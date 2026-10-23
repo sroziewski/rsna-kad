@@ -1,0 +1,7 @@
+oof rows 4407 unique 4407 == concat(fold oofs): True fold col matches folds_v1: True
+weak   n=4349 macro=0.925352
+strict n=4349 labels=data/labels/llm_v1.parquet macro=0.857635
+gold   n=58 macro=0.887812
+weak   recomputed 0.925352 reported 0.925352 diff +0.00e+00
+strict recomputed 0.857635 reported 0.857635 diff +0.00e+00
+gold   recomputed 0.887812 reported 0.887812 diff +0.00e+00

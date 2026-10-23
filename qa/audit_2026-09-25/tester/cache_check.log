@@ -1,0 +1,9 @@
+rows 24386 ok 24386 errors 0 splits {'train': 24371, 'test': 15}
+truncated series 2
+       split                                                 SeriesInstanceUID  n_src  n_cached  truncated_slices    ok
+10936  train  1.2.826.0.1.3680043.8.498.39396636671446532796538574315802928348     36        36                 1  True
+11648  train  1.2.826.0.1.3680043.8.498.31160785238781353848727311763596115703     38        38                 1  True
+manifest n_series 24386 n_ok 24386 built_at 2026-09-18T14:35:14+0200
+npy missing 0
+02928348 (36, 384, 384) uint8 75.02582634819879
+96115703 (38, 384, 384) uint8 98.50629715055052

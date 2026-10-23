@@ -1,0 +1,57 @@
+# Stage 9 pseudo-label experiment: configs/main_convnext_s_384_e8.yaml with targets v2 instead of
+# v1. ONE FOLD ONLY (--fold 0). Everything else - backbone, slots, K, schedule, seed, augmentation,
+# last-epoch selection - is byte-identical to the e8 arm, so the fold-0 number is paired with
+# runs/main_convnext_s_384_e8/fold0 cell for cell and the only free variable is the target table.
+#
+# Why one fold and not five: the pseudo-labels may only come from a model that saw neither the
+# study it labels nor the fold being held out. The five existing OOF models each saw four folds,
+# so every one of them saw fold 0 - using their OOF here would put fold-0 information into fold-0
+# training and make this comparison meaningless. data/targets/v2/fold0.parquet is instead built
+# from two half-data sources (configs/stage9_pseudo_src{A,B}.yaml) trained on folds {1,2} and
+# {3,4}; neither saw fold 0. Extending this to all five folds honestly needs ten leave-two-out
+# sources, not five - see qa/stage9/report.md.
+#
+# data/targets/v2/fold0.parquet keeps every fold-0 row bit-identical to v1, so the OOF-weak /
+# strict / gold numbers this run reports are still the v1 metric and compare directly.
+run_id: main_armA8_v2
+cache:
+  version: v1
+model:
+  backbone: convnext_small.fb_in22k_ft_in1k_384
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1]
+  k_train: 12
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.2
+  grad_checkpoint: true
+targets_version: v2
+targets_dir: data/targets
+labels_parquet: data/labels/llm_v1.parquet
+folds_csv: data/folds/folds_v1.csv
+epochs: 8
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 4
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: true

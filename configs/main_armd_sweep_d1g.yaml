@@ -1,0 +1,55 @@
+# Arm D sweep, candidate D1G - D1 on the targets the arm D chain will actually train on,
+# data/targets/v1_1_gemma3 (the 4-voter merge, labels data/labels/merged_v1_1_gemma3.parquet).
+#
+# It is NOT part of the view comparison and must not be read against D0-D3's losses. The sweep
+# decides view geometry and cost, and of its three axes (architecture §4.1: train loss,
+# throughput, memory) two are properties of the machine and the third is defined *by the target
+# table* - swap the table and the loss changes scale, so D0 could no longer reproduce the
+# recorded control (armc_sweep_c1 epoch 1 = 0.7091, 210 img/s, 11.3 GB) and the gate against arm
+# A's own smoke (0.7091, 161 img/s, 15.7 GB) would be meaningless. D0-D3 therefore stay on v1.
+#
+# What this run is for: 9 minutes of insurance before a ~12 h chain. It proves the new target
+# and label tables load, join and weight correctly through train_fold, and it records the loss
+# scale on them so the chain's log can be read. Its AUC is noise (+-0.04 at 200 studies) and
+# decides nothing.
+run_id: armd_sweep_d1g
+cache:
+  version: v1
+model:
+  backbone: convnextv2_tiny.fcmae_ft_in22k_in1k_384
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1, cor_fs]
+  view_crop_mm: [130.0, 130.0, 130.0, 130.0, 100.0]
+  k_train: 12
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.1
+  grad_checkpoint: true
+targets_version: v1_1_gemma3
+folds_csv: data/folds/folds_v1.csv
+epochs: 2
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 4
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: true

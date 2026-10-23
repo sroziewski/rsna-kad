@@ -1,0 +1,17 @@
+
+stage9_pseudo_srcA (--fold 0)
+  train  1739 studies, original folds: {1: 868, 2: 871}
+  val    1765 studies, original folds: {3: 882, 4: 883}
+  fold-0 studies in train: 0
+  fold-0 studies in val  : 0
+  train n val overlap    : 0
+  gold in train          : 0
+
+stage9_pseudo_srcB (--fold 0)
+  train  1741 studies, original folds: {3: 870, 4: 871}
+  val    1762 studies, original folds: {1: 879, 2: 883}
+  fold-0 studies in train: 0
+  fold-0 studies in val  : 0
+  train n val overlap    : 0
+  gold in train          : 0
+main_armA8_v2: data/targets/v2/fold0.parquet not built yet, skipped

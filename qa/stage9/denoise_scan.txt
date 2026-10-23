@@ -1,0 +1,51 @@
+rows: targets 4349  joined 4349  (gold excluded from v1 targets)
+
+=== confident-learning contradictions (target>=0.9 & OOF<=0.1, or target<=0.1 & OOF>=0.9; OOF = mean of the two arms)
+      key  under    n  n_hi  n_lo  pos_contra  neg_contra  contra  contra_pct  both_models_agree  w_mean_contra
+      acl  False 4349   175  3211           9           0       9    0.206944                  8           1.00
+      mcl  False 4349     0  3644           0           0       0    0.000000                  0            NaN
+  med_men  False 4349   557  1905          15           2      17    0.390894                 10           1.00
+  lat_men  False 4349     0  3136           0           1       1    0.022994                  0           1.00
+   med_oa   True 4349     0  2285           0           0       0    0.000000                  0            NaN
+   lat_oa   True 4349     0  2251           0           0       0    0.000000                  0            NaN
+    pf_oa   True 4349  1073  1324           9           3      12    0.275926                  9           1.00
+ effusion  False 4349   465  1697           3           0       3    0.068981                  2           1.00
+synovitis   True 4349    50    55           0           0       0    0.000000                  0            NaN
+    baker   True 4349    95  3178           4           1       5    0.114969                  4           0.82
+contusion   True 4349     0  1003           0           0       0    0.000000                  0            NaN
+ fracture   True 4349    92  2519           5           0       5    0.114969                  3           1.00
+
+TOTAL contradicted cells: 52 of 52188 (0.100 %)
+  pos_contra 45  neg_contra 7
+  under-reported keys: 22  well-reported keys: 30
+
+wrote .tmp/devj/contradictions.csv (52 rows)
+
+by state of the LLM label:
+kind        state   
+neg_contra  absent       1
+            negated      6
+pos_contra  affirmed    45
+
+=== under-reported 'absent' cells (weight 0.1) - OOF distribution
+  med_oa     n= 1223 target=0.096 OOF mean 0.172 p10 0.028 p50 0.113 p90 0.405 | frac>0.5 0.055
+  lat_oa     n= 1582 target=0.085 OOF mean 0.157 p10 0.033 p50 0.116 p90 0.337 | frac>0.5 0.032
+  pf_oa      n=  985 target=0.110 OOF mean 0.340 p10 0.088 p50 0.263 p90 0.724 | frac>0.5 0.239
+  synovitis  n= 3700 target=0.290 OOF mean 0.370 p10 0.248 p50 0.347 p90 0.530 | frac>0.5 0.132
+  baker      n= 2144 target=0.043 OOF mean 0.096 p10 0.018 p50 0.055 p90 0.213 | frac>0.5 0.021
+  contusion  n= 1413 target=0.072 OOF mean 0.186 p10 0.070 p50 0.148 p90 0.359 | frac>0.5 0.034
+  fracture   n= 2001 target=0.139 OOF mean 0.144 p10 0.069 p50 0.118 p90 0.243 | frac>0.5 0.017
+
+=== spearman(convnext, eff) OOF per key, all weak rows
+  acl        0.715
+  mcl        0.671
+  med_men    0.887
+  lat_men    0.691
+  med_oa     0.875
+  lat_oa     0.785
+  pf_oa      0.820
+  effusion   0.873
+  synovitis  0.738
+  baker      0.739
+  contusion  0.724
+  fracture   0.679

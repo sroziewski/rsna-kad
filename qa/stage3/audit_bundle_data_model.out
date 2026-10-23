@@ -1,0 +1,42 @@
+mcl: rows with target==0.2(f32): 559 of which weight>=0.5: 552
+  f32-compare: n_neg=4028 auc=0.7773
+  f64-upcast (code): n_neg=3476 auc=0.7910
+  code macro_auc mcl: {'mcl': 0.7909822706051709}
+bundle keys: ['arch', 'config', 'fingerprint', 'fold', 'git_sha', 'labels', 'metrics', 'norm', 'run_id'] missing: set() extra: set()
+arch keys: ['K_infer', 'attn_hidden', 'backbone', 'crop_mm', 'fusion', 'img_px', 'slots'] norm keys: ['mean', 'p_hi', 'p_lo', 'std'] n labels 12 fingerprint len 8 git_sha '' metrics epoch 2 metrics weak 0.849462288552061
+model.safetensors bytes 92128844
+load_bundle cpu ok in 0.3s, training=False
+bit-exact reload: True n tensors 793 n params 22857857 backbone params 20177488
+fingerprint tensors: ['attn.u.bias', 'backbone.blocks.2.2.bn2.weight', 'backbone.blocks.3.3.se.conv_expand.bias', 'backbone.blocks.4.2.bn2.running_var', 'backbone.blocks.4.6.se.conv_expand.bias', 'backbone.blocks.5.10.bn2.running_mean', 'backbone.blocks.5.14.se.conv_expand.bias', 'backbone.blocks.5.6.bn2.running_mean']
+TAMPER A (zero fingerprinted tensor): detected -> qa/stage3/tamper: weight fingerprint mismatch [-26.742531362921, 149.52607056498528, -5.48
+TAMPER B (zero non-fingerprinted tensor backbone.blocks.5.5.bn1.running_var): NOT DETECTED (by design: 8-tensor fingerprint)
+TAMPER C (removed tensor): detected -> qa/stage3/tamper: missing ['backbone.blocks.5.5.bn1.running_var'] unexpected []
+conv_stem corr(timm pretrained, bundle EMA) = 1.0000; corr(timm pretrained, random init) = 0.0321; max|diff| pre-vs-bundle 0.0161
+backbone.blocks.5.0.conv_pw.weight corr(timm, bundle) = 0.9990
+aux heads: (3, 1280, 12) (3, 12) missing vec: (3, 1280)
+
+(5a) centre sampling / triplets
+  N=11: K=24 uniform centres [0, 0, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10]
+         K=16 random  centres [0, 0, 1, 2, 3, 4, 4, 5, 5, 6, 7, 7, 8, 8, 10, 10]; triplets of first/last: [[0, 0, 1], [9, 10, 10]]
+         random coverage over 200 draws: min hits per slice 184, slices never hit 0
+  N=30: K=24 uniform centres [0, 1, 3, 4, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 26, 28, 29]
+         K=16 random  centres [1, 2, 3, 5, 9, 11, 12, 14, 16, 18, 20, 20, 24, 24, 27, 28]; triplets of first/last: [[0, 0, 1], [28, 29, 29]]
+         random coverage over 200 draws: min hits per slice 76, slices never hit 0
+  N=40: K=24 uniform centres [0, 2, 4, 5, 7, 9, 10, 12, 14, 15, 17, 19, 20, 22, 24, 25, 27, 29, 30, 32, 34, 35, 37, 39]
+         K=16 random  centres [1, 3, 5, 7, 12, 14, 16, 19, 21, 24, 27, 27, 32, 32, 36, 37]; triplets of first/last: [[0, 0, 1], [38, 39, 39]]
+         random coverage over 200 draws: min hits per slice 65, slices never hit 0
+(5b) normalize(uint8) == (x/255-mean)/std: True ; float passthrough: True
+(5f) eval K = 24 train K = 16
+(5f) eval item deterministic: True shape (3, 24, 3, 256, 256) torch.uint8
+(5c/f) eval images == plain INTER_AREA resize of cache slices (no aug): True uniform centres used: [0, 1, 2, 3, 4, 5] ...
+(5c) read_triplets with params == whole-volume warp gathered: True
+(5g) train item same seed/epoch identical: True True | different epoch differs: True | train differs from eval (aug on): True
+(5d) slot_dropout_p=1: natural present counts [0, 0, 0, 300] -> after dropout [0, 0, 300, 0] ; min present among studies with >=2 natural: 2 ; any study lost below 2 with 3 natural: False
+(5d/e) (study,slot) pairs with >1 sibling series: 1419 | studies missing a slot after fallback: {'sag_fs': 0, 'cor_fs': 0, 'ax_fs': 0}
+(5e) absent slot embed is zero: True | filled absent == missing[1]: True | present slot untouched: True
+(5e) changing missing[1] changes only study with absent slot 1: study0 same True study1 differs True | output shapes (2, 12) (2, 3, 12) finite True
+(6) attention weights sum to 1 per slot: True shape (5, 16)
+(7) masked_bce == weighted mean: True
+  warnings.warn(warn_msg)
+(5g) dataloader with workers, same seed -> same studies & images: True True
+(4) CPU fp32 re-prediction of 8 fold-0 studies vs oof.parquet (bf16 GPU): max|diff| 0.0069 mean 0.0017

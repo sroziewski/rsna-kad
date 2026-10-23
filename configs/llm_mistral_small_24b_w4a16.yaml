@@ -1,0 +1,21 @@
+# PATH 1 fallback voter: Mistral-Small-3.1-24B at W4A16 (~13 GB), a third pretraining lineage.
+# Second choice, not first: Mistral's own language list is European-centric and thin on Greek and
+# Bulgarian, two of our nine report languages, so its per-language gold AUC is the number to watch
+# before it is allowed into a voter set. The 3.2 checkpoints are gated on the Hub; 3.1 is not.
+model: RedHatAI/Mistral-Small-3.1-24B-Instruct-2503-quantized.w4a16
+quantization: null
+dtype: auto
+max_model_len: 12288
+gpu_memory_utilization: 0.6
+enable_prefix_caching: true
+max_tokens: 1400
+temperature: 0.0
+batch_size: 128
+max_num_seqs: 64
+seed: 0
+enable_thinking: false
+enforce_eager: false
+fewshot_dir: data/fewshot
+out_dir: data/labels
+extractor: mistral_small_24b_w4a16
+prompt_rules: base_qa

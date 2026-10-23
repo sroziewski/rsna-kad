@@ -1,0 +1,7 @@
+after crash: jsonl records 2 ['1.2.0', '1.2.1'] parquet exists: False
+resume: n_resumed 2 n_run 5 table rows 7 unique 7 ids==train True parse_ok 6 jsonl lines 8 parseable 7 unparseable ['{"StudyInstanceUID": "1.2.5", "lang": "en", "raw": "trunc{"StudyInstanceUID": "1'] jsonl unique ids 6 truncated stat 1
+  ids missing from jsonl after resume (would be re-run on a later resume): ['1.2.2']
+  row 1.2.1 (truncated in first pass) parse_ok: False acl state: absent
+retry_failed: n_resumed 5 n_run 2 rows 7 parse_ok 7 truncated 0 acl 1.2.1: affirmed evidence_ok_rate 1.0
+no-op resume: n_resumed 7 n_run None rows 7
+V2 parse-failed row: merged parse_ok True acl_state affirmed acl_state_v2 absent acl_agree False -> acl target 0.49000000953674316 weight 0.5 | clean row 1.2.2: target 0.9200000166893005 weight 1.0

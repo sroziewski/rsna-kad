@@ -1,0 +1,8 @@
+{
+ "version": "v0",
+ "labels": "data/labels/rules_v0.parquet",
+ "config": "configs/targets_v0.yaml",
+ "folds": "data/folds/folds_v1.csv",
+ "random_seed": null,
+ "n_rows": 4349
+}

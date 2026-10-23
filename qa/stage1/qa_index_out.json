@@ -1,0 +1,863 @@
+{
+ "n_rows": 24386,
+ "per_split": {
+  "train": 24371,
+  "test": 15
+ },
+ "n_ok": 24386,
+ "errors": [],
+ "missing_cols": [],
+ "extra_cols": [
+  "manufacturer",
+  "series_number",
+  "rows",
+  "cols",
+  "centre_x",
+  "mean_u8",
+  "z_step_cached_mm",
+  "tag_conf",
+  "plane_iop"
+ ],
+ "dtypes": {
+  "split": "object",
+  "StudyInstanceUID": "object",
+  "SeriesInstanceUID": "object",
+  "plane": "object",
+  "fs": "int64",
+  "slot": "object",
+  "rank": "int64",
+  "selected": "bool",
+  "is_3d": "bool",
+  "n_src": "int64",
+  "n_cached": "int64",
+  "spacing_mm": "float64",
+  "fov_mm": "float64",
+  "z_step_mm": "float64",
+  "crop_mm": "float64",
+  "px": "int64",
+  "p_lo": "float64",
+  "p_hi": "float64",
+  "truncated_slices": "int64",
+  "side_tag": "object",
+  "side_desc": "object",
+  "side_geom": "object",
+  "side_est": "object",
+  "side_conf": "float32",
+  "ok": "bool",
+  "error": "object",
+  "manufacturer": "object",
+  "series_number": "int64",
+  "rows": "int64",
+  "cols": "int64",
+  "centre_x": "float64",
+  "mean_u8": "float64",
+  "z_step_cached_mm": "float64",
+  "tag_conf": "float64",
+  "plane_iop": "object"
+ },
+ "n_cached_min_max": [
+  11,
+  40
+ ],
+ "n_cached_gt40": 0,
+ "n_cached_lt1": 0,
+ "px_unique": [
+  384
+ ],
+ "crop_mm_unique": [
+  130.0
+ ],
+ "dup_series": 0,
+ "n_studies": 4410,
+ "train_csv_rows": 24371,
+ "train_series_set_equal": true,
+ "plane_fs_match_csv": true,
+ "plane_iop_vs_csv_mismatch": 0,
+ "sample300_bad": [],
+ "sample300_mean_in_20_200": 1.0,
+ "sample300_mean_vs_index_maxabs": 0.0,
+ "sample300_sidecar_missing": 0,
+ "du_bytes": 105444831166,
+ "du_gib": 98.2,
+ "expected_npy_bytes_from_index": 105422070016,
+ "n_npy_files": 24386,
+ "n_tmp_files": 0,
+ "manifest": {
+  "built_at": "2026-09-18T10:40:24+0200",
+  "geom_rules": {
+   "ge": {
+    "agreement": 0.6216216216216216,
+    "n": 37,
+    "sign": -1,
+    "trusted": false
+   },
+   "hitachi": {
+    "agreement": 0.625,
+    "n": 24,
+    "sign": 1,
+    "trusted": false
+   },
+   "philips": {
+    "agreement": 0.985200845665962,
+    "n": 473,
+    "sign": 1,
+    "trusted": true
+   },
+   "siemens": {
+    "agreement": 0.9902676399026764,
+    "n": 1644,
+    "sign": 1,
+    "trusted": true
+   }
+  },
+  "n_ok": 24386,
+  "n_series": 24386,
+  "params": {
+   "crop_mm": 130.0,
+   "geom_min_agreement": 0.95,
+   "geom_min_studies": 30,
+   "max_2d_slices": 60,
+   "max_slices": 40,
+   "p_hi": 99.0,
+   "p_lo": 1.0,
+   "px": 384,
+   "version": "v1",
+   "z_target_mm": 3.0
+  },
+  "params_sha256": "65e16190fa59c1469a98da67c07104b9b798d877cc0d23c2cbd46721b71a397b",
+  "splits": {
+   "test": {
+    "n_ok": 15,
+    "n_series": 15
+   },
+   "train": {
+    "n_ok": 24371,
+    "n_series": 24371
+   }
+  },
+  "version": "v1"
+ },
+ "truncated_expected_series": [
+  "1.2.826.0.1.3680043.8.498.39396636671446532796538574315802928348",
+  "1.2.826.0.1.3680043.8.498.31160785238781353848727311763596115703"
+ ],
+ "truncated_rows": [
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.39396636671446532796538574315802928348",
+   "n_src": 36,
+   "n_cached": 36,
+   "truncated_slices": 1,
+   "ok": true
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.31160785238781353848727311763596115703",
+   "n_src": 38,
+   "n_cached": 38,
+   "truncated_slices": 1,
+   "ok": true
+  }
+ ],
+ "truncated_total": 2,
+ "truncated_other_series": 0,
+ "mean_u8_in_range_frac": 0.9996309357828262,
+ "mean_u8_out_of_range": [
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.85407847697620587030669139334864710338",
+   "manufacturer": "Philips",
+   "slot": "ax_t1",
+   "mean_u8": 17.167397223578558,
+   "p_lo": 0.0,
+   "p_hi": 1320.8429260253915,
+   "fov_mm": 300.0
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.11214379029766993573010708654862859536",
+   "manufacturer": "Philips",
+   "slot": "ax_t1",
+   "mean_u8": 18.833451334635416,
+   "p_lo": 0.0,
+   "p_hi": 1105.4794848632835,
+   "fov_mm": 300.0
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.15987106636282325352833499985962403587",
+   "manufacturer": "Philips",
+   "slot": "ax_t1",
+   "mean_u8": 15.808702256944445,
+   "p_lo": 0.0,
+   "p_hi": 1362.7006555175803,
+   "fov_mm": 300.0
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.51334208902638504550921228530189719112",
+   "manufacturer": "Philips",
+   "slot": "ax_fs",
+   "mean_u8": 18.15339129412616,
+   "p_lo": 0.0,
+   "p_hi": 1576.5883679199214,
+   "fov_mm": 81.29032015800192
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.26190161195183929804521180373336032297",
+   "manufacturer": "Philips",
+   "slot": "ax_t1",
+   "mean_u8": 16.26471184624566,
+   "p_lo": 0.0,
+   "p_hi": 1452.090457763673,
+   "fov_mm": 300.0
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.52753180293233746385161787593301494421",
+   "manufacturer": "GE MEDICAL SYSTEMS",
+   "slot": "sag_t1",
+   "mean_u8": 202.1805170694987,
+   "p_lo": 50.690994033813475,
+   "p_hi": 1795.6646789550782,
+   "fov_mm": 179.9936
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.98531380909648854063475337053116841190",
+   "manufacturer": "Philips",
+   "slot": "ax_fs",
+   "mean_u8": 19.275990205652572,
+   "p_lo": 0.0,
+   "p_hi": 1198.1897094726537,
+   "fov_mm": 70.32719421386496
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.55305295157426121319714316590849277107",
+   "manufacturer": "Philips",
+   "slot": "ax_t1",
+   "mean_u8": 13.95030788845486,
+   "p_lo": 0.0,
+   "p_hi": 1202.6431250000028,
+   "fov_mm": 300.0
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.35917065377312667007823807222555506364",
+   "manufacturer": "Philips",
+   "slot": "ax_t1",
+   "mean_u8": 11.476016743977864,
+   "p_lo": 0.0,
+   "p_hi": 1127.2533508300799,
+   "fov_mm": 300.0
+  }
+ ],
+ "mean_u8_describe": {
+  "count": 24386.0,
+  "mean": 80.82,
+  "std": 21.16,
+  "min": 11.48,
+  "25%": 66.66,
+  "50%": 80.53,
+  "75%": 94.42,
+  "max": 202.18
+ },
+ "p_lo_describe": {
+  "count": 24386.0,
+  "mean": 11.53,
+  "std": 30.29,
+  "min": -18.7,
+  "25%": 0.0,
+  "50%": 1.32,
+  "75%": 5.82,
+  "max": 783.25
+ },
+ "p_hi_describe": {
+  "count": 24386.0,
+  "mean": 1492.35,
+  "std": 2169.17,
+  "min": 88.91,
+  "25%": 476.03,
+  "50%": 981.37,
+  "75%": 1697.48,
+  "max": 116858.68
+ },
+ "p_hi_le_p_lo": 0,
+ "p_lo_eq_0": 9947,
+ "p_lo_lt_0": 5,
+ "p_lo_by_manu": {
+  "canon": {
+   "p_lo": 72.3,
+   "p_hi": 5665.3
+  },
+  "ge": {
+   "p_lo": 6.9,
+   "p_hi": 1303.3
+  },
+  "hitachi": {
+   "p_lo": 0.0,
+   "p_hi": 754.8
+  },
+  "philips": {
+   "p_lo": 0.0,
+   "p_hi": 1282.3
+  },
+  "siemens": {
+   "p_lo": 3.4,
+   "p_hi": 636.8
+  }
+ },
+ "p_lo_eq0_by_manu": {
+  "canon": 599,
+  "ge": 2011,
+  "hitachi": 108,
+  "philips": 6626,
+  "siemens": 603
+ },
+ "fov_lt_130_n": 106,
+ "fov_describe": {
+  "count": 24386.0,
+  "mean": 163.7,
+  "std": 15.7,
+  "min": 70.3,
+  "25%": 160.0,
+  "50%": 160.0,
+  "75%": 170.0,
+  "max": 320.0
+ },
+ "p_lo_eq0_and_fov_lt130": 104,
+ "slot_series_counts": {
+  "sag_t1": 5197,
+  "ax_fs": 4719,
+  "sag_fs": 4667,
+  "cor_fs": 4624,
+  "cor_t1": 3985,
+  "ax_t1": 1179
+ },
+ "slot_studies_with_ge1": {
+  "ax_fs": 4407,
+  "ax_t1": 857,
+  "cor_fs": 4248,
+  "cor_t1": 3406,
+  "sag_fs": 4150,
+  "sag_t1": 4266
+ },
+ "selected_per_study_slot_max": 1,
+ "studies_missing_selected_native": {
+  "sag_fs": 257,
+  "cor_fs": 159,
+  "ax_fs": 0,
+  "sag_t1": 141,
+  "cor_t1": 1001,
+  "ax_t1": 3550
+ },
+ "fallback_studies": {
+  "cor_fs": 159,
+  "sag_fs": 257
+ },
+ "studies_without_sag_fs": 257,
+ "studies_without_cor_fs": 159,
+ "studies_without_ax_fs": 0,
+ "selected_3d_while_2d_available": 0,
+ "n_3d": 837,
+ "n_3d_by_slot": {
+  "ax_fs": 318,
+  "sag_t1": 269,
+  "sag_fs": 148,
+  "ax_t1": 101,
+  "cor_fs": 1
+ },
+ "n_3d_ncached_max": 40,
+ "n_3d_nsrc_min_max": [
+  50,
+  320
+ ],
+ "n_3d_zstep_src_describe": {
+  "count": 837.0,
+  "mean": 0.81,
+  "std": 0.29,
+  "min": 0.4,
+  "25%": 0.6,
+  "50%": 0.7,
+  "75%": 1.0,
+  "max": 1.6
+ },
+ "n_3d_zstep_cached_describe": {
+  "count": 837.0,
+  "mean": 3.21,
+  "std": 0.56,
+  "min": 2.4,
+  "25%": 3.0,
+  "50%": 3.0,
+  "75%": 3.22,
+  "max": 6.09
+ },
+ "n_2d_nsrc_gt40": 740,
+ "n_2d_ncached_eq_min_nsrc_40": false,
+ "n_3d_ncached_eq_40_frac": 0.43727598566308246,
+ "is_3d_but_mracq_absent_gt60": 0,
+ "side_tag_counts": {
+  "": 2204,
+  "R": 1111,
+  "L": 1092
+ },
+ "side_est_counts": {
+  "R": 1822,
+  "L": 1695,
+  "unknown": 890
+ },
+ "side_conf_counts": {
+  "0.949999988079071": 2178,
+  "0.0": 890,
+  "0.9851999878883362": 766,
+  "0.800000011920929": 289,
+  "0.9902999997138977": 259,
+  "0.6000000238418579": 25
+ },
+ "n_contradictory_tag_conf06": 25,
+ "contradictory_side_conf": {
+  "0.6000000238418579": 25
+ },
+ "side_est_source": {
+  "tag": 2203,
+  "geom": 1025,
+  "none": 890,
+  "desc": 289
+ },
+ "side_est_source_by_fam": {
+  "canon": {
+   "desc": 0,
+   "geom": 0,
+   "none": 226,
+   "tag": 0
+  },
+  "ge": {
+   "desc": 204,
+   "geom": 0,
+   "none": 664,
+   "tag": 37
+  },
+  "hitachi": {
+   "desc": 0,
+   "geom": 0,
+   "none": 0,
+   "tag": 24
+  },
+  "philips": {
+   "desc": 37,
+   "geom": 766,
+   "none": 0,
+   "tag": 498
+  },
+  "siemens": {
+   "desc": 48,
+   "geom": 259,
+   "none": 0,
+   "tag": 1644
+  }
+ },
+ "side_geom_nonempty_by_fam": {
+  "ge": 905,
+  "hitachi": 24,
+  "philips": 1301,
+  "siemens": 1951
+ },
+ "side_est_from_geom_by_fam": {
+  "philips": 766,
+  "siemens": 259
+ },
+ "geom_agreement_recomputed": {
+  "ge": {
+   "n_tagged": 37,
+   "n_consistent": 37,
+   "agree_all": 0.6486,
+   "agree_consistent": 0.6486,
+   "sign": -1,
+   "geom_vs_tag_on_tagged": 0.6216
+  },
+  "hitachi": {
+   "n_tagged": 24,
+   "n_consistent": 24,
+   "agree_all": 0.6667,
+   "agree_consistent": 0.6667,
+   "sign": 1,
+   "geom_vs_tag_on_tagged": 0.625
+  },
+  "philips": {
+   "n_tagged": 498,
+   "n_consistent": 473,
+   "agree_all": 0.9699,
+   "agree_consistent": 0.9789,
+   "sign": 1,
+   "geom_vs_tag_on_tagged": 0.9759
+  },
+  "siemens": {
+   "n_tagged": 1644,
+   "n_consistent": 1644,
+   "agree_all": 0.9903,
+   "agree_consistent": 0.9903,
+   "sign": 1,
+   "geom_vs_tag_on_tagged": 0.9903
+  }
+ },
+ "manifest_geom_rules": {
+  "ge": {
+   "agreement": 0.6216216216216216,
+   "n": 37,
+   "sign": -1,
+   "trusted": false
+  },
+  "hitachi": {
+   "agreement": 0.625,
+   "n": 24,
+   "sign": 1,
+   "trusted": false
+  },
+  "philips": {
+   "agreement": 0.985200845665962,
+   "n": 473,
+   "sign": 1,
+   "trusted": true
+  },
+  "siemens": {
+   "agreement": 0.9902676399026764,
+   "n": 1644,
+   "sign": 1,
+   "trusted": true
+  }
+ },
+ "studies_by_fam": {
+  "siemens": 1951,
+  "philips": 1301,
+  "ge": 905,
+  "canon": 226,
+  "hitachi": 24
+ },
+ "centre_x_nan": 0,
+ "side_desc_counts": {
+  "": 3834,
+  "R": 288,
+  "L": 285
+ },
+ "tag_vs_desc_conflict": 4,
+ "test_sides": [
+  {
+   "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.10047035057544427318018579121635276191",
+   "manufacturer": "Siemens Healthineers",
+   "side_tag": "L",
+   "side_desc": "",
+   "side_geom": "L",
+   "side_est": "L",
+   "side_conf": 0.949999988079071
+  },
+  {
+   "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.10062861783145312629332250977456991776",
+   "manufacturer": "TOSHIBA",
+   "side_tag": "",
+   "side_desc": "",
+   "side_geom": "",
+   "side_est": "unknown",
+   "side_conf": 0.0
+  },
+  {
+   "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.10067514707072572280263481548497591402",
+   "manufacturer": "GE MEDICAL SYSTEMS",
+   "side_tag": "",
+   "side_desc": "",
+   "side_geom": "L",
+   "side_est": "unknown",
+   "side_conf": 0.0
+  }
+ ],
+ "test_rows": [
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.11580656442259111255675562605155903947",
+   "slot": "ax_t1",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 34,
+   "n_cached": 34,
+   "rows": 960,
+   "cols": 960,
+   "fov_mm": 149.952,
+   "mean_u8": 104.20514414668862
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.17811502614030631664517622518906646132",
+   "slot": "sag_t1",
+   "rank": 1,
+   "selected": false,
+   "is_3d": false,
+   "n_src": 30,
+   "n_cached": 30,
+   "rows": 800,
+   "cols": 800,
+   "fov_mm": 150.0,
+   "mean_u8": 102.17522922092014
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.30565395595045942404081022062489758495",
+   "slot": "sag_t1",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 30,
+   "n_cached": 30,
+   "rows": 896,
+   "cols": 896,
+   "fov_mm": 149.9904,
+   "mean_u8": 109.77239131221064
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.32856494541816845805947850304653662081",
+   "slot": "cor_fs",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 30,
+   "n_cached": 30,
+   "rows": 640,
+   "cols": 640,
+   "fov_mm": 150.016,
+   "mean_u8": 83.55952713577835
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.44334485654554877495800965096767429689",
+   "slot": "ax_fs",
+   "rank": 0,
+   "selected": true,
+   "is_3d": true,
+   "n_src": 160,
+   "n_cached": 32,
+   "rows": 640,
+   "cols": 1280,
+   "fov_mm": 160.0,
+   "mean_u8": 60.19717046949599
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.10543708582570884867685900269888836671",
+   "slot": "sag_fs",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 24,
+   "n_cached": 24,
+   "rows": 640,
+   "cols": 640,
+   "fov_mm": 180.03199999999998,
+   "mean_u8": 76.94209713406033
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.10818107180155454609278933308651876447",
+   "slot": "ax_fs",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 33,
+   "n_cached": 33,
+   "rows": 512,
+   "cols": 512,
+   "fov_mm": 150.016,
+   "mean_u8": 51.45622381858954
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.34851887739080902195133258975769749352",
+   "slot": "sag_fs",
+   "rank": 1,
+   "selected": false,
+   "is_3d": false,
+   "n_src": 24,
+   "n_cached": 24,
+   "rows": 512,
+   "cols": 512,
+   "fov_mm": 180.0192,
+   "mean_u8": 56.68915162263093
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.49057071886338907232646925625200929717",
+   "slot": "sag_t1",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 24,
+   "n_cached": 24,
+   "rows": 672,
+   "cols": 672,
+   "fov_mm": 180.02880000000002,
+   "mean_u8": 98.60268430356626
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.49397095733611495516760005725956804191",
+   "slot": "cor_fs",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 30,
+   "n_cached": 30,
+   "rows": 640,
+   "cols": 512,
+   "fov_mm": 200.0,
+   "mean_u8": 55.29166757089121
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.10927312244766790279817592893017048392",
+   "slot": "sag_t1",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 24,
+   "n_cached": 24,
+   "rows": 512,
+   "cols": 512,
+   "fov_mm": 169.984,
+   "mean_u8": 150.12710627803096
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.12207733879434320501816063789123909030",
+   "slot": "sag_fs",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 24,
+   "n_cached": 24,
+   "rows": 512,
+   "cols": 512,
+   "fov_mm": 169.984,
+   "mean_u8": 99.02429962158203
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.15858543841290540180647614348005539746",
+   "slot": "ax_fs",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 40,
+   "n_cached": 40,
+   "rows": 512,
+   "cols": 512,
+   "fov_mm": 169.984,
+   "mean_u8": 75.92280459933811
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.19236602294493686533219656323303746544",
+   "slot": "cor_t1",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 25,
+   "n_cached": 25,
+   "rows": 512,
+   "cols": 512,
+   "fov_mm": 180.0192,
+   "mean_u8": 116.30205485026042
+  },
+  {
+   "SeriesInstanceUID": "1.2.826.0.1.3680043.8.498.66069370990398014317043644514003034312",
+   "slot": "cor_fs",
+   "rank": 0,
+   "selected": true,
+   "is_3d": false,
+   "n_src": 25,
+   "n_cached": 25,
+   "rows": 512,
+   "cols": 512,
+   "fov_mm": 180.0192,
+   "mean_u8": 93.031484375
+  }
+ ],
+ "folds_cols": [
+  "StudyInstanceUID",
+  "fold",
+  "site_key",
+  "lang",
+  "is_gold"
+ ],
+ "folds_rows": 4407,
+ "folds_md5": "4dc54b74429f07051af2175e7bb35442",
+ "folds_unique_ids": true,
+ "folds_values": [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4"
+ ],
+ "folds_is_gold_values": {
+  "False": 4349,
+  "True": 58
+ },
+ "folds_gold_total": 58,
+ "folds_sites_multi": 0,
+ "folds_n_sites": 123,
+ "folds_sizes": {
+  "0": 0.1997,
+  "1": 0.1995,
+  "2": 0.2004,
+  "3": 0.2001,
+  "4": 0.2004
+ },
+ "folds_gold_per_fold": {
+  "0": 11,
+  "1": 11,
+  "2": 12,
+  "3": 12,
+  "4": 12
+ },
+ "folds_lang_global": {
+  "en": 0.3939,
+  "es": 0.1548,
+  "tr": 0.1239,
+  "hr": 0.0921,
+  "el": 0.0728,
+  "de": 0.0595,
+  "bg": 0.0499,
+  "nl": 0.0347,
+  "fr": 0.0184
+ },
+ "folds_lang_max_dev_pp": 23.83,
+ "folds_lang_dev_pp_by_fold": {
+  "0": 23.83,
+  "1": 7.86,
+  "2": 6.52,
+  "3": 19.95,
+  "4": 16.95
+ },
+ "folds_lang_dev_pp_by_lang": {
+  "bg": 19.95,
+  "de": 23.83,
+  "el": 16.95,
+  "en": 0.88,
+  "es": 1.29,
+  "fr": 5.9,
+  "hr": 8.99,
+  "nl": 9.91,
+  "tr": 7.86
+ },
+ "folds_check": [],
+ "study_summary_cols": [
+  "study_dir",
+  "manu",
+  "model",
+  "field",
+  "sw",
+  "freq",
+  "pid",
+  "n_pid",
+  "n_manu",
+  "lat",
+  "sex",
+  "age",
+  "n_files",
+  "n_series",
+  "tsyn",
+  "coil",
+  "desc0",
+  "freq_r",
+  "scanner_key",
+  "scanner_key_freq",
+  "labelled",
+  "lang",
+  "site_key",
+  "site_key_freq"
+ ],
+ "folds_vs_summary_rows": 4407,
+ "folds_vs_summary_site_match": true,
+ "folds_vs_summary_lang_match": true,
+ "folds_vs_summary_gold_match": true,
+ "folds_ids_equal_train_csv": true,
+ "folds_ids_equal_cache_train_studies": true,
+ "folds_md5_pinned": "4dc54b74429f07051af2175e7bb35442",
+ "folds_regen_identical": true
+}

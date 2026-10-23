@@ -1,0 +1,84 @@
+# Main arm D (stage 8b): a second specialist view, aimed at arm A's two weakest labels, lat_oa
+# 0.863 and mcl 0.869 - both read on the coronal plane. Arm C's recipe (convnextv2_tiny, a centre
+# crop of an already-cached series as an extra view) with the crop moved to cor_fs:
+#
+#   5 views over 4 series = MAIN_SLOTS (sag_fs, cor_fs, ax_fs, sag_t1) + cor_fs cropped to 100 mm
+#
+# Crop size, 100 mm not arm C's 90 mm - decided on geometry (qa/stage8b/cor_extent.py, 600
+# cached cor_fs series, limb width at the joint line measured from the image centre because the
+# crop is centred): a centred 90 mm crop keeps the collateral ligaments (10 mm inside the skin) in
+# 22 % of studies, 100 mm in 44 %; the tibiofemoral compartments survive either. The MCL sits at
+# the medial edge, which is exactly what a tight centred crop deletes.
+#
+# Sweep (qa/stage8b/sweep.sh, 200 studies x 2 epochs, fold 0, targets v1; epoch-1 values):
+#
+#   cand  views          loss    img/s  peak GB  train s
+#   d0    4 (control)    0.7091  206    11.3     42     = armc_sweep_c1 exactly (0.7091/210/11.3)
+#   d1    5, cor 100     0.7223  300    14.0     35     <- this arm
+#   d2    5, cor 90      0.7076  300    14.0     35
+#   d3    6, cor100+sag90 0.7265 230    16.7     56
+#   d1g   d1 on v1_1_gemma3 0.7113 301  14.0     35     plumbing check, loss not comparable
+#
+# d3 was rejected by its pre-registered rule: loss within 0.005 of d1 (0.0042, pass) and memory
+# under 30 GB (pass), but per-epoch train time +60 % against a 25 % allowance (fail) - and at 6
+# views it would cost 1.5x arm A per study at inference on top of main_v3's 2.1x of main_v2.
+#
+# d2 did NOT behave as pre-registered. It was meant to show that 90 and 100 mm cost the same and
+# leave the geometry as the only evidence; cost was identical, but its loss came in 0.0147 below
+# d1's. That gap is left standing against 100 mm, for two reasons stated rather than hidden:
+# train loss measures how easily a view is fitted, and a tighter crop that drops the peripheral
+# content is expected to be easier to fit whether or not that content matters - the MCL is that
+# content. And d1's penalty over the control (+0.0132) is below the level at which the arm C
+# sweep rejected a view (cor_t1, +0.0183). No seed variance of this quantity has been measured, so
+# neither number is a strong signal; the fold-0 per-label mcl AUC is the first real one.
+#
+# Targets v1_1_gemma3 (4-voter merge) per the coordinator. Arm D is therefore on a different
+# target table from A/E/C, and by architecture §4.2 `consensus` - not `weak` - is the primary
+# arbiter for any comparison of arm D with them; weak AUC in this run's own metrics.json is
+# measured on its own targets and is not comparable to arms A/C/E's numbers.
+#
+# 8 epochs (coordinator: the 8-epoch schedule tied arm A at 32 % less cost). eval_batch_studies 2
+# as in arm C: 2 studies x 5 views x 24 triplets keeps evaluation inside the 30 GB we may hold.
+#
+#   CUDA_VISIBLE_DEVICES=1 bash scripts/run_screen.sh armD bash qa/stage8b/armd_chain.sh
+run_id: main_armd_convnextv2_t_384
+cache:
+  version: v1
+model:
+  backbone: convnextv2_tiny.fcmae_ft_in22k_in1k_384
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1, cor_fs]
+  view_crop_mm: [130.0, 130.0, 130.0, 130.0, 100.0]
+  k_train: 12
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.1
+  grad_checkpoint: true
+targets_version: v1_1_gemma3
+folds_csv: data/folds/folds_v1.csv
+epochs: 8
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 2
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: true

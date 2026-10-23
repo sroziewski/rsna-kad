@@ -1,0 +1,18 @@
+series 1.2.826.0.1.3680043.8.498.910011 skipped: ValueError: no slot for plane='Oblique' fs=1
+series 1.2.826.0.1.3680043.8.498.910010 undecodable: ValueError: no readable slice in series
+series 1.2.826.0.1.3680043.8.498.919999 skipped: FileNotFoundError: [Errno 2] No such file or directory: '/raid/sroziewski/sandbox/rsna_kad/qa/audit_2026-09-25/tester/edge_data/test_series/1.2.826.0.1.3680043.8.498.900008/1.2.82
+one_series             valid=True prior=False n_slots=1 error='' mean_p=0.4323
+missing_coronal        valid=True prior=False n_slots=2 error='' mean_p=0.3915
+3d_only                valid=True prior=False n_slots=2 error='' mean_p=0.5116
+truncated_slices       valid=True prior=False n_slots=2 error='' mean_p=0.5041
+nonsquare_640x1280     valid=True prior=False n_slots=2 error='' mean_p=0.4806
+all_slices_truncated   valid=True prior=True n_slots=0 error='no usable slot' mean_p=0.2406
+unknown_plane_in_csv   valid=True prior=False n_slots=1 error='' mean_p=0.2998
+dir_missing            valid=True prior=True n_slots=0 error='no usable slot' mean_p=0.2406
+not_in_series_csv      valid=True prior=True n_slots=0 error='no usable slot' mean_p=0.2406
+real_jpegls            valid=True prior=False n_slots=4 error='' mean_p=0.3132
+real_j2k               valid=True prior=False n_slots=4 error='' mean_p=0.3132
+real_jpeg14            valid=True prior=False n_slots=4 error='' mean_p=0.3132
+real_rle               valid=True prior=False n_slots=4 error='' mean_p=0.3132
+rows 13 == sample 13 ; columns ok True
+EXIT 0

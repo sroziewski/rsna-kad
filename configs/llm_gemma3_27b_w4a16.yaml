@@ -1,0 +1,34 @@
+# PATH 1 of targets v1.1: a second local extractor from a *different* model family, so the fourth
+# voter is ours end to end (§2.1 rule 4.b forbids a hosted API; the public pilkwang table is a
+# hosted-API product and needs a host ruling before it can carry the final entry).
+#
+# Why gemma-3-27b-it over the other candidates:
+#   * different pretraining lineage from Qwen3 - that is the whole point of a fourth voter, and
+#     qa/competitor/public_table.md measures the public table's diversity at rho 0.897, so a
+#     same-family voter would not buy the same thing;
+#   * Gemma 3 is trained for 140+ languages, which covers tr/el/bg/hr - Llama-3.3 officially
+#     supports 8 languages and none of those four, and Mistral-Small is thin on el/bg;
+#   * 27 B at W4A16 is ~17 GB, so it fits one A6000 with room for a 12 k KV cache;
+#   * the RedHatAI checkpoint is compressed-tensors, i.e. built for vLLM, and vLLM 0.29 has a
+#     first-class Gemma-3 implementation.
+# architecture.md §2.1 rejected Gemma-3-27B for "weaker JSON compliance"; that objection is void
+# here because the schema is enforced by xgrammar, not by the model's goodwill.
+model: RedHatAI/gemma-3-27b-it-quantized.w4a16
+quantization: null            # compressed-tensors, read from the checkpoint's quantization_config
+dtype: auto
+max_model_len: 12288
+gpu_memory_utilization: 0.6
+enable_prefix_caching: true
+max_tokens: 1400
+temperature: 0.0
+batch_size: 128
+max_num_seqs: 64
+seed: 0
+enable_thinking: false        # ignored by the Gemma chat template, harmless
+enforce_eager: false
+fewshot_dir: data/fewshot
+out_dir: data/labels
+extractor: gemma3_27b_w4a16
+# The single carry-forward the qa/llm_ab A/B licensed: `strict`'s quoting and attribution
+# paragraphs on top of the byte-identical `base` state rules (prompts.STATE_RULES_BASE_QA).
+prompt_rules: base_qa

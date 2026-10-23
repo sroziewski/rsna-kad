@@ -1,0 +1,32 @@
+{
+ "variant": "v2",
+ "n_total": 4407,
+ "n_resumed": 0,
+ "n_run": 4407,
+ "wall_s": 16152.231682062149,
+ "reports_per_min": 16.370493267110046,
+ "gen_tokens": 2065178,
+ "prompt_tokens": 31689628,
+ "parse_rate": 0.9829816201497618,
+ "n_rows": 4407,
+ "truncated": 77,
+ "evidence_ok_rate": 0.9696631897444064,
+ "config": {
+  "model": "Qwen/Qwen3-32B-AWQ",
+  "quantization": "awq_marlin",
+  "dtype": "float16",
+  "max_model_len": 12288,
+  "gpu_memory_utilization": 0.6,
+  "enable_prefix_caching": true,
+  "max_tokens": 900,
+  "temperature": 0.0,
+  "batch_size": 128,
+  "seed": 0,
+  "enable_thinking": false,
+  "enforce_eager": false,
+  "max_num_seqs": 64,
+  "fewshot_dir": "data/fewshot",
+  "out_dir": "data/labels",
+  "extractor": "qwen3_32b_awq"
+ }
+}

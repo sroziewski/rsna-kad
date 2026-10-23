@@ -1,0 +1,24 @@
+{
+ "weights": "export/mvp_v1",
+ "devices": [
+  "cuda:1"
+ ],
+ "n_studies": 120,
+ "members": 5,
+ "replicate": 40,
+ "runs": [
+  {
+   "total_s": 64.66084957309067,
+   "per_study_s": 0.5388404131090889,
+   "prep_s_mean": 1.0203783827989052,
+   "gpu_s_mean": 0.45101532877112427,
+   "errors": 0
+  }
+ ],
+ "per_study_s_best": 0.5388404131090889,
+ "projected_1300_a6000_min": 11.674875617363593,
+ "projected_1300_t4_min": 52.53694027813617,
+ "projected_1300_t4_with_margin_min": 65.67117534767021,
+ "submission": "export/submission_bench.csv",
+ "passed": true
+}

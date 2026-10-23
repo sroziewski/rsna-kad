@@ -1,0 +1,8 @@
+{
+ "version": "v1",
+ "labels": "data/labels/llm_v1.parquet",
+ "config": "configs/targets_v1.yaml",
+ "folds": "data/folds/folds_v1.csv",
+ "random_seed": null,
+ "n_rows": 4349
+}

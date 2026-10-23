@@ -1,0 +1,27 @@
+{
+  "id": "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+  "id_no": 135346023,
+  "title": "RSNA Knee V2 | Velciraptor DINOsaur Speed",
+  "code_file": "rsna-knee-v2-velciraptor-dinosaur-speed.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "heliosli/rsna-knee-compact-v1",
+    "nartaa/rsna-knee-publication-swa-weights-20261007",
+    "heliosli/rsna-orthofoundation-fold0-epoch7-20261004"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "machine_shape": "NvidiaTeslaT4"
+}

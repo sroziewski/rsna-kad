@@ -1,0 +1,12 @@
+# Preprocessing cache v1 (architecture §2.2). Changing anything here changes params_sha256
+# and forces a rebuild; v2 must replace v1 on disk, never coexist.
+version: v1
+crop_mm: 130.0
+px: 384
+max_slices: 40
+z_target_mm: 3.0
+p_lo: 1.0
+p_hi: 99.0
+max_2d_slices: 60
+geom_min_studies: 30
+geom_min_agreement: 0.95

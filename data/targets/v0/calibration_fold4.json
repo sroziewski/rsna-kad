@@ -1,0 +1,357 @@
+{
+ "version": "v0",
+ "fold": 4,
+ "n_gold_train": 0,
+ "values": {
+  "acl": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.35,
+   "hedged": 0.5,
+   "absent": 0.06,
+   "negated": 0.04
+  },
+  "mcl": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.2,
+   "hedged": 0.5,
+   "absent": 0.06,
+   "negated": 0.04
+  },
+  "med_men": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.25,
+   "hedged": 0.5,
+   "absent": 0.06,
+   "negated": 0.04
+  },
+  "lat_men": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.25,
+   "hedged": 0.5,
+   "absent": 0.06,
+   "negated": 0.04
+  },
+  "med_oa": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.35,
+   "hedged": 0.5,
+   "absent": 0.15,
+   "negated": 0.04
+  },
+  "lat_oa": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.35,
+   "hedged": 0.5,
+   "absent": 0.15,
+   "negated": 0.04
+  },
+  "pf_oa": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.35,
+   "hedged": 0.5,
+   "absent": 0.15,
+   "negated": 0.04
+  },
+  "effusion": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.25,
+   "hedged": 0.5,
+   "absent": 0.06,
+   "negated": 0.04
+  },
+  "synovitis": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.35,
+   "hedged": 0.5,
+   "absent": 0.15,
+   "negated": 0.04
+  },
+  "baker": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.25,
+   "hedged": 0.5,
+   "absent": 0.15,
+   "negated": 0.04
+  },
+  "contusion": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.7,
+   "hedged": 0.5,
+   "absent": 0.15,
+   "negated": 0.04
+  },
+  "fracture": {
+   "affirmed": 0.92,
+   "affirmed_mild": 0.7,
+   "hedged": 0.5,
+   "absent": 0.15,
+   "negated": 0.04
+  }
+ },
+ "counts": {
+  "acl": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "mcl": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "med_men": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "lat_men": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "med_oa": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "lat_oa": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "pf_oa": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "effusion": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "synovitis": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "baker": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "contusion": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "fracture": {
+   "affirmed": [
+    0,
+    0
+   ],
+   "affirmed_mild": [
+    0,
+    0
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    0,
+    0
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  }
+ }
+}

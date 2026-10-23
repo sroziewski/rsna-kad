@@ -1,0 +1,51 @@
+folds_v1 md5 4dc54b74429f07051af2175e7bb35442 rows 4407
+gold ids: gold_ids.txt 58 folds is_gold 58 train.csv 58 all equal: True
+cached train studies 4407
+fold0: reconstructed train=3480 val=880 (gold in val 11) | log says train=3480 val=880 gold=11 | train∩gold=0 train∩fold0=0 | fold0 size=880 gold=11 | oof rows=880 oof==fold0: True oof folds=[np.int64(0)] | targets rows=4349 gold rows in targets=0
+fold1: reconstructed train=3481 val=879 (gold in val 11) | log says train=3481 val=879 gold=11 | train∩gold=0 train∩fold1=0 | fold1 size=879 gold=11 | oof rows=879 oof==fold1: True oof folds=[np.int64(1)] | targets rows=4349 gold rows in targets=0
+fold2: reconstructed train=3478 val=883 (gold in val 12) | log says train=3478 val=883 gold=12 | train∩gold=0 train∩fold2=0 | fold2 size=883 gold=12 | oof rows=883 oof==fold2: True oof folds=[np.int64(2)] | targets rows=4349 gold rows in targets=0
+fold3: reconstructed train=3479 val=882 (gold in val 12) | log says train=3479 val=882 gold=12 | train∩gold=0 train∩fold3=0 | fold3 size=882 gold=12 | oof rows=882 oof==fold3: True oof folds=[np.int64(3)] | targets rows=4349 gold rows in targets=0
+fold4: reconstructed train=3478 val=883 (gold in val 12) | log says train=3478 val=883 gold=12 | train∩gold=0 train∩fold4=0 | fold4 size=883 gold=12 | oof rows=883 oof==fold4: True oof folds=[np.int64(4)] | targets rows=4349 gold rows in targets=0
+targets v0 fold files identical: True rows [4349, 4349, 4349, 4349, 4349]
+calibration_fold0.json n_gold_train=0
+calibration_fold1.json n_gold_train=0
+calibration_fold2.json n_gold_train=0
+calibration_fold3.json n_gold_train=0
+calibration_fold4.json n_gold_train=0
+targets unique values [np.float32(0.04), np.float32(0.06), np.float32(0.15), np.float32(0.2), np.float32(0.25), np.float32(0.35), np.float32(0.7), np.float32(0.92)] weights [np.float32(0.1), np.float32(0.2), np.float32(0.5), np.float32(1.0)]
+target when weight==0: no weight-0 cells
+cells with weight<=0.1: 0.252
+oof columns ok: True rows 4407 unique 4407 dtypes {'float32'} min 0.0059 max 0.9967 nan 0
+oof fold agrees with folds_v1: True
+oof ∩ gold 58 oof == all folds ids True
+metrics.json keys ['folds', 'gold_auc', 'gold_ci95', 'n_gold', 'n_rows', 'n_weak', 'oof_strict_auc', 'oof_weak_auc', 'per_label', 'per_label_gold', 'per_label_strict']
+weak rows 4349
+  acl        n_pos= 541 n_neg=3133 sklearn=0.8758 reported=0.8758
+  mcl        n_pos= 263 n_neg=4028 sklearn=0.7773 reported=0.7910
+  med_men    n_pos=1668 n_neg=2000 sklearn=0.8800 reported=0.8800
+  lat_men    n_pos= 871 n_neg=2923 sklearn=0.7324 reported=0.7324
+  med_oa     n_pos=1083 n_neg=1604 sklearn=0.8569 reported=0.8569
+  lat_oa     n_pos= 772 n_neg=1747 sklearn=0.8201 reported=0.8201
+  pf_oa      n_pos=1238 n_neg=1481 sklearn=0.8250 reported=0.8250
+  effusion   n_pos=1260 n_neg=1708 sklearn=0.8857 reported=0.8857
+  synovitis  n_pos= 352 n_neg=  22 sklearn=0.8374 reported=0.8374
+  baker      n_pos= 585 n_neg= 816 sklearn=0.9178 reported=0.9178
+  contusion  n_pos=1219 n_neg=1866 sklearn=0.8415 reported=0.8415
+  fracture   n_pos= 279 n_neg=2268 sklearn=0.8919 reported=0.8919
+RECOMPUTED oof_weak_auc=0.8452 reported=0.8463 diff=-1.14e-03
+  fold0 weak sklearn=0.8484 fold metrics.json=0.8495 best_epoch=2
+  fold1 weak sklearn=0.8501 fold metrics.json=0.8517 best_epoch=3
+  fold2 weak sklearn=0.8491 fold metrics.json=0.8503 best_epoch=3
+  fold3 weak sklearn=0.8708 fold metrics.json=0.8717 best_epoch=3
+  fold4 weak sklearn=0.8061 fold metrics.json=0.8078 best_epoch=3
+gold rows joined 58
+RECOMPUTED gold_auc=0.8466 reported=0.8466 diff=+0.00e+00; labels with NaN: []
+per-label gold sklearn: {'acl': 0.94, 'mcl': 0.576, 'med_men': 0.898, 'lat_men': 0.733, 'med_oa': 0.941, 'lat_oa': 0.826, 'pf_oa': 0.81, 'effusion': 0.965, 'synovitis': 0.812, 'baker': 0.893, 'contusion': 0.87, 'fracture': 0.897}
+
+(d) best-epoch selection optimism (fold metrics.json history):
+  fold0: weak per epoch [0.7688, 0.8275, 0.8495, 0.8494, 0.8389, 0.8335] best ep 2 | gold [0.695, 0.767, 0.846, 0.835, 0.82, 0.832]
+  fold1: weak per epoch [0.7738, 0.8332, 0.8485, 0.8517, 0.8517, 0.8497] best ep 3 | gold [0.7, 0.797, 0.823, 0.848, 0.841, 0.845]
+  fold2: weak per epoch [0.7786, 0.8198, 0.8419, 0.8503, 0.8479, 0.845] best ep 3 | gold [0.799, 0.866, 0.88, 0.888, 0.867, 0.857]
+  fold3: weak per epoch [0.8004, 0.8473, 0.8679, 0.8717, 0.8688, 0.8646] best ep 3 | gold [0.778, 0.848, 0.852, 0.863, 0.864, 0.865]
+  fold4: weak per epoch [0.7565, 0.78, 0.7928, 0.8078, 0.8035, 0.8002] best ep 3 | gold [0.77, 0.803, 0.876, 0.879, 0.876, 0.861]
+  mean weak best=0.8462 last=0.8386 optimism=+0.0076; gold at best-weak epoch=0.8648 last=0.8522

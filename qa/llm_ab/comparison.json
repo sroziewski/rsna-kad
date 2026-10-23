@@ -1,0 +1,4270 @@
+{
+ "awq_base": {
+  "name": "awq_base",
+  "n_rows": 481,
+  "parse_rate": 1.0,
+  "gold_macro_auc": 0.8495774981422731,
+  "gold_ci95": [
+   0.8203096965994311,
+   0.879587456238141
+  ],
+  "gold_n": 58,
+  "per_label_auc": {
+   "acl": 0.8823529411764706,
+   "mcl": 0.9569160997732427,
+   "med_men": 0.9320913461538461,
+   "lat_men": 0.837888198757764,
+   "med_oa": 0.9038759689922481,
+   "lat_oa": 0.8413926499032882,
+   "pf_oa": 0.8912483912483913,
+   "effusion": 0.8173913043478261,
+   "synovitis": 0.6762246117084827,
+   "baker": 0.9139492753623188,
+   "contusion": 0.7165991902834008,
+   "fracture": 0.825
+  },
+  "per_lang_auc": {
+   "en": {
+    "n": 28,
+    "auc": 0.8620239537721611
+   },
+   "es": {
+    "n": 10,
+    "auc": 0.8726146384479718
+   },
+   "tr": {
+    "n": 6,
+    "auc": 0.7279166666666667
+   }
+  },
+  "counts": {
+   "cells": 5772,
+   "non_absent": 4128,
+   "quote_missing": 141,
+   "quote_fabricated": 25,
+   "quote_empty": 8,
+   "negated_unmentioned": 127,
+   "absent_vs_negated": 260,
+   "subthreshold_negated": 178,
+   "misattributed": 105
+  },
+  "audit_counts": {
+   "cells": 300,
+   "non_absent": 208,
+   "quote_missing": 7,
+   "quote_fabricated": 4,
+   "quote_empty": 2,
+   "negated_unmentioned": 11,
+   "absent_vs_negated": 18,
+   "subthreshold_negated": 6,
+   "misattributed": 4
+  },
+  "per_label_counts": {
+   "acl": {
+    "cells": 481,
+    "non_absent": 448,
+    "quote_missing": 15,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 22,
+    "misattributed": 5
+   },
+   "mcl": {
+    "cells": 481,
+    "non_absent": 430,
+    "quote_missing": 8,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 3,
+    "absent_vs_negated": 4,
+    "subthreshold_negated": 22,
+    "misattributed": 23
+   },
+   "med_men": {
+    "cells": 481,
+    "non_absent": 456,
+    "quote_missing": 18,
+    "quote_fabricated": 2,
+    "quote_empty": 1,
+    "negated_unmentioned": 15,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 23,
+    "misattributed": 2
+   },
+   "lat_men": {
+    "cells": 481,
+    "non_absent": 432,
+    "quote_missing": 19,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 8,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 38,
+    "misattributed": 5
+   },
+   "med_oa": {
+    "cells": 481,
+    "non_absent": 341,
+    "quote_missing": 10,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 7,
+    "absent_vs_negated": 53,
+    "subthreshold_negated": 11,
+    "misattributed": 1
+   },
+   "lat_oa": {
+    "cells": 481,
+    "non_absent": 301,
+    "quote_missing": 17,
+    "quote_fabricated": 2,
+    "quote_empty": 0,
+    "negated_unmentioned": 7,
+    "absent_vs_negated": 61,
+    "subthreshold_negated": 27,
+    "misattributed": 4
+   },
+   "pf_oa": {
+    "cells": 481,
+    "non_absent": 374,
+    "quote_missing": 19,
+    "quote_fabricated": 1,
+    "quote_empty": 0,
+    "negated_unmentioned": 9,
+    "absent_vs_negated": 30,
+    "subthreshold_negated": 8,
+    "misattributed": 6
+   },
+   "effusion": {
+    "cells": 481,
+    "non_absent": 446,
+    "quote_missing": 1,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 5,
+    "misattributed": 1
+   },
+   "synovitis": {
+    "cells": 481,
+    "non_absent": 84,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 3,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 0,
+    "misattributed": 5
+   },
+   "baker": {
+    "cells": 481,
+    "non_absent": 247,
+    "quote_missing": 3,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 37,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 2,
+    "misattributed": 19
+   },
+   "contusion": {
+    "cells": 481,
+    "non_absent": 317,
+    "quote_missing": 10,
+    "quote_fabricated": 6,
+    "quote_empty": 2,
+    "negated_unmentioned": 20,
+    "absent_vs_negated": 38,
+    "subthreshold_negated": 18,
+    "misattributed": 15
+   },
+   "fracture": {
+    "cells": 481,
+    "non_absent": 252,
+    "quote_missing": 21,
+    "quote_fabricated": 11,
+    "quote_empty": 2,
+    "negated_unmentioned": 14,
+    "absent_vs_negated": 72,
+    "subthreshold_negated": 2,
+    "misattributed": 19
+   }
+  },
+  "state_rates": {
+   "acl": {
+    "affirmed": 0.29521829521829523,
+    "hedged": 0.02079002079002079,
+    "negated": 0.6153846153846154,
+    "absent": 0.06860706860706861
+   },
+   "mcl": {
+    "affirmed": 0.20582120582120583,
+    "hedged": 0.010395010395010396,
+    "negated": 0.6777546777546778,
+    "absent": 0.10602910602910603
+   },
+   "med_men": {
+    "affirmed": 0.49272349272349275,
+    "hedged": 0.02702702702702703,
+    "negated": 0.4282744282744283,
+    "absent": 0.05197505197505198
+   },
+   "lat_men": {
+    "affirmed": 0.2661122661122661,
+    "hedged": 0.02702702702702703,
+    "negated": 0.604989604989605,
+    "absent": 0.10187110187110188
+   },
+   "med_oa": {
+    "affirmed": 0.39501039501039503,
+    "hedged": 0.0,
+    "negated": 0.31392931392931395,
+    "absent": 0.2910602910602911
+   },
+   "lat_oa": {
+    "affirmed": 0.2494802494802495,
+    "hedged": 0.002079002079002079,
+    "negated": 0.37422037422037424,
+    "absent": 0.37422037422037424
+   },
+   "pf_oa": {
+    "affirmed": 0.41164241164241167,
+    "hedged": 0.0,
+    "negated": 0.3659043659043659,
+    "absent": 0.22245322245322247
+   },
+   "effusion": {
+    "affirmed": 0.6507276507276507,
+    "hedged": 0.0,
+    "negated": 0.2765072765072765,
+    "absent": 0.07276507276507277
+   },
+   "synovitis": {
+    "affirmed": 0.1600831600831601,
+    "hedged": 0.002079002079002079,
+    "negated": 0.012474012474012475,
+    "absent": 0.8253638253638254
+   },
+   "baker": {
+    "affirmed": 0.2661122661122661,
+    "hedged": 0.002079002079002079,
+    "negated": 0.24532224532224534,
+    "absent": 0.4864864864864865
+   },
+   "contusion": {
+    "affirmed": 0.24532224532224534,
+    "hedged": 0.004158004158004158,
+    "negated": 0.4095634095634096,
+    "absent": 0.340956340956341
+   },
+   "fracture": {
+    "affirmed": 0.06444906444906445,
+    "hedged": 0.016632016632016633,
+    "negated": 0.44282744282744285,
+    "absent": 0.4760914760914761
+   }
+  },
+  "evidence_verbatim_rate": 0.965843023255814,
+  "evidence_mean_ratio": 0.9817608716134052,
+  "audit_flagged_cells": [
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Lateralni i medijalni kolateralni ligamenti urednog signala te se prate u kontinuitetu."
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Ostale prikazane ko\u0161tane, mekotkivne i neurovaskularne strukture uredne su morfologije"
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "fracture",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Ostale prikazane ko\u0161tane, mekotkivne i neurovaskularne strukture uredne su morfologije"
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "pf_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "quote_missing"
+    ],
+    "quote": "The medial & lateral collateral ligaments show intact appearance"
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "49541215",
+    "lang": "bg",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "\u041f\u043e\u043f\u043b\u0438\u0442\u0435\u0430\u043b\u043d\u0430 \u044f\u043c\u043a\u0430 \u2013 \u0431.\u043e."
+   },
+   {
+    "study": "69667666",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "med_men",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Gering mucoide Degeneration des Innenmeniskushinterhornes"
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "acl",
+    "state": "negated",
+    "flags": [
+     "quote_missing"
+    ],
+    "quote": "Kruisbanden intact."
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "Laterale gewrichtspan intact."
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "lat_men",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "Laterale gewrichtspan intact."
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "pf_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "84998462",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35593988",
+    "lang": "nl",
+    "key": "acl",
+    "state": "negated",
+    "flags": [
+     "quote_missing"
+    ],
+    "quote": "Kruisbanden intact."
+   },
+   {
+    "study": "35593988",
+    "lang": "nl",
+    "key": "mcl",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35593988",
+    "lang": "nl",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35593988",
+    "lang": "nl",
+    "key": "pf_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "acl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "subthreshold_negated"
+    ],
+    "quote": "\u0391\u03c0\u03cc \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03c9\u03bd \u00b5\u03b7\u03bd\u03af\u03c3\u03ba\u03c9\u03bd \u03c0\u03b1\u03c1\u03b1\u03c4\u03b7\u03c1\u03b5\u03af\u03c4\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ae \u03b5\u03ba\u03c6\u03cd\u03bb\u03b9\u03c3\u03b7 \u03c7\u03c9\u03c1\u03af\u03c2 \u03c1\u03ae\u03be\u03b7"
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "\u039f \u03b1\u03c1\u03b8\u03c1\u03b9\u03ba\u03cc\u03c2 \u03c7\u03cc\u03bd\u03b4\u03c1\u03bf\u03c2 \u03c3\u03b5 \u03ad\u03c3\u03c9 \u03ba\u03b1\u03b9 \u03ad\u03be\u03c9 \u03b4\u03b9\u03b1\u00b5\u03ad\u03c1\u03b9\u03c3\u00b5\u03b1 \u03ad\u03c7\u03b5\u03b9 \u03b9\u03ba\u03b1\u03bd\u03bf\u03c0\u03bf\u03b9\u03b7\u03c4\u03b9\u03ba\u03ae \u03b1\u03c0\u03b5\u03b9\u03ba\u03cc\u03bd\u03b9\u03c3\u03b7"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Intakter Knorpel"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "effusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   }
+  ],
+  "reports_per_min": 38.44841431154205,
+  "wall_s": 5878.525917053223,
+  "truncated": 78,
+  "model": "Qwen/Qwen3-32B-AWQ",
+  "prompt_rules": "base"
+ },
+ "bf16_base": {
+  "name": "bf16_base",
+  "n_rows": 481,
+  "parse_rate": 1.0,
+  "gold_macro_auc": 0.8469667189682065,
+  "gold_ci95": [
+   0.8143846738023245,
+   0.8776553737065427
+  ],
+  "gold_n": 58,
+  "per_label_auc": {
+   "acl": 0.8768382352941176,
+   "mcl": 0.9444444444444444,
+   "med_men": 0.9200721153846154,
+   "lat_men": 0.8397515527950311,
+   "med_oa": 0.9069767441860465,
+   "lat_oa": 0.8404255319148937,
+   "pf_oa": 0.8835263835263836,
+   "effusion": 0.8173913043478261,
+   "synovitis": 0.6577060931899642,
+   "baker": 0.9021739130434783,
+   "contusion": 0.7860998650472335,
+   "fracture": 0.7881944444444444
+  },
+  "per_lang_auc": {
+   "en": {
+    "n": 28,
+    "auc": 0.8553125572929418
+   },
+   "es": {
+    "n": 10,
+    "auc": 0.8726146384479718
+   },
+   "tr": {
+    "n": 6,
+    "auc": 0.6866666666666668
+   }
+  },
+  "counts": {
+   "cells": 5772,
+   "non_absent": 4177,
+   "quote_missing": 139,
+   "quote_fabricated": 34,
+   "quote_empty": 18,
+   "negated_unmentioned": 135,
+   "absent_vs_negated": 218,
+   "subthreshold_negated": 193,
+   "misattributed": 100
+  },
+  "audit_counts": {
+   "cells": 300,
+   "non_absent": 214,
+   "quote_missing": 7,
+   "quote_fabricated": 4,
+   "quote_empty": 2,
+   "negated_unmentioned": 11,
+   "absent_vs_negated": 14,
+   "subthreshold_negated": 6,
+   "misattributed": 7
+  },
+  "per_label_counts": {
+   "acl": {
+    "cells": 481,
+    "non_absent": 448,
+    "quote_missing": 12,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 25,
+    "misattributed": 5
+   },
+   "mcl": {
+    "cells": 481,
+    "non_absent": 428,
+    "quote_missing": 8,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 4,
+    "absent_vs_negated": 5,
+    "subthreshold_negated": 23,
+    "misattributed": 17
+   },
+   "med_men": {
+    "cells": 481,
+    "non_absent": 456,
+    "quote_missing": 14,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 15,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 27,
+    "misattributed": 2
+   },
+   "lat_men": {
+    "cells": 481,
+    "non_absent": 434,
+    "quote_missing": 17,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 8,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 39,
+    "misattributed": 5
+   },
+   "med_oa": {
+    "cells": 481,
+    "non_absent": 351,
+    "quote_missing": 9,
+    "quote_fabricated": 2,
+    "quote_empty": 2,
+    "negated_unmentioned": 8,
+    "absent_vs_negated": 42,
+    "subthreshold_negated": 12,
+    "misattributed": 2
+   },
+   "lat_oa": {
+    "cells": 481,
+    "non_absent": 310,
+    "quote_missing": 15,
+    "quote_fabricated": 4,
+    "quote_empty": 2,
+    "negated_unmentioned": 10,
+    "absent_vs_negated": 50,
+    "subthreshold_negated": 27,
+    "misattributed": 5
+   },
+   "pf_oa": {
+    "cells": 481,
+    "non_absent": 374,
+    "quote_missing": 13,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 8,
+    "absent_vs_negated": 25,
+    "subthreshold_negated": 5,
+    "misattributed": 4
+   },
+   "effusion": {
+    "cells": 481,
+    "non_absent": 445,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 1,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 4,
+    "misattributed": 0
+   },
+   "synovitis": {
+    "cells": 481,
+    "non_absent": 84,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 3,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 0,
+    "misattributed": 6
+   },
+   "baker": {
+    "cells": 481,
+    "non_absent": 248,
+    "quote_missing": 4,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 36,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 1,
+    "misattributed": 17
+   },
+   "contusion": {
+    "cells": 481,
+    "non_absent": 337,
+    "quote_missing": 21,
+    "quote_fabricated": 12,
+    "quote_empty": 7,
+    "negated_unmentioned": 24,
+    "absent_vs_negated": 32,
+    "subthreshold_negated": 29,
+    "misattributed": 19
+   },
+   "fracture": {
+    "cells": 481,
+    "non_absent": 262,
+    "quote_missing": 26,
+    "quote_fabricated": 12,
+    "quote_empty": 3,
+    "negated_unmentioned": 16,
+    "absent_vs_negated": 62,
+    "subthreshold_negated": 1,
+    "misattributed": 18
+   }
+  },
+  "state_rates": {
+   "acl": {
+    "affirmed": 0.2910602910602911,
+    "hedged": 0.016632016632016633,
+    "negated": 0.6237006237006237,
+    "absent": 0.06860706860706861
+   },
+   "mcl": {
+    "affirmed": 0.1995841995841996,
+    "hedged": 0.006237006237006237,
+    "negated": 0.683991683991684,
+    "absent": 0.1101871101871102
+   },
+   "med_men": {
+    "affirmed": 0.49064449064449067,
+    "hedged": 0.018711018711018712,
+    "negated": 0.4386694386694387,
+    "absent": 0.05197505197505198
+   },
+   "lat_men": {
+    "affirmed": 0.2661122661122661,
+    "hedged": 0.018711018711018712,
+    "negated": 0.6174636174636174,
+    "absent": 0.09771309771309772
+   },
+   "med_oa": {
+    "affirmed": 0.3887733887733888,
+    "hedged": 0.0,
+    "negated": 0.340956340956341,
+    "absent": 0.2702702702702703
+   },
+   "lat_oa": {
+    "affirmed": 0.23700623700623702,
+    "hedged": 0.002079002079002079,
+    "negated": 0.40540540540540543,
+    "absent": 0.35550935550935553
+   },
+   "pf_oa": {
+    "affirmed": 0.41372141372141374,
+    "hedged": 0.0,
+    "negated": 0.36382536382536385,
+    "absent": 0.22245322245322247
+   },
+   "effusion": {
+    "affirmed": 0.6548856548856549,
+    "hedged": 0.0,
+    "negated": 0.2702702702702703,
+    "absent": 0.07484407484407485
+   },
+   "synovitis": {
+    "affirmed": 0.1600831600831601,
+    "hedged": 0.002079002079002079,
+    "negated": 0.012474012474012475,
+    "absent": 0.8253638253638254
+   },
+   "baker": {
+    "affirmed": 0.27442827442827444,
+    "hedged": 0.0,
+    "negated": 0.24116424116424118,
+    "absent": 0.48440748440748443
+   },
+   "contusion": {
+    "affirmed": 0.24324324324324326,
+    "hedged": 0.0,
+    "negated": 0.4573804573804574,
+    "absent": 0.2993762993762994
+   },
+   "fracture": {
+    "affirmed": 0.06444906444906445,
+    "hedged": 0.014553014553014554,
+    "negated": 0.4656964656964657,
+    "absent": 0.4553014553014553
+   }
+  },
+  "evidence_verbatim_rate": 0.966722528130237,
+  "evidence_mean_ratio": 0.9817887063043343,
+  "audit_flagged_cells": [
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Lateralni i medijalni kolateralni ligamenti urednog signala te se prate u kontinuitetu."
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Ostale prikazane ko\u0161tane, mekotkivne i neurovaskularne strukture uredne su morfologije"
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "fracture",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Ostale prikazane ko\u0161tane, mekotkivne i neurovaskularne strukture uredne su morfologije"
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "pf_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Aucune."
+   },
+   {
+    "study": "65160316",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Patellar kemik medial d\u00fczeyde subkondral hafif kemik ili\u011fi \u00f6demi mevcuttur."
+   },
+   {
+    "study": "65160316",
+    "lang": "tr",
+    "key": "fracture",
+    "state": "negated",
+    "flags": [
+     "misattributed"
+    ],
+    "quote": "Distal kuadriseps ve patellar tendonlar normaldir."
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "misattributed"
+    ],
+    "quote": "Medyal ve lateral menisk\u00fcs normal"
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "quote_missing"
+    ],
+    "quote": "The medial & lateral collateral ligaments show intact appearance"
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "49541215",
+    "lang": "bg",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "\u041f\u043e\u043f\u043b\u0438\u0442\u0435\u0430\u043b\u043d\u0430 \u044f\u043c\u043a\u0430 \u2013 \u0431.\u043e."
+   },
+   {
+    "study": "69667666",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "med_men",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Gering mucoide Degeneration des Innenmeniskushinterhornes"
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "Kruisbanden en laterale gewrichtspan intact."
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "lat_men",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "Kruisbanden en laterale gewrichtspan intact."
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "pf_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "84998462",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "acl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "subthreshold_negated"
+    ],
+    "quote": "\u0391\u03c0\u03cc \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03c9\u03bd \u00b5\u03b7\u03bd\u03af\u03c3\u03ba\u03c9\u03bd \u03c0\u03b1\u03c1\u03b1\u03c4\u03b7\u03c1\u03b5\u03af\u03c4\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ae \u03b5\u03ba\u03c6\u03cd\u03bb\u03b9\u03c3\u03b7 \u03c7\u03c9\u03c1\u03af\u03c2 \u03c1\u03ae\u03be\u03b7"
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "med_men",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Laterales Kompartiment: Regelrechtes Knochenmarksignal. Intakter Knorpel"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "synovitis",
+    "state": "affirmed",
+    "flags": [
+     "misattributed"
+    ],
+    "quote": "Geringer Gelenkerguss mit verdickter Synovia"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "effusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "13529091",
+    "lang": "el",
+    "key": "mcl",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "13529091",
+    "lang": "el",
+    "key": "med_oa",
+    "state": "affirmed",
+    "flags": [
+     "quote_missing"
+    ],
+    "quote": "\u03c7\u03cc\u03bd\u03b4\u03c1\u03b9\u03bd\u03b5\u03c2 \u03b2\u03bb\u03ac\u03b2\u03b5\u03c2 \u03c4\u03bf\u03c5 \u00b5\u03b7\u03c1\u03b9\u03b1\u03af\u03bf\u03c5 \u03ba\u03bf\u03bd\u03b4\u03cd\u03bb\u03c5 (\u03c9\u03c2 ICRS 3 \u03b5\u03c3\u03c4\u03b9\u03b1\u03ba\u03ac) \u03ba\u03b1\u03b9 \u03b5\u03c0\u03b9\u03c7\u03b5\u03af\u03bb\u03b9\u03b1 \u03bf\u03c3\u03c4\u03b5\u03cc\u03c6\u03c5\u03c4\u03b1"
+   },
+   {
+    "study": "13529091",
+    "lang": "el",
+    "key": "pf_oa",
+    "state": "affirmed",
+    "flags": [
+     "quote_missing"
+    ],
+    "quote": "\u03c7\u03cc\u03bd\u03b4\u03c1\u03b9\u03bd\u03b5\u03c2 \u03b2\u03bb\u03ac\u03b2\u03b5\u03c2 \u03c4\u03b7\u03c2 \u03b5\u03c0\u03b9\u03b3\u03bf\u03bd\u03b1\u03c4\u03af\u03b4\u03b1\u03c2 (ICRS 3)"
+   }
+  ],
+  "reports_per_min": 33.54691625396359,
+  "wall_s": 860.2877171039581,
+  "truncated": 0,
+  "model": "Qwen/Qwen3-32B",
+  "prompt_rules": "base",
+  "agreement_vs_baseline": {
+   "n_ids": 481,
+   "cell_agreement": 0.9615384615384616,
+   "per_label": {
+    "acl": 0.9854469854469855,
+    "mcl": 0.972972972972973,
+    "med_men": 0.9792099792099792,
+    "lat_men": 0.9688149688149689,
+    "med_oa": 0.9438669438669439,
+    "lat_oa": 0.9334719334719335,
+    "pf_oa": 0.9563409563409564,
+    "effusion": 0.9896049896049897,
+    "synovitis": 0.9958419958419958,
+    "baker": 0.9916839916839917,
+    "contusion": 0.9168399168399168,
+    "fracture": 0.9043659043659044
+   },
+   "changes": {
+    "absent->negated": 101,
+    "negated->absent": 43,
+    "affirmed->negated": 25,
+    "negated->affirmed": 14,
+    "affirmed->absent": 13,
+    "hedged->affirmed": 10,
+    "hedged->negated": 6,
+    "absent->affirmed": 6,
+    "hedged->absent": 2,
+    "affirmed->hedged": 1,
+    "negated->hedged": 1
+   }
+  },
+  "gold_head_to_head": {
+   "n_disagreeing_gold_cells": 30,
+   "n_gold_cells": 696,
+   "mean_abs_err_baseline": 0.34199999999999997,
+   "mean_abs_err_table": 0.2773333333333333,
+   "wins_baseline": 13,
+   "wins_table": 17,
+   "per_label_wins": {
+    "acl": {
+     "baseline": 1,
+     "table": 0
+    },
+    "baker": {
+     "baseline": 1,
+     "table": 0
+    },
+    "contusion": {
+     "baseline": 1,
+     "table": 8
+    },
+    "fracture": {
+     "baseline": 4,
+     "table": 2
+    },
+    "lat_men": {
+     "baseline": 0,
+     "table": 2
+    },
+    "lat_oa": {
+     "baseline": 1,
+     "table": 3
+    },
+    "mcl": {
+     "baseline": 1,
+     "table": 0
+    },
+    "med_oa": {
+     "baseline": 0,
+     "table": 2
+    },
+    "pf_oa": {
+     "baseline": 3,
+     "table": 0
+    },
+    "synovitis": {
+     "baseline": 1,
+     "table": 0
+    }
+   }
+  }
+ },
+ "fp8_base": {
+  "name": "fp8_base",
+  "n_rows": 481,
+  "parse_rate": 1.0,
+  "gold_macro_auc": 0.8454051991023257,
+  "gold_ci95": [
+   0.8125855900654664,
+   0.8763463078310968
+  ],
+  "gold_n": 58,
+  "per_label_auc": {
+   "acl": 0.8768382352941176,
+   "mcl": 0.9444444444444444,
+   "med_men": 0.9200721153846154,
+   "lat_men": 0.824223602484472,
+   "med_oa": 0.8775193798449612,
+   "lat_oa": 0.8326885880077369,
+   "pf_oa": 0.8758043758043758,
+   "effusion": 0.8173913043478261,
+   "synovitis": 0.6577060931899642,
+   "baker": 0.9021739130434783,
+   "contusion": 0.7847503373819164,
+   "fracture": 0.83125
+  },
+  "per_lang_auc": {
+   "en": {
+    "n": 28,
+    "auc": 0.8518129093276952
+   },
+   "es": {
+    "n": 10,
+    "auc": 0.8726146384479718
+   },
+   "tr": {
+    "n": 6,
+    "auc": 0.6866666666666668
+   }
+  },
+  "counts": {
+   "cells": 5772,
+   "non_absent": 4121,
+   "quote_missing": 130,
+   "quote_fabricated": 31,
+   "quote_empty": 16,
+   "negated_unmentioned": 126,
+   "absent_vs_negated": 248,
+   "subthreshold_negated": 188,
+   "misattributed": 88
+  },
+  "audit_counts": {
+   "cells": 300,
+   "non_absent": 211,
+   "quote_missing": 6,
+   "quote_fabricated": 5,
+   "quote_empty": 3,
+   "negated_unmentioned": 11,
+   "absent_vs_negated": 15,
+   "subthreshold_negated": 7,
+   "misattributed": 5
+  },
+  "per_label_counts": {
+   "acl": {
+    "cells": 481,
+    "non_absent": 447,
+    "quote_missing": 12,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 23,
+    "misattributed": 5
+   },
+   "mcl": {
+    "cells": 481,
+    "non_absent": 426,
+    "quote_missing": 8,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 4,
+    "absent_vs_negated": 6,
+    "subthreshold_negated": 23,
+    "misattributed": 17
+   },
+   "med_men": {
+    "cells": 481,
+    "non_absent": 454,
+    "quote_missing": 13,
+    "quote_fabricated": 2,
+    "quote_empty": 1,
+    "negated_unmentioned": 14,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 25,
+    "misattributed": 2
+   },
+   "lat_men": {
+    "cells": 481,
+    "non_absent": 431,
+    "quote_missing": 16,
+    "quote_fabricated": 2,
+    "quote_empty": 2,
+    "negated_unmentioned": 7,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 40,
+    "misattributed": 3
+   },
+   "med_oa": {
+    "cells": 481,
+    "non_absent": 338,
+    "quote_missing": 8,
+    "quote_fabricated": 2,
+    "quote_empty": 2,
+    "negated_unmentioned": 8,
+    "absent_vs_negated": 54,
+    "subthreshold_negated": 13,
+    "misattributed": 2
+   },
+   "lat_oa": {
+    "cells": 481,
+    "non_absent": 293,
+    "quote_missing": 12,
+    "quote_fabricated": 2,
+    "quote_empty": 1,
+    "negated_unmentioned": 8,
+    "absent_vs_negated": 60,
+    "subthreshold_negated": 26,
+    "misattributed": 3
+   },
+   "pf_oa": {
+    "cells": 481,
+    "non_absent": 370,
+    "quote_missing": 14,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 8,
+    "absent_vs_negated": 28,
+    "subthreshold_negated": 5,
+    "misattributed": 4
+   },
+   "effusion": {
+    "cells": 481,
+    "non_absent": 445,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 1,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 4,
+    "misattributed": 0
+   },
+   "synovitis": {
+    "cells": 481,
+    "non_absent": 85,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 3,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 0,
+    "misattributed": 6
+   },
+   "baker": {
+    "cells": 481,
+    "non_absent": 246,
+    "quote_missing": 4,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 36,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 1,
+    "misattributed": 17
+   },
+   "contusion": {
+    "cells": 481,
+    "non_absent": 328,
+    "quote_missing": 20,
+    "quote_fabricated": 11,
+    "quote_empty": 6,
+    "negated_unmentioned": 21,
+    "absent_vs_negated": 35,
+    "subthreshold_negated": 27,
+    "misattributed": 14
+   },
+   "fracture": {
+    "cells": 481,
+    "non_absent": 258,
+    "quote_missing": 23,
+    "quote_fabricated": 10,
+    "quote_empty": 2,
+    "negated_unmentioned": 14,
+    "absent_vs_negated": 62,
+    "subthreshold_negated": 1,
+    "misattributed": 15
+   }
+  },
+  "state_rates": {
+   "acl": {
+    "affirmed": 0.29313929313929316,
+    "hedged": 0.018711018711018712,
+    "negated": 0.6174636174636174,
+    "absent": 0.07068607068607069
+   },
+   "mcl": {
+    "affirmed": 0.1995841995841996,
+    "hedged": 0.006237006237006237,
+    "negated": 0.6798336798336798,
+    "absent": 0.11434511434511435
+   },
+   "med_men": {
+    "affirmed": 0.49064449064449067,
+    "hedged": 0.018711018711018712,
+    "negated": 0.43451143451143454,
+    "absent": 0.056133056133056136
+   },
+   "lat_men": {
+    "affirmed": 0.2598752598752599,
+    "hedged": 0.02079002079002079,
+    "negated": 0.6153846153846154,
+    "absent": 0.10395010395010396
+   },
+   "med_oa": {
+    "affirmed": 0.3908523908523909,
+    "hedged": 0.0,
+    "negated": 0.31185031185031187,
+    "absent": 0.2972972972972973
+   },
+   "lat_oa": {
+    "affirmed": 0.23700623700623702,
+    "hedged": 0.002079002079002079,
+    "negated": 0.3700623700623701,
+    "absent": 0.3908523908523909
+   },
+   "pf_oa": {
+    "affirmed": 0.4158004158004158,
+    "hedged": 0.0,
+    "negated": 0.35343035343035345,
+    "absent": 0.23076923076923078
+   },
+   "effusion": {
+    "affirmed": 0.6528066528066528,
+    "hedged": 0.0,
+    "negated": 0.27234927234927236,
+    "absent": 0.07484407484407485
+   },
+   "synovitis": {
+    "affirmed": 0.16216216216216217,
+    "hedged": 0.002079002079002079,
+    "negated": 0.012474012474012475,
+    "absent": 0.8232848232848233
+   },
+   "baker": {
+    "affirmed": 0.2702702702702703,
+    "hedged": 0.0,
+    "negated": 0.24116424116424118,
+    "absent": 0.4885654885654886
+   },
+   "contusion": {
+    "affirmed": 0.24116424116424118,
+    "hedged": 0.0,
+    "negated": 0.4407484407484408,
+    "absent": 0.3180873180873181
+   },
+   "fracture": {
+    "affirmed": 0.06652806652806653,
+    "hedged": 0.016632016632016633,
+    "negated": 0.45322245322245325,
+    "absent": 0.46361746361746364
+   }
+  },
+  "evidence_verbatim_rate": 0.9684542586750788,
+  "evidence_mean_ratio": 0.9829072399792874,
+  "audit_flagged_cells": [
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Lateralni i medijalni kolateralni ligamenti urednog signala te se prate u kontinuitetu."
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Ostale prikazane ko\u0161tane, mekotkivne i neurovaskularne strukture uredne su morfologije"
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "fracture",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Ostale prikazane ko\u0161tane, mekotkivne i neurovaskularne strukture uredne su morfologije"
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "pf_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "65160316",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Patellar kemik medial d\u00fczeyde subkondral hafif kemik ili\u011fi \u00f6demi mevcuttur."
+   },
+   {
+    "study": "65160316",
+    "lang": "tr",
+    "key": "fracture",
+    "state": "negated",
+    "flags": [
+     "misattributed"
+    ],
+    "quote": "Distal kuadriseps ve patellar tendonlar normaldir."
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "misattributed"
+    ],
+    "quote": "Medyal ve lateral menisk\u00fcs normal"
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "quote_missing"
+    ],
+    "quote": "The medial & lateral collateral ligaments show intact appearance"
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "49541215",
+    "lang": "bg",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "\u041f\u043e\u043f\u043b\u0438\u0442\u0435\u0430\u043b\u043d\u0430 \u044f\u043c\u043a\u0430 \u2013 \u0431.\u043e."
+   },
+   {
+    "study": "69667666",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "med_men",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Gering mucoide Degeneration des Innenmeniskushinterhornes"
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Keine wesentliche Chondropathie im lateralen femorotibialen Kompartiment"
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "Kruisbanden en laterale gewrichtspan intact."
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "lat_men",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "84998462",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "acl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "subthreshold_negated"
+    ],
+    "quote": "\u0391\u03c0\u03cc \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03c9\u03bd \u00b5\u03b7\u03bd\u03af\u03c3\u03ba\u03c9\u03bd \u03c0\u03b1\u03c1\u03b1\u03c4\u03b7\u03c1\u03b5\u03af\u03c4\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ae \u03b5\u03ba\u03c6\u03cd\u03bb\u03b9\u03c3\u03b7 \u03c7\u03c9\u03c1\u03af\u03c2 \u03c1\u03ae\u03be\u03b7"
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "med_men",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Laterales Kompartiment: Regelrechtes Knochenmarksignal. Intakter Knorpel"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "effusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "13529091",
+    "lang": "el",
+    "key": "mcl",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   }
+  ],
+  "reports_per_min": 26.547076829659062,
+  "wall_s": 1087.1253428459167,
+  "truncated": 0,
+  "model": "Qwen/Qwen3-32B-FP8",
+  "prompt_rules": "base",
+  "agreement_vs_baseline": {
+   "n_ids": 481,
+   "cell_agreement": 0.9606722106722106,
+   "per_label": {
+    "acl": 0.9833679833679834,
+    "mcl": 0.9688149688149689,
+    "med_men": 0.9792099792099792,
+    "lat_men": 0.9708939708939709,
+    "med_oa": 0.9376299376299376,
+    "lat_oa": 0.9313929313929314,
+    "pf_oa": 0.9459459459459459,
+    "effusion": 0.9916839916839917,
+    "synovitis": 0.9937629937629938,
+    "baker": 0.9875259875259875,
+    "contusion": 0.918918918918919,
+    "fracture": 0.918918918918919
+   },
+   "changes": {
+    "absent->negated": 72,
+    "negated->absent": 70,
+    "affirmed->negated": 29,
+    "negated->affirmed": 17,
+    "affirmed->absent": 15,
+    "hedged->affirmed": 10,
+    "absent->affirmed": 7,
+    "hedged->negated": 4,
+    "affirmed->hedged": 1,
+    "hedged->absent": 1,
+    "negated->hedged": 1
+   }
+  },
+  "gold_head_to_head": {
+   "n_disagreeing_gold_cells": 34,
+   "n_gold_cells": 696,
+   "mean_abs_err_baseline": 0.27294117647058824,
+   "mean_abs_err_table": 0.33176470588235296,
+   "wins_baseline": 21,
+   "wins_table": 13,
+   "per_label_wins": {
+    "acl": {
+     "baseline": 1,
+     "table": 0
+    },
+    "baker": {
+     "baseline": 1,
+     "table": 0
+    },
+    "contusion": {
+     "baseline": 1,
+     "table": 7
+    },
+    "fracture": {
+     "baseline": 3,
+     "table": 2
+    },
+    "lat_oa": {
+     "baseline": 4,
+     "table": 2
+    },
+    "mcl": {
+     "baseline": 2,
+     "table": 0
+    },
+    "med_oa": {
+     "baseline": 4,
+     "table": 2
+    },
+    "pf_oa": {
+     "baseline": 4,
+     "table": 0
+    },
+    "synovitis": {
+     "baseline": 1,
+     "table": 0
+    }
+   }
+  }
+ },
+ "awq_strict": {
+  "name": "awq_strict",
+  "n_rows": 481,
+  "parse_rate": 1.0,
+  "gold_macro_auc": 0.8483408895220781,
+  "gold_ci95": [
+   0.819203163284444,
+   0.8774970892353721
+  ],
+  "gold_n": 58,
+  "per_label_auc": {
+   "acl": 0.8676470588235294,
+   "mcl": 0.9569160997732427,
+   "med_men": 0.9356971153846154,
+   "lat_men": 0.8260869565217391,
+   "med_oa": 0.8883720930232558,
+   "lat_oa": 0.8336557059961315,
+   "pf_oa": 0.8777348777348777,
+   "effusion": 0.8074534161490683,
+   "synovitis": 0.6762246117084827,
+   "baker": 0.9139492753623188,
+   "contusion": 0.7678812415654521,
+   "fracture": 0.8284722222222223
+  },
+  "per_lang_auc": {
+   "en": {
+    "n": 28,
+    "auc": 0.8538819438116114
+   },
+   "es": {
+    "n": 10,
+    "auc": 0.8591887125220459
+   },
+   "tr": {
+    "n": 6,
+    "auc": 0.7529166666666667
+   }
+  },
+  "counts": {
+   "cells": 5772,
+   "non_absent": 3951,
+   "quote_missing": 90,
+   "quote_fabricated": 21,
+   "quote_empty": 4,
+   "negated_unmentioned": 104,
+   "absent_vs_negated": 368,
+   "subthreshold_negated": 189,
+   "misattributed": 88
+  },
+  "audit_counts": {
+   "cells": 300,
+   "non_absent": 198,
+   "quote_missing": 2,
+   "quote_fabricated": 1,
+   "quote_empty": 0,
+   "negated_unmentioned": 7,
+   "absent_vs_negated": 21,
+   "subthreshold_negated": 6,
+   "misattributed": 2
+  },
+  "per_label_counts": {
+   "acl": {
+    "cells": 481,
+    "non_absent": 449,
+    "quote_missing": 7,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 22,
+    "misattributed": 5
+   },
+   "mcl": {
+    "cells": 481,
+    "non_absent": 428,
+    "quote_missing": 8,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 4,
+    "subthreshold_negated": 23,
+    "misattributed": 12
+   },
+   "med_men": {
+    "cells": 481,
+    "non_absent": 454,
+    "quote_missing": 8,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 12,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 25,
+    "misattributed": 3
+   },
+   "lat_men": {
+    "cells": 481,
+    "non_absent": 430,
+    "quote_missing": 11,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 5,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 38,
+    "misattributed": 7
+   },
+   "med_oa": {
+    "cells": 481,
+    "non_absent": 303,
+    "quote_missing": 4,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 5,
+    "absent_vs_negated": 85,
+    "subthreshold_negated": 11,
+    "misattributed": 1
+   },
+   "lat_oa": {
+    "cells": 481,
+    "non_absent": 248,
+    "quote_missing": 5,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 6,
+    "absent_vs_negated": 97,
+    "subthreshold_negated": 27,
+    "misattributed": 5
+   },
+   "pf_oa": {
+    "cells": 481,
+    "non_absent": 327,
+    "quote_missing": 11,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 6,
+    "absent_vs_negated": 61,
+    "subthreshold_negated": 7,
+    "misattributed": 3
+   },
+   "effusion": {
+    "cells": 481,
+    "non_absent": 443,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 1,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 5,
+    "misattributed": 1
+   },
+   "synovitis": {
+    "cells": 481,
+    "non_absent": 86,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 0,
+    "misattributed": 5
+   },
+   "baker": {
+    "cells": 481,
+    "non_absent": 244,
+    "quote_missing": 1,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 35,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 1,
+    "misattributed": 17
+   },
+   "contusion": {
+    "cells": 481,
+    "non_absent": 302,
+    "quote_missing": 16,
+    "quote_fabricated": 8,
+    "quote_empty": 1,
+    "negated_unmentioned": 17,
+    "absent_vs_negated": 41,
+    "subthreshold_negated": 29,
+    "misattributed": 10
+   },
+   "fracture": {
+    "cells": 481,
+    "non_absent": 237,
+    "quote_missing": 19,
+    "quote_fabricated": 12,
+    "quote_empty": 2,
+    "negated_unmentioned": 11,
+    "absent_vs_negated": 80,
+    "subthreshold_negated": 1,
+    "misattributed": 19
+   }
+  },
+  "state_rates": {
+   "acl": {
+    "affirmed": 0.30561330561330563,
+    "hedged": 0.012474012474012475,
+    "negated": 0.6153846153846154,
+    "absent": 0.06652806652806653
+   },
+   "mcl": {
+    "affirmed": 0.20374220374220375,
+    "hedged": 0.006237006237006237,
+    "negated": 0.6798336798336798,
+    "absent": 0.1101871101871102
+   },
+   "med_men": {
+    "affirmed": 0.4885654885654886,
+    "hedged": 0.02702702702702703,
+    "negated": 0.4282744282744283,
+    "absent": 0.056133056133056136
+   },
+   "lat_men": {
+    "affirmed": 0.2661122661122661,
+    "hedged": 0.02494802494802495,
+    "negated": 0.6029106029106029,
+    "absent": 0.10602910602910603
+   },
+   "med_oa": {
+    "affirmed": 0.3991683991683992,
+    "hedged": 0.0,
+    "negated": 0.23076923076923078,
+    "absent": 0.3700623700623701
+   },
+   "lat_oa": {
+    "affirmed": 0.2182952182952183,
+    "hedged": 0.002079002079002079,
+    "negated": 0.29521829521829523,
+    "absent": 0.48440748440748443
+   },
+   "pf_oa": {
+    "affirmed": 0.40124740124740127,
+    "hedged": 0.0,
+    "negated": 0.2785862785862786,
+    "absent": 0.3201663201663202
+   },
+   "effusion": {
+    "affirmed": 0.6465696465696466,
+    "hedged": 0.0,
+    "negated": 0.27442827442827444,
+    "absent": 0.079002079002079
+   },
+   "synovitis": {
+    "affirmed": 0.16632016632016633,
+    "hedged": 0.002079002079002079,
+    "negated": 0.010395010395010396,
+    "absent": 0.8212058212058212
+   },
+   "baker": {
+    "affirmed": 0.2681912681912682,
+    "hedged": 0.0,
+    "negated": 0.2390852390852391,
+    "absent": 0.49272349272349275
+   },
+   "contusion": {
+    "affirmed": 0.20582120582120583,
+    "hedged": 0.0,
+    "negated": 0.42203742203742206,
+    "absent": 0.37214137214137216
+   },
+   "fracture": {
+    "affirmed": 0.07068607068607069,
+    "hedged": 0.006237006237006237,
+    "negated": 0.4158004158004158,
+    "absent": 0.5072765072765073
+   }
+  },
+  "evidence_verbatim_rate": 0.9772209567198178,
+  "evidence_mean_ratio": 0.9873868360777515,
+  "audit_flagged_cells": [
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Lateralni i medijalni kolateralni ligamenti urednog signala te se prate u kontinuitetu."
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "negated_unmentioned"
+    ],
+    "quote": "Uredan intenzitet signala svih ko\u0161tanih struktura"
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "fracture",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Uredna morfologija i intenziteti signala ko\u0161tanih struktura"
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "pf_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "49541215",
+    "lang": "bg",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "\u041f\u043e\u043f\u043b\u0438\u0442\u0435\u0430\u043b\u043d\u0430 \u044f\u043c\u043a\u0430 \u2013 \u0431.\u043e."
+   },
+   {
+    "study": "69667666",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "69667666",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "med_men",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Gering mucoide Degeneration des Innenmeniskushinterhornes"
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Keine wesentliche Chondropathie im lateralen femorotibialen Kompartiment"
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "pf_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "84998462",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "77151905",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "77151905",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "77151905",
+    "lang": "en",
+    "key": "pf_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "acl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "subthreshold_negated"
+    ],
+    "quote": "\u0391\u03c0\u03cc \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03c9\u03bd \u00b5\u03b7\u03bd\u03af\u03c3\u03ba\u03c9\u03bd \u03c0\u03b1\u03c1\u03b1\u03c4\u03b7\u03c1\u03b5\u03af\u03c4\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ae \u03b5\u03ba\u03c6\u03cd\u03bb\u03b9\u03c3\u03b7 \u03c7\u03c9\u03c1\u03af\u03c2 \u03c1\u03ae\u03be\u03b7"
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Intakter Knorpel"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "effusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "13529091",
+    "lang": "el",
+    "key": "mcl",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   }
+  ],
+  "reports_per_min": 31.445982238193746,
+  "wall_s": 917.7643039226532,
+  "truncated": 0,
+  "model": "Qwen/Qwen3-32B-AWQ",
+  "prompt_rules": "strict",
+  "agreement_vs_baseline": {
+   "n_ids": 481,
+   "cell_agreement": 0.9447331947331947,
+   "per_label": {
+    "acl": 0.9875259875259875,
+    "mcl": 0.9771309771309772,
+    "med_men": 0.975051975051975,
+    "lat_men": 0.9688149688149689,
+    "med_oa": 0.9022869022869023,
+    "lat_oa": 0.8711018711018711,
+    "pf_oa": 0.8898128898128899,
+    "effusion": 0.9896049896049897,
+    "synovitis": 0.9875259875259875,
+    "baker": 0.9854469854469855,
+    "contusion": 0.896049896049896,
+    "fracture": 0.9064449064449065
+   },
+   "changes": {
+    "negated->absent": 181,
+    "affirmed->absent": 34,
+    "absent->negated": 33,
+    "affirmed->negated": 29,
+    "hedged->affirmed": 15,
+    "negated->affirmed": 14,
+    "absent->affirmed": 7,
+    "affirmed->hedged": 3,
+    "hedged->absent": 2,
+    "hedged->negated": 1
+   }
+  },
+  "gold_head_to_head": {
+   "n_disagreeing_gold_cells": 57,
+   "n_gold_cells": 696,
+   "mean_abs_err_baseline": 0.2496491228070176,
+   "mean_abs_err_table": 0.3191228070175438,
+   "wins_baseline": 37,
+   "wins_table": 20,
+   "per_label_wins": {
+    "acl": {
+     "baseline": 1,
+     "table": 1
+    },
+    "contusion": {
+     "baseline": 1,
+     "table": 7
+    },
+    "fracture": {
+     "baseline": 4,
+     "table": 3
+    },
+    "lat_men": {
+     "baseline": 2,
+     "table": 1
+    },
+    "lat_oa": {
+     "baseline": 9,
+     "table": 3
+    },
+    "med_men": {
+     "baseline": 0,
+     "table": 2
+    },
+    "med_oa": {
+     "baseline": 11,
+     "table": 0
+    },
+    "pf_oa": {
+     "baseline": 8,
+     "table": 2
+    },
+    "synovitis": {
+     "baseline": 1,
+     "table": 1
+    }
+   }
+  }
+ },
+ "awq_strict2": {
+  "name": "awq_strict2",
+  "n_rows": 481,
+  "parse_rate": 1.0,
+  "gold_macro_auc": 0.8458546673564427,
+  "gold_ci95": [
+   0.8148723875306301,
+   0.8757395352963424
+  ],
+  "gold_n": 58,
+  "per_label_auc": {
+   "acl": 0.8823529411764706,
+   "mcl": 0.9569160997732427,
+   "med_men": 0.9356971153846154,
+   "lat_men": 0.8260869565217391,
+   "med_oa": 0.8906976744186047,
+   "lat_oa": 0.8317214700193424,
+   "pf_oa": 0.8178893178893178,
+   "effusion": 0.8074534161490683,
+   "synovitis": 0.6947431302270012,
+   "baker": 0.9130434782608695,
+   "contusion": 0.7651821862348178,
+   "fracture": 0.8284722222222223
+  },
+  "per_lang_auc": {
+   "en": {
+    "n": 28,
+    "auc": 0.8554510468316073
+   },
+   "es": {
+    "n": 10,
+    "auc": 0.8476146384479718
+   },
+   "tr": {
+    "n": 6,
+    "auc": 0.7529166666666667
+   }
+  },
+  "counts": {
+   "cells": 5772,
+   "non_absent": 4029,
+   "quote_missing": 94,
+   "quote_fabricated": 32,
+   "quote_empty": 12,
+   "negated_unmentioned": 104,
+   "absent_vs_negated": 295,
+   "subthreshold_negated": 184,
+   "misattributed": 86
+  },
+  "audit_counts": {
+   "cells": 300,
+   "non_absent": 204,
+   "quote_missing": 2,
+   "quote_fabricated": 2,
+   "quote_empty": 0,
+   "negated_unmentioned": 9,
+   "absent_vs_negated": 17,
+   "subthreshold_negated": 6,
+   "misattributed": 4
+  },
+  "per_label_counts": {
+   "acl": {
+    "cells": 481,
+    "non_absent": 449,
+    "quote_missing": 7,
+    "quote_fabricated": 2,
+    "quote_empty": 1,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 22,
+    "misattributed": 5
+   },
+   "mcl": {
+    "cells": 481,
+    "non_absent": 428,
+    "quote_missing": 8,
+    "quote_fabricated": 2,
+    "quote_empty": 1,
+    "negated_unmentioned": 3,
+    "absent_vs_negated": 5,
+    "subthreshold_negated": 24,
+    "misattributed": 12
+   },
+   "med_men": {
+    "cells": 481,
+    "non_absent": 454,
+    "quote_missing": 10,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 13,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 25,
+    "misattributed": 2
+   },
+   "lat_men": {
+    "cells": 481,
+    "non_absent": 430,
+    "quote_missing": 10,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 6,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 37,
+    "misattributed": 7
+   },
+   "med_oa": {
+    "cells": 481,
+    "non_absent": 327,
+    "quote_missing": 4,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 5,
+    "absent_vs_negated": 60,
+    "subthreshold_negated": 11,
+    "misattributed": 0
+   },
+   "lat_oa": {
+    "cells": 481,
+    "non_absent": 284,
+    "quote_missing": 6,
+    "quote_fabricated": 2,
+    "quote_empty": 1,
+    "negated_unmentioned": 7,
+    "absent_vs_negated": 65,
+    "subthreshold_negated": 27,
+    "misattributed": 3
+   },
+   "pf_oa": {
+    "cells": 481,
+    "non_absent": 351,
+    "quote_missing": 12,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 7,
+    "absent_vs_negated": 42,
+    "subthreshold_negated": 9,
+    "misattributed": 3
+   },
+   "effusion": {
+    "cells": 481,
+    "non_absent": 443,
+    "quote_missing": 1,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 1,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 5,
+    "misattributed": 1
+   },
+   "synovitis": {
+    "cells": 481,
+    "non_absent": 89,
+    "quote_missing": 1,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 3,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 0,
+    "misattributed": 6
+   },
+   "baker": {
+    "cells": 481,
+    "non_absent": 238,
+    "quote_missing": 2,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 31,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 2,
+    "misattributed": 17
+   },
+   "contusion": {
+    "cells": 481,
+    "non_absent": 297,
+    "quote_missing": 14,
+    "quote_fabricated": 8,
+    "quote_empty": 1,
+    "negated_unmentioned": 16,
+    "absent_vs_negated": 43,
+    "subthreshold_negated": 22,
+    "misattributed": 10
+   },
+   "fracture": {
+    "cells": 481,
+    "non_absent": 239,
+    "quote_missing": 19,
+    "quote_fabricated": 11,
+    "quote_empty": 1,
+    "negated_unmentioned": 10,
+    "absent_vs_negated": 79,
+    "subthreshold_negated": 0,
+    "misattributed": 20
+   }
+  },
+  "state_rates": {
+   "acl": {
+    "affirmed": 0.2972972972972973,
+    "hedged": 0.02079002079002079,
+    "negated": 0.6153846153846154,
+    "absent": 0.06652806652806653
+   },
+   "mcl": {
+    "affirmed": 0.1995841995841996,
+    "hedged": 0.008316008316008316,
+    "negated": 0.681912681912682,
+    "absent": 0.1101871101871102
+   },
+   "med_men": {
+    "affirmed": 0.4781704781704782,
+    "hedged": 0.035343035343035345,
+    "negated": 0.4303534303534304,
+    "absent": 0.056133056133056136
+   },
+   "lat_men": {
+    "affirmed": 0.26195426195426197,
+    "hedged": 0.031185031185031187,
+    "negated": 0.6008316008316008,
+    "absent": 0.10602910602910603
+   },
+   "med_oa": {
+    "affirmed": 0.39293139293139295,
+    "hedged": 0.0,
+    "negated": 0.2869022869022869,
+    "absent": 0.3201663201663202
+   },
+   "lat_oa": {
+    "affirmed": 0.22245322245322247,
+    "hedged": 0.002079002079002079,
+    "negated": 0.3659043659043659,
+    "absent": 0.4095634095634096
+   },
+   "pf_oa": {
+    "affirmed": 0.3970893970893971,
+    "hedged": 0.0,
+    "negated": 0.33264033264033266,
+    "absent": 0.2702702702702703
+   },
+   "effusion": {
+    "affirmed": 0.6486486486486487,
+    "hedged": 0.0,
+    "negated": 0.27234927234927236,
+    "absent": 0.079002079002079
+   },
+   "synovitis": {
+    "affirmed": 0.1704781704781705,
+    "hedged": 0.002079002079002079,
+    "negated": 0.012474012474012475,
+    "absent": 0.814968814968815
+   },
+   "baker": {
+    "affirmed": 0.26195426195426197,
+    "hedged": 0.0,
+    "negated": 0.23284823284823286,
+    "absent": 0.5051975051975052
+   },
+   "contusion": {
+    "affirmed": 0.21413721413721415,
+    "hedged": 0.002079002079002079,
+    "negated": 0.40124740124740127,
+    "absent": 0.38253638253638256
+   },
+   "fracture": {
+    "affirmed": 0.07276507276507277,
+    "hedged": 0.008316008316008316,
+    "negated": 0.4158004158004158,
+    "absent": 0.5031185031185031
+   }
+  },
+  "evidence_verbatim_rate": 0.9766691486721271,
+  "evidence_mean_ratio": 0.9856659471846022,
+  "audit_flagged_cells": [
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Lateralni i medijalni kolateralni ligamenti urednog signala te se prate u kontinuitetu."
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Uredna morfologija i intenziteti signala ko\u0161tanih struktura"
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "fracture",
+    "state": "negated",
+    "flags": [
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": "Uredna morfologija i intenziteti signala ko\u0161tanih struktura"
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "pf_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "29634662",
+    "lang": "de",
+    "key": "lat_men",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Kein Anhalt f\u00fcr einen Reizzustand des Tractus iliotibialis."
+   },
+   {
+    "study": "29634662",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "Keine frische Fraktur"
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "69667666",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "med_men",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Gering mucoide Degeneration des Innenmeniskushinterhornes"
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Keine wesentliche Chondropathie im lateralen femorotibialen Kompartiment"
+   },
+   {
+    "study": "14972176",
+    "lang": "nl",
+    "key": "lat_men",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "Kruisbanden en laterale gewrichtspan intact."
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "pf_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "84998462",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "acl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "subthreshold_negated"
+    ],
+    "quote": "\u0391\u03c0\u03cc \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03c9\u03bd \u00b5\u03b7\u03bd\u03af\u03c3\u03ba\u03c9\u03bd \u03c0\u03b1\u03c1\u03b1\u03c4\u03b7\u03c1\u03b5\u03af\u03c4\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ae \u03b5\u03ba\u03c6\u03cd\u03bb\u03b9\u03c3\u03b7 \u03c7\u03c9\u03c1\u03af\u03c2 \u03c1\u03ae\u03be\u03b7"
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Intakter Knorpel"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "effusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "13529091",
+    "lang": "el",
+    "key": "mcl",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   }
+  ],
+  "reports_per_min": 31.54464297068403,
+  "wall_s": 914.8938546180725,
+  "truncated": 0,
+  "model": "Qwen/Qwen3-32B-AWQ",
+  "prompt_rules": "strict2",
+  "agreement_vs_baseline": {
+   "n_ids": 481,
+   "cell_agreement": 0.9473319473319474,
+   "per_label": {
+    "acl": 0.9875259875259875,
+    "mcl": 0.972972972972973,
+    "med_men": 0.9771309771309772,
+    "lat_men": 0.9667359667359667,
+    "med_oa": 0.9085239085239085,
+    "lat_oa": 0.8898128898128899,
+    "pf_oa": 0.9106029106029107,
+    "effusion": 0.9916839916839917,
+    "synovitis": 0.9896049896049897,
+    "baker": 0.9708939708939709,
+    "contusion": 0.8918918918918919,
+    "fracture": 0.9106029106029107
+   },
+   "changes": {
+    "negated->absent": 135,
+    "absent->negated": 62,
+    "affirmed->absent": 34,
+    "affirmed->negated": 29,
+    "negated->affirmed": 13,
+    "absent->affirmed": 10,
+    "affirmed->hedged": 9,
+    "hedged->affirmed": 8,
+    "hedged->absent": 2,
+    "hedged->negated": 1,
+    "negated->hedged": 1
+   }
+  },
+  "gold_head_to_head": {
+   "n_disagreeing_gold_cells": 52,
+   "n_gold_cells": 696,
+   "mean_abs_err_baseline": 0.22942307692307695,
+   "mean_abs_err_table": 0.33711538461538465,
+   "wins_baseline": 35,
+   "wins_table": 17,
+   "per_label_wins": {
+    "acl": {
+     "baseline": 0,
+     "table": 1
+    },
+    "baker": {
+     "baseline": 1,
+     "table": 0
+    },
+    "contusion": {
+     "baseline": 1,
+     "table": 6
+    },
+    "fracture": {
+     "baseline": 3,
+     "table": 1
+    },
+    "lat_men": {
+     "baseline": 2,
+     "table": 1
+    },
+    "lat_oa": {
+     "baseline": 7,
+     "table": 2
+    },
+    "mcl": {
+     "baseline": 1,
+     "table": 0
+    },
+    "med_men": {
+     "baseline": 0,
+     "table": 2
+    },
+    "med_oa": {
+     "baseline": 9,
+     "table": 1
+    },
+    "pf_oa": {
+     "baseline": 11,
+     "table": 2
+    },
+    "synovitis": {
+     "baseline": 0,
+     "table": 1
+    }
+   }
+  }
+ },
+ "fp8_strict": {
+  "name": "fp8_strict",
+  "n_rows": 481,
+  "parse_rate": 1.0,
+  "gold_macro_auc": 0.8461535286412842,
+  "gold_ci95": [
+   0.8162670493408946,
+   0.8747917489226632
+  ],
+  "gold_n": 58,
+  "per_label_auc": {
+   "acl": 0.8676470588235294,
+   "mcl": 0.9444444444444444,
+   "med_men": 0.9110576923076923,
+   "lat_men": 0.8260869565217391,
+   "med_oa": 0.9046511627906977,
+   "lat_oa": 0.8433268858800773,
+   "pf_oa": 0.868082368082368,
+   "effusion": 0.8391304347826087,
+   "synovitis": 0.6762246117084827,
+   "baker": 0.9139492753623188,
+   "contusion": 0.7307692307692307,
+   "fracture": 0.8284722222222223
+  },
+  "per_lang_auc": {
+   "en": {
+    "n": 28,
+    "auc": 0.8573269804864617
+   },
+   "es": {
+    "n": 10,
+    "auc": 0.8553306878306878
+   },
+   "tr": {
+    "n": 6,
+    "auc": 0.7679166666666667
+   }
+  },
+  "counts": {
+   "cells": 5772,
+   "non_absent": 3983,
+   "quote_missing": 71,
+   "quote_fabricated": 17,
+   "quote_empty": 6,
+   "negated_unmentioned": 109,
+   "absent_vs_negated": 327,
+   "subthreshold_negated": 190,
+   "misattributed": 85
+  },
+  "audit_counts": {
+   "cells": 300,
+   "non_absent": 198,
+   "quote_missing": 3,
+   "quote_fabricated": 2,
+   "quote_empty": 2,
+   "negated_unmentioned": 7,
+   "absent_vs_negated": 21,
+   "subthreshold_negated": 7,
+   "misattributed": 3
+  },
+  "per_label_counts": {
+   "acl": {
+    "cells": 481,
+    "non_absent": 448,
+    "quote_missing": 9,
+    "quote_fabricated": 1,
+    "quote_empty": 1,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 25,
+    "misattributed": 6
+   },
+   "mcl": {
+    "cells": 481,
+    "non_absent": 424,
+    "quote_missing": 6,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 2,
+    "absent_vs_negated": 7,
+    "subthreshold_negated": 24,
+    "misattributed": 8
+   },
+   "med_men": {
+    "cells": 481,
+    "non_absent": 451,
+    "quote_missing": 4,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 12,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 24,
+    "misattributed": 5
+   },
+   "lat_men": {
+    "cells": 481,
+    "non_absent": 428,
+    "quote_missing": 8,
+    "quote_fabricated": 2,
+    "quote_empty": 2,
+    "negated_unmentioned": 6,
+    "absent_vs_negated": 1,
+    "subthreshold_negated": 37,
+    "misattributed": 4
+   },
+   "med_oa": {
+    "cells": 481,
+    "non_absent": 316,
+    "quote_missing": 1,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 5,
+    "absent_vs_negated": 69,
+    "subthreshold_negated": 12,
+    "misattributed": 2
+   },
+   "lat_oa": {
+    "cells": 481,
+    "non_absent": 259,
+    "quote_missing": 3,
+    "quote_fabricated": 1,
+    "quote_empty": 0,
+    "negated_unmentioned": 5,
+    "absent_vs_negated": 82,
+    "subthreshold_negated": 30,
+    "misattributed": 1
+   },
+   "pf_oa": {
+    "cells": 481,
+    "non_absent": 342,
+    "quote_missing": 10,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 6,
+    "absent_vs_negated": 52,
+    "subthreshold_negated": 6,
+    "misattributed": 3
+   },
+   "effusion": {
+    "cells": 481,
+    "non_absent": 443,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 1,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 4,
+    "misattributed": 3
+   },
+   "synovitis": {
+    "cells": 481,
+    "non_absent": 85,
+    "quote_missing": 0,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 3,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 0,
+    "misattributed": 6
+   },
+   "baker": {
+    "cells": 481,
+    "non_absent": 242,
+    "quote_missing": 1,
+    "quote_fabricated": 0,
+    "quote_empty": 0,
+    "negated_unmentioned": 35,
+    "absent_vs_negated": 0,
+    "subthreshold_negated": 1,
+    "misattributed": 18
+   },
+   "contusion": {
+    "cells": 481,
+    "non_absent": 307,
+    "quote_missing": 16,
+    "quote_fabricated": 8,
+    "quote_empty": 2,
+    "negated_unmentioned": 20,
+    "absent_vs_negated": 40,
+    "subthreshold_negated": 27,
+    "misattributed": 13
+   },
+   "fracture": {
+    "cells": 481,
+    "non_absent": 238,
+    "quote_missing": 13,
+    "quote_fabricated": 5,
+    "quote_empty": 1,
+    "negated_unmentioned": 12,
+    "absent_vs_negated": 74,
+    "subthreshold_negated": 0,
+    "misattributed": 16
+   }
+  },
+  "state_rates": {
+   "acl": {
+    "affirmed": 0.29313929313929316,
+    "hedged": 0.012474012474012475,
+    "negated": 0.6257796257796258,
+    "absent": 0.06860706860706861
+   },
+   "mcl": {
+    "affirmed": 0.19126819126819128,
+    "hedged": 0.010395010395010396,
+    "negated": 0.6798336798336798,
+    "absent": 0.11850311850311851
+   },
+   "med_men": {
+    "affirmed": 0.49272349272349275,
+    "hedged": 0.018711018711018712,
+    "negated": 0.4261954261954262,
+    "absent": 0.062370062370062374
+   },
+   "lat_men": {
+    "affirmed": 0.26195426195426197,
+    "hedged": 0.02286902286902287,
+    "negated": 0.604989604989605,
+    "absent": 0.1101871101871102
+   },
+   "med_oa": {
+    "affirmed": 0.38253638253638256,
+    "hedged": 0.0,
+    "negated": 0.27442827442827444,
+    "absent": 0.34303534303534305
+   },
+   "lat_oa": {
+    "affirmed": 0.20582120582120583,
+    "hedged": 0.0,
+    "negated": 0.33264033264033266,
+    "absent": 0.46153846153846156
+   },
+   "pf_oa": {
+    "affirmed": 0.41372141372141374,
+    "hedged": 0.0,
+    "negated": 0.2972972972972973,
+    "absent": 0.288981288981289
+   },
+   "effusion": {
+    "affirmed": 0.6507276507276507,
+    "hedged": 0.0,
+    "negated": 0.2702702702702703,
+    "absent": 0.079002079002079
+   },
+   "synovitis": {
+    "affirmed": 0.16216216216216217,
+    "hedged": 0.002079002079002079,
+    "negated": 0.012474012474012475,
+    "absent": 0.8232848232848233
+   },
+   "baker": {
+    "affirmed": 0.26403326403326405,
+    "hedged": 0.0,
+    "negated": 0.2390852390852391,
+    "absent": 0.4968814968814969
+   },
+   "contusion": {
+    "affirmed": 0.21413721413721415,
+    "hedged": 0.0,
+    "negated": 0.42411642411642414,
+    "absent": 0.36174636174636177
+   },
+   "fracture": {
+    "affirmed": 0.07068607068607069,
+    "hedged": 0.010395010395010396,
+    "negated": 0.41372141372141374,
+    "absent": 0.5051975051975052
+   }
+  },
+  "evidence_verbatim_rate": 0.9821742405222195,
+  "evidence_mean_ratio": 0.990131074226066,
+  "audit_flagged_cells": [
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "10867960",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Lateralni i medijalni kolateralni ligamenti urednog signala te se prate u kontinuitetu."
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "83701141",
+    "lang": "hr",
+    "key": "fracture",
+    "state": "negated",
+    "flags": [
+     "quote_empty",
+     "quote_missing",
+     "quote_fabricated",
+     "negated_unmentioned"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "med_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "20616863",
+    "lang": "fr",
+    "key": "pf_oa",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "Changements d\u00e9g\u00e9n\u00e9ratifs : Aucune."
+   },
+   {
+    "study": "65160316",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Patellar kemik medial d\u00fczeyde subkondral hafif kemik ili\u011fi \u00f6demi mevcuttur."
+   },
+   {
+    "study": "61015159",
+    "lang": "tr",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "mcl",
+    "state": "negated",
+    "flags": [
+     "quote_missing"
+    ],
+    "quote": "The medial & lateral collateral ligaments show intact appearance"
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "73986063",
+    "lang": "en",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "49541215",
+    "lang": "bg",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "negated_unmentioned"
+    ],
+    "quote": "\u041f\u043e\u043f\u043b\u0438\u0442\u0435\u0430\u043b\u043d\u0430 \u044f\u043c\u043a\u0430 \u2013 \u0431.\u043e."
+   },
+   {
+    "study": "69667666",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "med_men",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Keine wesentliche Chondropathie im medialen und lateralen femorotibialen Kompartiment"
+   },
+   {
+    "study": "04002971",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Keine wesentliche Chondropathie im medialen und lateralen femorotibialen Kompartiment"
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "pf_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "contusion",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "72141617",
+    "lang": "en",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "84998462",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "77151905",
+    "lang": "en",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "77151905",
+    "lang": "en",
+    "key": "lat_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "77151905",
+    "lang": "en",
+    "key": "pf_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "acl",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "subthreshold_negated"
+    ],
+    "quote": "\u0391\u03c0\u03cc \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03c9\u03bd \u00b5\u03b7\u03bd\u03af\u03c3\u03ba\u03c9\u03bd \u03c0\u03b1\u03c1\u03b1\u03c4\u03b7\u03c1\u03b5\u03af\u03c4\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ae \u03b5\u03ba\u03c6\u03cd\u03bb\u03b9\u03c3\u03b7 \u03c7\u03c9\u03c1\u03af\u03c2 \u03c1\u03ae\u03be\u03b7"
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "med_men",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05595078",
+    "lang": "el",
+    "key": "med_oa",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "lat_oa",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "Laterales Kompartiment: Regelrechtes Knochenmarksignal. Intakter Knorpel"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "synovitis",
+    "state": "affirmed",
+    "flags": [
+     "misattributed"
+    ],
+    "quote": "Geringer Gelenkerguss mit verdickter Synovia"
+   },
+   {
+    "study": "05441740",
+    "lang": "de",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "effusion",
+    "state": "negated",
+    "flags": [
+     "subthreshold_negated"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "baker",
+    "state": "negated",
+    "flags": [
+     "misattributed",
+     "negated_unmentioned"
+    ],
+    "quote": "No hay derrame articular y quistes popl\u00edteos."
+   },
+   {
+    "study": "35947981",
+    "lang": "es",
+    "key": "fracture",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   },
+   {
+    "study": "13529091",
+    "lang": "el",
+    "key": "mcl",
+    "state": "absent",
+    "flags": [
+     "absent_vs_negated"
+    ],
+    "quote": ""
+   }
+  ],
+  "reports_per_min": 23.520221753698845,
+  "wall_s": 1227.0292475223541,
+  "truncated": 0,
+  "model": "Qwen/Qwen3-32B-FP8",
+  "prompt_rules": "strict",
+  "agreement_vs_baseline": {
+   "n_ids": 481,
+   "cell_agreement": 0.9442134442134442,
+   "per_label": {
+    "acl": 0.9833679833679834,
+    "mcl": 0.9646569646569647,
+    "med_men": 0.975051975051975,
+    "lat_men": 0.9688149688149689,
+    "med_oa": 0.9085239085239085,
+    "lat_oa": 0.8669438669438669,
+    "pf_oa": 0.9043659043659044,
+    "effusion": 0.9896049896049897,
+    "synovitis": 0.9937629937629938,
+    "baker": 0.9854469854469855,
+    "contusion": 0.9043659043659044,
+    "fracture": 0.8856548856548857
+   },
+   "changes": {
+    "negated->absent": 156,
+    "absent->negated": 46,
+    "affirmed->absent": 42,
+    "affirmed->negated": 36,
+    "negated->affirmed": 12,
+    "hedged->affirmed": 11,
+    "absent->affirmed": 9,
+    "hedged->negated": 6,
+    "affirmed->hedged": 2,
+    "hedged->absent": 2
+   }
+  },
+  "gold_head_to_head": {
+   "n_disagreeing_gold_cells": 47,
+   "n_gold_cells": 696,
+   "mean_abs_err_baseline": 0.2674468085106383,
+   "mean_abs_err_table": 0.36638297872340425,
+   "wins_baseline": 30,
+   "wins_table": 17,
+   "per_label_wins": {
+    "acl": {
+     "baseline": 1,
+     "table": 0
+    },
+    "contusion": {
+     "baseline": 3,
+     "table": 6
+    },
+    "fracture": {
+     "baseline": 4,
+     "table": 2
+    },
+    "lat_men": {
+     "baseline": 1,
+     "table": 0
+    },
+    "lat_oa": {
+     "baseline": 5,
+     "table": 4
+    },
+    "mcl": {
+     "baseline": 1,
+     "table": 0
+    },
+    "med_oa": {
+     "baseline": 7,
+     "table": 4
+    },
+    "pf_oa": {
+     "baseline": 7,
+     "table": 0
+    },
+    "synovitis": {
+     "baseline": 1,
+     "table": 1
+    }
+   }
+  }
+ }
+}

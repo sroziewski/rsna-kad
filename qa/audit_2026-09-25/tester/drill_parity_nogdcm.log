@@ -1,0 +1,5 @@
+reference 1.2.826.0.1.3680043.8.498.10062861783145312629332250977456991776 {'sag_fs': (24, 384, 384), 'cor_fs': (30, 384, 384), 'ax_fs': (33, 384, 384), 'sag_t1': (24, 384, 384)}
+jpegls  JPEG-LS Lossless Image Compression            slots ['ax_fs', 'cor_fs', 'sag_fs', 'sag_t1'] identical=True max|diff|=0
+j2k     JPEG 2000 Image Compression (Lossless Only)   slots ['ax_fs', 'cor_fs', 'sag_fs', 'sag_t1'] identical=True max|diff|=0
+jpeg14  JPEG Lossless, Non-Hierarchical, First-Order Prediction (Process 14 [Selection Value 1]) slots ['ax_fs', 'cor_fs', 'sag_fs', 'sag_t1'] identical=True max|diff|=0
+rle     RLE Lossless                                  slots ['ax_fs', 'cor_fs', 'sag_fs', 'sag_t1'] identical=True max|diff|=0

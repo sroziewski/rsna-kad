@@ -1,0 +1,102 @@
+[
+ {
+  "batch": "bg_000",
+  "lang": "bg",
+  "n": 29
+ },
+ {
+  "batch": "de_000",
+  "lang": "de",
+  "n": 24
+ },
+ {
+  "batch": "el_000",
+  "lang": "el",
+  "n": 30
+ },
+ {
+  "batch": "el_001",
+  "lang": "el",
+  "n": 8
+ },
+ {
+  "batch": "en_000",
+  "lang": "en",
+  "n": 30
+ },
+ {
+  "batch": "en_001",
+  "lang": "en",
+  "n": 30
+ },
+ {
+  "batch": "en_002",
+  "lang": "en",
+  "n": 30
+ },
+ {
+  "batch": "en_003",
+  "lang": "en",
+  "n": 30
+ },
+ {
+  "batch": "en_004",
+  "lang": "en",
+  "n": 30
+ },
+ {
+  "batch": "en_005",
+  "lang": "en",
+  "n": 30
+ },
+ {
+  "batch": "en_006",
+  "lang": "en",
+  "n": 14
+ },
+ {
+  "batch": "es_000",
+  "lang": "es",
+  "n": 30
+ },
+ {
+  "batch": "es_001",
+  "lang": "es",
+  "n": 30
+ },
+ {
+  "batch": "es_002",
+  "lang": "es",
+  "n": 22
+ },
+ {
+  "batch": "fr_000",
+  "lang": "fr",
+  "n": 10
+ },
+ {
+  "batch": "hr_000",
+  "lang": "hr",
+  "n": 30
+ },
+ {
+  "batch": "hr_001",
+  "lang": "hr",
+  "n": 14
+ },
+ {
+  "batch": "nl_000",
+  "lang": "nl",
+  "n": 13
+ },
+ {
+  "batch": "tr_000",
+  "lang": "tr",
+  "n": 30
+ },
+ {
+  "batch": "tr_001",
+  "lang": "tr",
+  "n": 17
+ }
+]

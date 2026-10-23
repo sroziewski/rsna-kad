@@ -1,0 +1,24 @@
+{
+ "weights": "export/eff_v1",
+ "devices": [
+  "cpu"
+ ],
+ "n_studies": 3,
+ "members": 5,
+ "replicate": 1,
+ "runs": [
+  {
+   "total_s": 28.212919546291232,
+   "per_study_s": 9.404306515430411,
+   "prep_s_mean": 3.4257820826023817,
+   "gpu_s_mean": 5.788618029405673,
+   "errors": 0
+  }
+ ],
+ "per_study_s_best": 9.404306515430411,
+ "projected_1300_a6000_min": 203.75997450099223,
+ "projected_1300_t4_min": 916.919885254465,
+ "projected_1300_t4_with_margin_min": 1146.1498565680813,
+ "submission": "export/submission_local_eff_v1.csv",
+ "passed": true
+}

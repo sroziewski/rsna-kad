@@ -1,0 +1,43 @@
+22:59:45 INFO ensemble export/main_v3: 15 members, mode main, devices ['cpu'], torch 2.9.1+cu128
+22:59:46 INFO loaded main_convnext_s_384_f0 on cpu (convnext_small.fb_in22k_ft_in1k_384)
+22:59:47 INFO loaded main_convnext_s_384_f1 on cpu (convnext_small.fb_in22k_ft_in1k_384)
+22:59:47 INFO loaded main_convnext_s_384_f2 on cpu (convnext_small.fb_in22k_ft_in1k_384)
+22:59:48 INFO loaded main_convnext_s_384_f3 on cpu (convnext_small.fb_in22k_ft_in1k_384)
+22:59:49 INFO loaded main_convnext_s_384_f4 on cpu (convnext_small.fb_in22k_ft_in1k_384)
+22:59:49 INFO loaded eff_effv2s_256_f0 on cpu (tf_efficientnetv2_s.in21k_ft_in1k)
+22:59:50 INFO loaded eff_effv2s_256_f1 on cpu (tf_efficientnetv2_s.in21k_ft_in1k)
+22:59:50 INFO loaded eff_effv2s_256_f2 on cpu (tf_efficientnetv2_s.in21k_ft_in1k)
+22:59:50 INFO loaded eff_effv2s_256_f3 on cpu (tf_efficientnetv2_s.in21k_ft_in1k)
+22:59:50 INFO loaded eff_effv2s_256_f4 on cpu (tf_efficientnetv2_s.in21k_ft_in1k)
+22:59:51 INFO loaded main_armc_convnextv2_t_384_f0 on cpu (convnextv2_tiny.fcmae_ft_in22k_in1k_384)
+22:59:51 INFO loaded main_armc_convnextv2_t_384_f1 on cpu (convnextv2_tiny.fcmae_ft_in22k_in1k_384)
+22:59:51 INFO loaded main_armc_convnextv2_t_384_f2 on cpu (convnextv2_tiny.fcmae_ft_in22k_in1k_384)
+22:59:52 INFO loaded main_armc_convnextv2_t_384_f3 on cpu (convnextv2_tiny.fcmae_ft_in22k_in1k_384)
+22:59:52 INFO loaded main_armc_convnextv2_t_384_f4 on cpu (convnextv2_tiny.fcmae_ft_in22k_in1k_384)
+22:59:55 INFO prepared 3/3 studies, 9.8s elapsed, peak RSS 3.5 GB
+23:21:54 INFO predicted 3 studies in 1328.2s (0 prior rows)
+23:21:54 INFO submission qa/audit_2026-09-25/tester/submission_local_cpu_main_v3.csv: 3 rows | setup 0.0s | inference 1328.2s = 442.74s/study (prep 1.01s, gpu 439.44s per study) | 0 prior rows
+	Command being timed: "/raid/sroziewski/sandbox/bin/python notebooks/kaggle_inference.py --data-dir /raid/sroziewski/data/rsna_kad --weights export/main_v3 --out qa/audit_2026-09-25/tester/submission_local_cpu_main_v3.csv --device cpu --fp32 --workers 3"
+	User time (seconds): 2744.85
+	System time (seconds): 1958.85
+	Percent of CPU this job got: 352%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 22:12.94
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10072944
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 1021574034
+	Voluntary context switches: 211894
+	Involuntary context switches: 15799
+	Swaps: 0
+	File system inputs: 212304
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+EXIT 0

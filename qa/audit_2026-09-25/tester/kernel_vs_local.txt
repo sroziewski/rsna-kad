@@ -1,0 +1,4 @@
+headers equal True ids equal & same order True
+kernel(v10, 2xT4 fp16) vs today local CPU fp32: max|diff| 1.78e-04
+kernel vs 2026-09-23 local CPU run: max|diff| 1.78e-04
+today local vs 2026-09-23 local: max|diff| 0.00e+00

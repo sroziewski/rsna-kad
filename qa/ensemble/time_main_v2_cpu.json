@@ -1,0 +1,24 @@
+{
+ "weights": "export/main_v2",
+ "devices": [
+  "cpu"
+ ],
+ "n_studies": 3,
+ "members": 10,
+ "replicate": 1,
+ "runs": [
+  {
+   "total_s": 350.5458526145667,
+   "per_study_s": 116.84861753818889,
+   "prep_s_mean": 1.6436213652292888,
+   "gpu_s_mean": 114.0724621322006,
+   "errors": 0
+  }
+ ],
+ "per_study_s_best": 116.84861753818889,
+ "projected_1300_a6000_min": 2531.720046660759,
+ "projected_1300_t4_min": 11392.740209973415,
+ "projected_1300_t4_with_margin_min": 14240.92526246677,
+ "submission": "export/submission_local_main_v2.csv",
+ "passed": false
+}

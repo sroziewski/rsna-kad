@@ -1,0 +1,23 @@
+readyNext Page Token = CfDJ8LXGgraiXMNClPzcySXY5U57dsRpq6vcRe8CdJ8__rPzKpsIJSMoeH-OyqZw-D8M2zcdNIt8p4eDiOEBAIWTeNiKJen1bgY2FAkc5ANsIYwHT3udraMtByFxf0WJrqSfgFKlld2GTnXM5Aj-pBKCN6nJtY2TGNIDh4K41MA102VNNuE
+name                                                   size  creationDate                
+------------------------------------------------  ---------  --------------------------  
+VERSION                                                 388  2026-09-23 08:34:15.349000  
+ensemble.json                                          5795  2026-09-23 08:34:15.349000  
+models/eff_effv2s_256_f0.json                          3449  2026-09-23 08:35:04.818000  
+models/eff_effv2s_256_f0.safetensors               92128844  2026-09-23 08:35:07.592000  
+models/eff_effv2s_256_f1.json                          3494  2026-09-23 08:35:06.381000  
+models/eff_effv2s_256_f1.safetensors               92128844  2026-09-23 08:35:09.164000  
+models/eff_effv2s_256_f2.json                          3503  2026-09-23 08:35:08.736000  
+models/eff_effv2s_256_f2.safetensors               92128844  2026-09-23 08:35:11.679000  
+models/eff_effv2s_256_f3.json                          3527  2026-09-23 08:35:11.419000  
+models/eff_effv2s_256_f3.safetensors               92128844  2026-09-23 08:35:14.359000  
+models/eff_effv2s_256_f4.json                          3510  2026-09-23 08:35:14.274000  
+models/eff_effv2s_256_f4.safetensors               92128844  2026-09-23 08:35:17.258000  
+models/main_armc_convnextv2_t_384_f0.json              3750  2026-09-23 08:35:18.579000  
+models/main_armc_convnextv2_t_384_f0.safetensors  121165436  2026-09-23 08:35:22.636000  
+models/main_armc_convnextv2_t_384_f1.json              3722  2026-09-23 08:35:22.080000  
+models/main_armc_convnextv2_t_384_f1.safetensors  121165436  2026-09-23 08:35:26.115000  
+models/main_armc_convnextv2_t_384_f2.json              3748  2026-09-23 08:35:25.678000  
+models/main_armc_convnextv2_t_384_f2.safetensors  121165436  2026-09-23 08:35:29.874000  
+models/main_armc_convnextv2_t_384_f3.json              3750  2026-09-23 08:35:29.498000  
+models/main_armc_convnextv2_t_384_f3.safetensors  121165436  2026-09-23 08:35:33.770000  

@@ -1,0 +1,12 @@
+# Folds v1 (architecture §2.5): generated once, md5 pinned in tests/test_cv.py.
+version: v1
+n_splits: 5
+seed: 2026
+group_col: site_key
+strat_col: lang
+# sklearn's StratifiedGroupKFold ignores fold size and gives 14-25 % folds here (language is a
+# function of site); "balanced" keeps the site grouping and also balances size and gold rows.
+method: balanced
+n_trials: 200
+study_summary: analysis/out/study_summary.csv
+out_csv: data/folds/folds_v1.csv

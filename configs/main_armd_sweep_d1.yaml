@@ -1,0 +1,63 @@
+# Arm D sweep, candidate D1 - D0 plus a second *view* of cor_fs at a 100 mm field: the
+# coronal specialist this arm exists for. Arm A's two weakest labels are lat_oa 0.863 and
+# mcl 0.869 (runs/main_convnext_s_384/metrics.json) and both are graded coronally - the MCL is
+# a coronal structure, lateral-compartment OA is a coronal reading - so the view that repaired
+# synovitis for arm C (a 90 mm sagittal crop, +0.0137 weak) has a coronal counterpart.
+#
+# Why 100 mm and not arm C's 90 mm - the one part of this design that the sweep cannot decide,
+# because the two crops cost exactly the same. `qa/stage8b/cor_extent.py` measures the limb at
+# the joint line on 600 cached cor_fs series (the crop is centred, so what matters is twice the
+# larger distance from the image centre to the skin surface):
+#
+#     cor_fs centred width mm   p5 98.9  p25 111.0  p50 123.2  p75+ 130.0 (clipped by the cache)
+#     kept by a centred crop of   80    90     100    110
+#       whole limb                0.003 0.015  0.060  0.217
+#       10 mm inside the skin     0.060 0.217  0.443  1.000     <- collateral ligaments, capsule
+#       20 mm inside the skin     0.443 1.000  1.000  1.000     <- tibiofemoral compartments
+#
+# A 90 mm coronal crop keeps the MCL in 22 % of studies against 44 % at 100 mm: for a *central*
+# structure like the menisci clipping the periphery is free, which is why 90 mm worked for arm
+# C's sagittal view, but the MCL sits at the medial edge and is precisely what a tight centred
+# crop removes. lat_oa, a compartment rather than an edge structure, survives either. 100 mm is
+# therefore the whole allowed range's top end and still a 1.3x zoom on the cached field.
+run_id: armd_sweep_d1
+cache:
+  version: v1
+model:
+  backbone: convnextv2_tiny.fcmae_ft_in22k_in1k_384
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1, cor_fs]
+  view_crop_mm: [130.0, 130.0, 130.0, 130.0, 100.0]
+  k_train: 12
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.1
+  grad_checkpoint: true
+targets_version: v1
+folds_csv: data/folds/folds_v1.csv
+epochs: 2
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 4
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: true

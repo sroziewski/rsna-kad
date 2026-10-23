@@ -1,0 +1,4 @@
+unreadable pixel data in /raid/sroziewski/data/rsna_kad/train_series/1.2.826.0.1.3680043.8.498.34685905030370793639196564723935583035/1.2.826.0.1.3680043.8.498.39396636671446532796538574315802928348/1.2.826.0.1.3680043.8.498.41947538458330624797291612781685746320.dcm: The number of bytes of pixel data is less than expected (409600 vs 819200 bytes) - the dataset may be corrupted, have an
+unreadable pixel data in /raid/sroziewski/data/rsna_kad/train_series/1.2.826.0.1.3680043.8.498.37833587429731221455928642963031995680/1.2.826.0.1.3680043.8.498.31160785238781353848727311763596115703/1.2.826.0.1.3680043.8.498.66460523372602171398246641420761543626.dcm: The number of bytes of pixel data is less than expected (173056 vs 346112 bytes) - the dataset may be corrupted, have an
+02928348 infer (36, 384, 384) truncated 1 identical to cache True
+96115703 infer (38, 384, 384) truncated 1 identical to cache True

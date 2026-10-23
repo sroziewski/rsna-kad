@@ -1,0 +1,19 @@
+23:24:19 INFO ensemble qa/audit_2026-09-25/tester/mini_export: 3 members, mode main, devices ['cpu'], torch 2.9.1+cu128
+23:24:19 INFO loaded main_convnext_s_384_f0 on cpu (convnext_small.fb_in22k_ft_in1k_384)
+23:24:20 INFO loaded eff_effv2s_256_f0 on cpu (tf_efficientnetv2_s.in21k_ft_in1k)
+23:24:20 INFO loaded main_armc_convnextv2_t_384_f0 on cpu (convnextv2_tiny.fcmae_ft_in22k_in1k_384)
+23:24:22 INFO prepared 1/1 studies, 3.5s elapsed, peak RSS 1.5 GB
+23:25:44 INFO predicted 1 studies in 85.8s (0 prior rows)
+23:25:44 WARNING 2 studies without prediction get the prior
+23:25:44 INFO submission qa/audit_2026-09-25/tester/nbcmp_kaggle_inference.csv: 1 rows | setup 0.0s | inference 85.8s = 85.81s/study (prep 1.27s, gpu 82.29s per study) | 0 prior rows
+EXIT 0
+23:25:48 INFO ensemble qa/audit_2026-09-25/tester/mini_export: 3 members, mode main, devices ['cpu'], torch 2.9.1+cu128
+23:25:49 INFO loaded main_convnext_s_384_f0 on cpu (convnext_small.fb_in22k_ft_in1k_384)
+23:25:49 INFO loaded eff_effv2s_256_f0 on cpu (tf_efficientnetv2_s.in21k_ft_in1k)
+23:25:49 INFO loaded main_armc_convnextv2_t_384_f0 on cpu (convnextv2_tiny.fcmae_ft_in22k_in1k_384)
+23:25:52 INFO prepared 1/1 studies, 3.6s elapsed, peak RSS 1.6 GB
+23:27:16 INFO predicted 1 studies in 87.9s (0 prior rows)
+23:27:16 WARNING 2 studies without prediction get the prior
+23:27:16 INFO submission qa/audit_2026-09-25/tester/nbcmp_stale_local_kaggle_inference.csv: 1 rows | setup 0.0s | inference 87.9s = 87.90s/study (prep 1.29s, gpu 84.26s per study) | 0 prior rows
+EXIT 0
+DONE

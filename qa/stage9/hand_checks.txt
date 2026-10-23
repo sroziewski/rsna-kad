@@ -1,0 +1,156 @@
+=== threshold sweep: cells where the mean OOF contradicts a high-weight LLM label
+ hi/lo  |  pos_contra  neg_contra  total   % of 52188 cells
+ 0.90/0.10 |          45           6     51   0.098 %
+ 0.85/0.15 |         212          15    227   0.435 %
+ 0.80/0.20 |         367          39    406   0.778 %
+ 0.75/0.25 |         598          88    686   1.314 %
+ 0.70/0.30 |         858         156   1014   1.943 %
+ 0.60/0.40 |        1789         712   2501   4.792 %
+
+=== same, but on the STATE (affirmed vs negated) rather than the calibrated target
+    affirmed & OOF<=lo, or negated & OOF>=hi, weight>=0.5
+ 0.90/0.10 | affirmed-but-negative 2162  negated-but-positive 7  total 2169  (4.156 %)
+ 0.80/0.20 | affirmed-but-negative 4053  negated-but-positive 34  total 4087  (7.831 %)
+   per key: acl=478 mcl=630 med_men=430 lat_men=369 med_oa=369 lat_oa=450 pf_oa=256 effusion=566 synovitis=0 baker=300 contusion=187 fracture=52
+ 0.70/0.30 | affirmed-but-negative 5558  negated-but-positive 93  total 5651  (10.828 %)
+
+
+########## 10 HAND-CHECK CASES ##########
+
+--- [1] key=acl study=1.2.826.0.1.3680043.8.498.11719502398697390809777045891822044637 lang=fr fold=1
+    LLM state=affirmed/moderate  target=0.941 w=1.00  OOF convnext=0.005 eff=0.010
+    evidence quote: Ligament croisé antérieur : Déchirure partielle chronique proximale de grade bas à modéré
+    REPORT:
+      CONSTATATIONS :
+      Fractures :
+      Aucune.
+      Alignement articulaire :
+      Normal.
+      Changements dégénératifs :
+      Arthrose sévère du compartiment articulaire médial avec perte complète du cartilage des surfaces portantes, ostéophytose marginale et œdème osseux réactionnel des deux côtés.
+      Arthrose légère à modérée du compartiment latéral avec chondropatie proportionnelle et ostéophytose marginale. Chondropatie modérée focale dans la gorge trochléaire, pas de chondropathie rétropatellai
+      Signal de la moelle osseuse :
+      Par ailleurs normal.
+      Ligament croisé antérieur : Déchirure partielle chronique proximale de grade bas à modéré.
+      Ligament croisé postérieur : Déchirure partielle chronique de grade bas à modéré au niveau de la partie moyenne.
+      Ligament médial collatéral : Signes d'entorse chronique de bas grade.
+      Complexe du ligament collatéral latéral : normal.
+      Ménisque médial : Macération dégénérative sévère du corps du ménisque avec perte de volume diffuse. Déchirure horizontale oblique du corps à la jonction de la corne postérieure surfaçant distalement. 
+      Ménisque latéral : Macération dégénérative avec changements signalatifs internes impliquant la corne antérieure, le corps et la corne postérieure. Signes d'une déchirure dégénérative de bas grade avec
+      Tendons extenseurs : Normaux.
+      Rétinacula patellaire : Normales.
+      Pes anserinus : Normal.
+      Coin postéro-latéral et postérieur : Enthésopathie dégénérative du tendon semi-membraneux distal.
+      Épanchement articulaire : Petit épanchement articulaire réactionnel.
+      Kyste de Baker : Petit kyste de Baker avec des signes de fuite proximale et distale.
+      Autres trouvailles significatives :
+      Petit kyste ganglionnaire à la jonction myotendineuse du tendon du poplité.
+      Varicose veineuse impliquant le creux poplité.
+      CONCLUSION :
+      Arthrose tricompartimentale, sévère dans le compartiment médial.
+      Macération dégénérative des deux ménisques avec déchirures dégénératives, pire au niveau du ménisque médial.
+      Déchirures chroniques de grade bas à modéré des ligaments croisés antérieur et postérieur.
+      Petit épanchement articulaire réactionnel et petit kyste de Baker avec signes de fuite.
+
+--- [2] key=baker study=1.2.826.0.1.3680043.8.498.13034169434311535671044673510644711229 lang=hr fold=0
+    LLM state=affirmed/moderate  target=0.957 w=1.00  OOF convnext=0.012 eff=0.039
+    evidence quote: Poplitealna cista veličine 28x7x6mm.
+    REPORT:
+      Entezofit duljine 9 mm na hvatištu patelarnog ligamenta za patelu.
+      Incipijentna rubna osteofitoza femoropatelarnog zgloba.
+      Manja zona subhondralnog koštanog edema anteriorno u centralnom dijelu medijalnog tibijalnog
+      platoa.
+      U oba kondila femura zone sklerozacije subhondralne kosti. Manja zona erozije hrskavice
+      medijalnog kondila femura u centralnom dijelu u sklopu deg. promjena.
+      Mala količina izljeva u zglobu.
+      Prednji križni ligament degenerativno promijenjen, prati se u kontinuitetu.
+      Stražnji križni ligament urednog signala te se prati u kontinuitetu.
+      Promjene intenziteta signala stražnjeg roga medijalnog meniska u sklopu deg. promjena.
+      Ekstruzija medijalnog meniska pod MCL za 3 mm.
+      Lateralni menisk deg. promijenjen u području slobodnog ruba, bez znakova rupture.
+      Lateralni i medijalni kolateralni ligamenti se prate u kontinuitetu. Burzitis MCL.
+      Intersupstancijska degeneracija hvatišta tetive kvadricepsa i patelarnog ligamenta.
+      Distenzija tetive m. popiteusa sa burzitisom i ganglion cistom na hvatištu promjera 4mm.
+      Poplitealna cista veličine 28x7x6mm.
+      Edem subkutanog masnog tkiva ispred patele te kaudalno od nje. Uredna je kongruencija
+      zglobnih tijela femoropatelarnog zgloba. Hondromalacija II° patelarne i trohlearne hrskavice.
+
+--- [3] key=med_men study=1.2.826.0.1.3680043.8.498.13377426362348493372112241208607685717 lang=en fold=0
+    LLM state=negated/none  target=0.012 w=1.00  OOF convnext=0.947 eff=0.878
+    evidence quote: Medial meniscus normal
+    REPORT:
+      Technique: MRI of the knee. ACL normal. MCL normal. Medial meniscus normal. Lateral meniscus normal. OA of all three complartments. Small Baker's cyst. No effusion. Coclusion: OA of all three complart
+
+--- [4] key=pf_oa study=1.2.826.0.1.3680043.8.498.45380312679924593883892686293576260616 lang=de fold=0
+    LLM state=affirmed/moderate  target=0.966 w=1.00  OOF convnext=0.054 eff=0.083
+    evidence quote: Fokal tiefgreifender Knorpeldefekt an der medialen Patellafacette
+    REPORT:
+      Mediales Kompartiment:
+      Regelrechtes Knochenmarksignal. Geringe oberflächliche Knorpelirregularitäten an der medialen Femurcondyle (Serie 4/ Image 19). Kein tiefgreifender oder vollschichtiger Knorpeldefekt. Kein subchondral
+      Laterales Kompartiment:
+      Regelrechtes Knochenmarksignal. Intakter Knorpel. Intakter Außenmeniskus. Intaktes LCL.
+      Femoropatellares Gleitlager und Trochlea:
+      Regelrechtes Knochenmarksignal. Fokal tiefgreifender Knorpeldefekt an der medialen Patellafacette im mittleren Anteil (Serie 7/ Image 10). Kein vollschichtiger Knorpeldefekt, kein subchondrales Ödem. 
+      Kreuzbänder:
+      Intakte Kreuzbänder.
+      Muskulatur und übrige Weichteile:
+      Kein Gelenkerguss. Plica mediopatellaris (Typ B nach Sakakibara).
+
+--- [5] key=fracture study=1.2.826.0.1.3680043.8.498.95500234888498554736637315199668317948 lang=bg fold=3
+    LLM state=affirmed/unspecified  target=0.954 w=1.00  OOF convnext=0.057 eff=0.101
+    evidence quote: МР данни за фрактура в долния полюс на пателата, без данни за дислокация на костните фрагменти
+    REPORT:
+      МР находка: МР данни за минимален ставен излив. Изобразява се фрактура в долния полюс на пателата, без данни за дислокация на костните фрагменти. Налице е дифузен костномозъчен едем на пателата предим
+
+--- [6] key=effusion study=1.2.826.0.1.3680043.8.498.12462703906850759490077163612851243080 lang=el fold=4
+    LLM state=affirmed/moderate  target=0.902 w=1.00  OOF convnext=0.070 eff=0.032
+    evidence quote: Παρουσία µέτριας ποσότητας εντοπισµένης ενδοαρθρικής συλλογής υγρού
+    REPORT:
+      ΤΕΧΝΙΚΗ Η εξέταση έγινε µε ακολουθίες παλµών Τ1, πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους και Τ2 βαθµιδωτής ηχούς. ΕΥΡΗΜΑΤΑ Έχουµε στη διάθεσή µας προηγούµενη ΜΤ ([DATE]) για συγκριτικ
+
+--- [7] key=lat_men study=1.2.826.0.1.3680043.8.498.10262784969531507133353458615303007839 lang=en fold=0
+    LLM state=negated/none  target=0.089 w=1.00  OOF convnext=0.972 eff=0.876
+    evidence quote: Lateral meniscus normal
+    REPORT:
+      Technique: MRI of the knee. ACL normal. MCL normal. Medial meniscus bucket handle tear. Lateral meniscus normal. OA of all lateral and FP compartments. No baker's cyst. No effusion. Conclusion: Medial
+
+--- [8] key=acl study=1.2.826.0.1.3680043.8.498.41440206520769979754790425253631809212 lang=hr fold=1
+    LLM state=affirmed/moderate  target=0.941 w=1.00  OOF convnext=0.015 eff=0.019
+    evidence quote: Blaže do umjerene promjene prednjeg križnog ligamenta.
+    REPORT:
+      Na seriji MR presjeka desnog koljena nalazi se uredna morfologija i intenziteti signala kolateralnih
+      ligamenata, stražnjeg križnog ligamenta, iliotibijalnog traktusa.
+      Blage entezopatske promjene hvatišta tetive m. kvadricepsa te patelarnog ligamenta.
+      Nešto tekućine uz hvatište tetive m. popliteusa, blaži burzitis.
+      Blaže do umjerene promjene prednjeg križnog ligamenta.
+      Lateralni menisk uredne je morfologije i intenziteta signala.
+      Vidi se kosa ruptura stražnjeg roga medijalnog meniska.
+      Reducirana je debljina artikulacijske hrskavice femorotibijalnog zgloba uz hondromalaciju
+      lateralne fasete patele II./III. stupnja.
+      Blago reducirana debljina artikulacijske hrskavice femorotibijalnog zgloba, izraženije medijalnog
+      kompartmenta uz hondromalaciju II. stupnja.
+      Ne vidi se signifikantnog izljeva u koljenu. Ne nalazi se poplitealne (Bakerove) ciste.
+      Sitna sklerotična lezija posteriornog dijela lateralnog kondila femura - otočić kompakte.
+      Ostale prikazane koštane, mekotkivne i neurovaskularne strukture uredne su morfologije i
+      intenziteta signala.
+
+--- [9] key=pf_oa study=1.2.826.0.1.3680043.8.498.94590838906158914501563687877014778914 lang=en fold=1
+    LLM state=affirmed/severe  target=0.964 w=1.00  OOF convnext=0.057 eff=0.083
+    evidence quote: Subcentimeter focus of grade 3/4 articular cartilage loss at the midline femoral trochlea
+    REPORT:
+      FINDINGS: A partial injury of the anterior cruciate ligament is demonstrated - anatomical continuity is best appreciated in the coronal plane. There is in fact no associated anterior tibial translatio
+      </IMPRESSION/> Partial ACL injury with involvement of the popliteus muscle, popliteofibular and arcuate ligaments posterolaterally. Subcentimeter diameter focus of full-thickness cartilage loss with a
+
+--- [10] key=med_men study=1.2.826.0.1.3680043.8.498.84062980592611347665739105270731842220 lang=en fold=4
+    LLM state=affirmed/unspecified  target=0.909 w=1.00  OOF convnext=0.003 eff=0.026
+    evidence quote: medial meniscus is torn
+    REPORT:
+      In the medial compartment, the medial meniscus is torn. The articular cartilage appears normal.
+      The lateral compartment, the lateral meniscus is not torn. The articular cartilage appears normal.
+      The patellofemoral joint, high grade chondrosis at mid PF joint both sides. The medial patellofemoral ligament is intact.
+      In the intercondylar notch, there is low grade partial tear of the anterior cruciate ligament. The posterior cruciate ligament is partial tear with stretching. There is anterior tibial translation.
+      The medial collateral ligamentous complexes are intact. The posteromedial oblique ligament is intact.
+      The lateral collateral ligament complexes are intact. The The popliteofibular ligament is intact. The meniscopopliteal fascicles are intact.
+      The extensor mechanism is normal.
+      Some amount of left effusion is present. The surrounding musculature is normal.  The posterior cruciate ligament is partial tear with stretching
+      High grade chondrosis at mid PF joint both sides

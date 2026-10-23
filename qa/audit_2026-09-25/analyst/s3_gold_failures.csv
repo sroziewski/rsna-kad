@@ -1,0 +1,11 @@
+study,label,gold,weak_target,llm_state,lang,share_V3,label_agrees
+3432197492,lat_oa,0,0.2923077,affirmed/mild,el,0.7272727272727273,True
+3216559395,lat_oa,1,0.07586207,absent/none,en,0.723404255319149,False
+3451855003,lat_oa,1,0.05030769,absent/none,en,0.9148936170212766,False
+6968676828,lat_oa,0,0.51726496,affirmed/moderate,hr,0.7272727272727273,False
+0594649149,pf_oa,1,0.96,affirmed/severe,es,0.7027027027027027,True
+8836556945,synovitis,1,0.2904762,absent/none,es,0.9354838709677419,False
+1908452608,synovitis,0,0.297561,absent/none,tr,0.7037037037037037,True
+8921482192,contusion,0,0.71130437,affirmed/unspecified,en,0.7894736842105263,False
+0568677187,contusion,0,0.39985347,affirmed/unspecified,tr,0.8947368421052632,True
+2853419550,fracture,1,0.08862745,absent/none,en,0.675,False

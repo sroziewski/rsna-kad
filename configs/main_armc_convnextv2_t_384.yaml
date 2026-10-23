@@ -1,0 +1,91 @@
+# Main arm C (architecture §2.2/§2.4, stage 8): a **view-diverse** arm, not a backbone-swap arm.
+# research.md §2-3 is unambiguous that backbone swaps on identical labels/views bought +0.001
+# while a different view/crop bought more, and our own numbers agree: arm A + the efficiency arm
+# (a different resolution and slot set, and 0.0135 *worse* alone) already ensemble to 0.9292
+# OOF-weak, +0.0077 over arm A's 0.9215. So arm C changes what the model looks at:
+#
+#   5 views over 4 series = MAIN_SLOTS (sag_fs, cor_fs, ax_fs, sag_t1)
+#                         + sag_fs cropped to 90 mm (the "meniscus specialist" view: the cache is
+#                           a constant 130 mm field, so 90 mm is the centre 69.2 % upscaled back
+#                           to 384 px, ~8 % below native resolution and no second cache. Public
+#                           prior art uses exactly this crop for the sagittal fluid slot;
+#                           lat_men 0.908 is arm A's third-weakest label).
+#
+# The 90 mm entry repeats the `sag_fs` name with a different view_crop_mm: data.py loads that
+# series once, samples its own K centres for each view and crops them differently, and the model
+# gives each view its own [MISSING] vector and aux head.
+#
+# The 5th slot `cor_t1` of §2.2 was swept as well (configs/main_armc_sweep_c2/c4.yaml) and is
+# deliberately NOT here. On the 200-study/2-epoch sweep the 90 mm view cost almost nothing in
+# convergence (train loss 0.7143 vs 0.7091 for the same backbone on arm A's 4 slots) while
+# cor_t1 cost four times that (0.7274) - it is a new modality that is missing in 22.7 % of
+# studies and, in the 159 studies with no native cor_fs, is the very series the cor_fs fallback
+# already loads. Both together (6 views) landed at 0.7132 but doubled the fold cost (78 s vs
+# 36 s per 200-study epoch) and pushed the process past the 30 GB GPU budget. cor_t1 stays on
+# the table for stage 9, where a full fold can measure it instead of a 2-epoch smoke.
+#
+# Backbone: convnextv2_tiny.fcmae_ft_in22k_in1k_384. Chosen against the stage-8 arm B failure -
+# LayerNorm/GRN only (no BatchNorm statistics for gradient checkpointing to double-update),
+# resolution-flexible, bf16-friendly, and trainable with the same flat lr 1e-4 that arm A's
+# convnext was tuned with, so no layer-wise decay is needed. At 31 M params it measured 1.4x arm
+# A's convnext_small on the same smoke (210 vs 148 img/s, 11.3 vs 12.3 GB), which is what pays
+# for the 5th view at arm A's cost per fold; FCMAE self-supervised + in22k fine-tuning is also a
+# different pretraining objective from arm A's supervised in22k, so the small part of the
+# diversity that does come from the backbone is free. The sweep's control run (c1, this backbone
+# on arm A's own 4 slots) reproduced arm A's smoke train loss exactly (0.7091), which is the
+# evidence that the flat lr is right for it - the check stage 8 arm B failed.
+#
+# eval_batch_studies 2, not arm A's 4: at k_infer 24 one eval forward is studies x 5 views x 24
+# images, and the 4-study/6-view version of that (576 images) is what took the sweep's process to
+# ~36 GB of GPU memory. 2 x 5 x 24 = 240 keeps the arm inside the 30 GB we may hold on a shared
+# GPU 1; it costs ~1 min per fold-evaluation.
+#
+# 10 epochs, not arm A's 12: both arms peak at epoch 4-6 and lose ~0.008 OOF-weak by the last
+# epoch whatever the schedule length (arm A 0.9292@6 -> 0.9207@11, eff 0.9109@4 -> 0.9033@7), so
+# under the project's last-epoch policy (stage-3 F1) the shorter complete cosine is weakly better
+# and 17 % cheaper. Everything else is arm A's recipe verbatim.
+#
+#   bash scripts/run_screen.sh armC bash -c 'for k in 0 1 2 3 4; do python scripts/train.py \
+#     --config configs/main_armc_convnextv2_t_384.yaml --fold $k; done; \
+#     python scripts/predict_oof.py --config configs/main_armc_convnextv2_t_384.yaml'
+run_id: main_armc_convnextv2_t_384
+cache:
+  version: v1
+model:
+  backbone: convnextv2_tiny.fcmae_ft_in22k_in1k_384
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1, sag_fs]
+  view_crop_mm: [130.0, 130.0, 130.0, 130.0, 90.0]
+  k_train: 12
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.1
+  grad_checkpoint: true
+targets_version: v1
+folds_csv: data/folds/folds_v1.csv
+epochs: 10
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 2
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: true

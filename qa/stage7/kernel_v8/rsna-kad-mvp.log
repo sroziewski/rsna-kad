@@ -1,0 +1,29 @@
+[{"stream_name":"stdout","time":1.068358733,"data":"installing decoder wheels: /usr/bin/python3 -m pip install --no-index --no-cache-dir --disable-pip-version-check --find-links /kaggle/input/datasets/sroziews/rsna-kad-weights/wheels pylibjpeg pylibjpeg-libjpeg pylibjpeg-openjpeg pylibjpeg-rle python-gdcm\n"}
+,{"stream_name":"stdout","time":4.421066327,"data":"Looking in links: /kaggle/input/datasets/sroziews/rsna-kad-weights/wheels\n"}
+,{"stream_name":"stdout","time":4.46000312,"data":"Processing /kaggle/input/datasets/sroziews/rsna-kad-weights/wheels/pylibjpeg-2.1.0-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":4.4787139,"data":"Processing /kaggle/input/datasets/sroziews/rsna-kad-weights/wheels/pylibjpeg_libjpeg-2.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl\n"}
+,{"stream_name":"stdout","time":4.596021943,"data":"Processing /kaggle/input/datasets/sroziews/rsna-kad-weights/wheels/pylibjpeg_openjpeg-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl\n"}
+,{"stream_name":"stdout","time":4.649174967,"data":"Processing /kaggle/input/datasets/sroziews/rsna-kad-weights/wheels/pylibjpeg_rle-2.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl\n"}
+,{"stream_name":"stdout","time":4.671205885,"data":"Processing /kaggle/input/datasets/sroziews/rsna-kad-weights/wheels/python_gdcm-3.2.6-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":4.9249251560000005,"data":"Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from pylibjpeg) (2.0.2)\n"}
+,{"stream_name":"stdout","time":7.007173905,"data":"Installing collected packages: python-gdcm, pylibjpeg-rle, pylibjpeg-openjpeg, pylibjpeg-libjpeg, pylibjpeg\n"}
+,{"stream_name":"stdout","time":7.68692575,"data":"Successfully installed pylibjpeg-2.1.0 pylibjpeg-libjpeg-2.4.0 pylibjpeg-openjpeg-2.5.0 pylibjpeg-rle-2.2.0 python-gdcm-3.2.6\n"}
+,{"stream_name":"stdout","time":25.947004196,"data":"14:29:07 INFO inputs: ['competitions/', 'datasets/', 'competitions/rsna-knee-abnormality-detection/', 'datasets/sroziews/', 'competitions/rsna-knee-abnormality-detection/sample_submission.csv', 'competitions/rsna-knee-abnormality-detection/test.csv', 'competitions/rsna-knee-abnormality-detection/test_series/', 'competitions/rsna-knee-abnormality-detection/test_series.csv', 'competitions/rsna-knee-abnormality-detection/train.csv', 'competitions/rsna-knee-abnormality-detection/train_series/', 'competitions/rsna-knee-abnormality-detection/train_series.csv', 'datasets/sroziews/rsna-kad-weights/']\n"}
+,{"stream_name":"stdout","time":25.94740573,"data":"14:29:07 INFO found sample_submission.csv under /kaggle/input/competitions/rsna-knee-abnormality-detection\n"}
+,{"stream_name":"stdout","time":25.955664664,"data":"14:29:07 INFO found ensemble.json under /kaggle/input/datasets/sroziews/rsna-kad-weights\n"}
+,{"stream_name":"stdout","time":26.296085988,"data":"14:29:07 INFO ensemble /kaggle/input/datasets/sroziews/rsna-kad-weights: 5 members, mode efficiency, devices ['cuda:0', 'cuda:1'], torch 2.10.0+cu128\n"}
+,{"stream_name":"stdout","time":29.93896892,"data":"14:29:11 INFO loaded eff_effv2s_256_f0 on cuda:0 (tf_efficientnetv2_s.in21k_ft_in1k)\n"}
+,{"stream_name":"stdout","time":32.188730894,"data":"14:29:13 INFO loaded eff_effv2s_256_f1 on cuda:1 (tf_efficientnetv2_s.in21k_ft_in1k)\n"}
+,{"stream_name":"stdout","time":34.227643669,"data":"14:29:15 INFO loaded eff_effv2s_256_f2 on cuda:0 (tf_efficientnetv2_s.in21k_ft_in1k)\n"}
+,{"stream_name":"stdout","time":36.337092828,"data":"14:29:17 INFO loaded eff_effv2s_256_f3 on cuda:1 (tf_efficientnetv2_s.in21k_ft_in1k)\n"}
+,{"stream_name":"stdout","time":38.587742727,"data":"14:29:19 INFO loaded eff_effv2s_256_f4 on cuda:0 (tf_efficientnetv2_s.in21k_ft_in1k)\n"}
+,{"stream_name":"stdout","time":47.181822896,"data":"14:29:28 INFO prepared 3/3 studies, 20.8s elapsed, peak RSS 1.3 GB\n"}
+,{"stream_name":"stdout","time":53.033822022,"data":"14:29:34 INFO predicted 3 studies in 26.7s (0 prior rows)\n"}
+,{"stream_name":"stdout","time":53.050820681,"data":"14:29:34 INFO submission /kaggle/working/submission.csv: 3 rows | setup 0.4s | inference 26.7s = 8.90s/study (prep 4.62s, gpu 3.81s per study) | 0 prior rows\n"}
+,{"stream_name":"stderr","time":58.448250544,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":58.448317039,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":58.71146155,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":58.71148761,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":59.510375434,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":61.264182155,"data":"[NbConvertApp] Writing 683031 bytes to __results__.html\n"}
+]

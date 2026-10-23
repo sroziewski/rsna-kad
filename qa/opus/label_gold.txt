@@ -1,0 +1,17 @@
+key<->column: [('acl', 'ACL'), ('mcl', 'MCL'), ('med_men', 'Medial Meniscus'), ('lat_men', 'Lateral Meniscus'), ('med_oa', 'Medial OA'), ('lat_oa', 'Lateral OA'), ('pf_oa', 'PF OA'), ('effusion', 'Effusion'), ('synovitis', 'Synovitis'), ('baker', "Baker's"), ('contusion', 'Contusion'), ('fracture', 'Fracture')]
+manifest labels=data/labels/merged_v1_1.parquet config=configs/targets_v1_1.yaml
+gold-58 macro AUC: opus 0.9364 | ours v1.1 targets 0.8728 | mean 0.9275
+finding          opus   ours   mean   spearman(non-gold 4349)  opus_conf_gold
+  ACL              0.989  0.981  0.993  0.811  0.89
+  MCL              0.983  0.982  0.986  0.662  0.83
+  Medial Meniscus  0.978  0.933  0.975  0.898  0.85
+  Lateral Meniscus 0.916  0.858  0.901  0.768  0.80
+  Medial OA        0.971  0.892  0.944  0.836  0.85
+  Lateral OA       0.853  0.821  0.856  0.726  0.82
+  PF OA            0.947  0.899  0.927  0.857  0.81
+  Effusion         0.924  0.829  0.913  0.861  0.61
+  Synovitis        0.815  0.674  0.812  0.506  0.73
+  Baker's          0.979  0.936  0.966  0.773  0.90
+  Contusion        0.927  0.805  0.906  0.714  0.79
+  Fracture         0.955  0.865  0.953  0.477  0.74
+opus - ours: +0.0637 [+0.0437, +0.0841] P(<=0)=0.00

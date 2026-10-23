@@ -1,0 +1,64 @@
+# Main arm B (architecture §2.4, stage 8): coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k @384 (fixed
+# 384 input, 1024-d features, 73 M params), 4 slots (MAIN_SLOTS), calibrated targets v1, last-epoch
+# selection. Optimiser/augmentation identical to arm A. K/epochs/batch are set from the 200-study
+# smoke so one fold stays <= 4.5 h on a 48 GB A6000 (see the stage-8 log entry).
+#
+# HARD CONSTRAINT, measured: CoAtNet's stage-0 MbConv runs at 192x192 with 512 channels, so one
+# backbone call of n images holds n*512*192*192 elements and cuDNN's 32-bit indexing caps n at
+# 112 (n=128 raises canUse32BitIndexMath). Every shape below keeps the worst case (all 4 slots
+# present) under that: train 3 studies x 4 slots x K 8 = 96, eval 1 study x 4 slots x K 24 = 96.
+# The same ceiling applies to inference - arm B cannot be run with more than one study per
+# forward at k_infer 24.
+#
+# Measured on an A6000 (bf16, channels_last, grad checkpointing): 56.5 img/s train (flat for
+# n=64..112), 281 img/s eval, 20.6 GB peak at n=96. Without checkpointing it is 72.9 img/s but
+# 42 GB at n=64 and OOM at n=96 - not worth the headroom on a shared GPU, so checkpointing stays.
+# The 200-study smoke then measured 49 img/s end-to-end (dataloader included) and 20.8 GB peak,
+# which puts a K-8 epoch at ~34 min train + ~5 min eval: 7 epochs = 4.5 h/fold, the cap, and ~4.0 h
+# if the full fold reaches the 56.5 img/s the pure-GPU benchmark showed. K 8 (vs arm A's 12) and
+# 7 epochs (vs 12) are the two cuts that buy that; the cosine schedule is rescaled to 7 epochs, so
+# it is a complete schedule rather than a truncated one, and arm A's epoch curve peaked at 4-6.
+#
+# compile_backbone is off: unlike convnext, the CoAtNet graph under dynamic=True spent 13 min in
+# inductor and then OOM'd on a single 8.4 GiB buffer (the relative-position-bias stages make the
+# batch dim symbolic through window reshapes). Eager + grad checkpointing is the measured path.
+run_id: main_coatnet2_384
+cache:
+  version: v1
+model:
+  backbone: coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1]
+  k_train: 8
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.2
+  grad_checkpoint: true
+targets_version: v1
+folds_csv: data/folds/folds_v1.csv
+epochs: 7
+batch_studies: 3
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 1
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: false

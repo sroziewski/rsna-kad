@@ -1,0 +1,53 @@
+# Stage 9 pseudo-label SOURCE srcB: arm A's recipe trained on folds {3,4} only, predicting
+# folds {1,2}. It exists so that every pseudo-label used by configs/main_armA8_v2.yaml comes
+# from a model that saw neither the study it labels nor fold 0 - the fold that config is judged
+# on. The remapped folds CSV puts the folds to predict in pseudo-fold 0 and everything else in
+# pseudo-fold 1; qa/stage9/targets/srcB/fold0.parquet holds only the rows this source may train
+# on, which is how fold 0 is kept out of both sets (train.py trains on `fold != 0` INTERSECTED
+# with the rows that have a target). Both tables are subsets of data/targets/v1/fold0.parquet,
+# calibrated on the gold of folds 1-4, so no fold-0 gold reaches the source either.
+#
+# 12 epochs, not 8: this source sees half the studies, so an epoch is half as many steps
+# (~435 vs ~870) and 12 of them lands near arm A's measured optimum in steps.
+run_id: pseudo_srcB
+cache:
+  version: v1
+model:
+  backbone: convnext_small.fb_in22k_ft_in1k_384
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1]
+  k_train: 12
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.2
+  grad_checkpoint: true
+targets_version: srcB
+targets_dir: qa/stage9/targets
+labels_parquet: data/labels/llm_v1.parquet
+folds_csv: qa/stage9/folds_srcB.csv
+epochs: 12
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 4
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: true

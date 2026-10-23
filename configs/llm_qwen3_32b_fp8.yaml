@@ -1,0 +1,24 @@
+# LLM extractor, W8-class precision (qa/llm_ab): official FP8 checkpoint of the same Qwen3-32B.
+# On Ampere (sm_86) vLLM has no native FP8 tensor cores and serves this through the fp8-Marlin
+# weight-only path, i.e. W8A16 - the int8 rung between the AWQ int4 run and bf16.
+# ~33 GB of weights, so it needs a GPU with nothing else of ours on it.
+model: Qwen/Qwen3-32B-FP8
+quantization: null            # read from the checkpoint's quantization_config
+dtype: auto
+max_model_len: 12288
+# 0.85 x 49 GB = 42 GB: ~35 GB of weights + CUDA graphs leaves ~6 GB of KV (12288 tokens needs 3 GB).
+# 0.78 was enough only while another user held 6 GB of GPU 0; once they freed it the cap became
+# binding and vLLM refused to start ("estimated maximum model length is 10912").
+gpu_memory_utilization: 0.85
+enable_prefix_caching: true
+max_tokens: 1400
+temperature: 0.0
+batch_size: 128
+max_num_seqs: 32              # KV cache is only ~4 GB once the weights are resident
+seed: 0
+enable_thinking: false
+enforce_eager: false
+fewshot_dir: data/fewshot
+out_dir: data/labels
+extractor: qwen3_32b_fp8
+prompt_rules: base

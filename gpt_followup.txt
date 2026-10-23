@@ -1,0 +1,32 @@
+Follow-up on your four proposals for our knee-MRI pipeline (same context as before: 12 findings, macro AUC,
+58 gold studies used only for evaluation, acceptance = paired gold-58 gain >= +0.004 at P >= 0.95 over 3 seeds,
+public LB 0.948, leader ~0.961, LB noise ~0.002-0.003).
+
+RESULTS OF YOUR IDEAS (all measured)
+- #1 pre-pseudo DINO branch blended at 0.2 on the 4 weak findings: gold +0.0009 (P=0.66); LB 0.947 vs 0.948.
+  Per label: synovitis +0.030, lateral meniscus +0.005, lateral OA -0.012, PF OA -0.013.
+- #3 silent cells of synovitis/lateral OA/PF OA trained on teacher only (weight 0.25): gold +0.0014 (P=0.68).
+  Per label: synovitis +0.017, PF OA +0.005, lateral OA -0.017. (A synovitis-only variant is now being LB-probed.)
+- #2 (reader study) not possible: no radiologist available.
+- #4 audit: a strong LLM read reports for synovial thickening. In 25/25 synovitis-silent reports the synovium is
+  not mentioned at all, so report text cannot recover silent synovitis. Separately, an LLM graded "mild" mentions
+  of OA/meniscus findings against the competition's positive definitions: label-level AUC vs gold improved
+  +0.0032 (P=0.995; lateral meniscus 0.844->0.863, lateral OA 0.818->0.830), but after training 3 seeds on the
+  rebuilt targets the model gained only +0.0012 (P=0.65), every seed was slightly below its baseline twin, and
+  lateral OA (-0.014) and lateral meniscus (-0.011) moved the wrong way.
+- Also tied since your answer: 12-seed ensemble (LB 0.947), a general vision-LLM reading the MRI slices
+  (synovitis AUC 0.71, OA/meniscus near chance). Domain-adversarial (site) training is running now.
+
+THREE QUESTIONS - answer each in <= 200 words, no code, say when you are speculating:
+1. Why can a clear label-level improvement (+0.0032 at P=0.995) vanish after training? Our targets are
+   0.5 x calibrated report label + 0.5 x teacher OOF, where the teacher was trained on the OLD labels, and the mild
+   cells are already gold-calibrated per label. Is "the teacher half still carries the old error" a plausible
+   mechanism, and if so what is the cheapest decisive test (we have ~2 GPU-days; one full run ~2 h, a 5-fold
+   teacher ~10 runs)? Or is a +0.003 label gain simply below what 4,349 studies x soft BCE can transmit?
+2. Twice, a change that helped synovitis (+0.017 / +0.030) hurt lateral OA by a similar amount. Give the most
+   plausible mechanism(s) (shared fusion head? target-scale shift? a gold-58 artefact with 11 lateral-OA
+   positives?) and one test that distinguishes them WITHOUT choosing labels on gold-58.
+3. Given everything ties, how would you spend the last ~17 days and 2 GPUs to maximise the PRIVATE leaderboard
+   (not public)? Constraints: no OAI-derived data or weights without institutional sign-off, other external data
+   must be public and free; pretrained weights of any licence are allowed; final 2 selections, one must be an
+   efficiency entry. Rank at most 3 options with expected effect and risk. "Stop and lock in" is a valid answer.

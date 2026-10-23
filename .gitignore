@@ -1,0 +1,68 @@
+# Secrets - the Kaggle token lives here and must never be committed.
+.kaggle/
+
+# Environments, redirected home/cache dirs, scratch space
+.venv-llm/
+.home/
+.fakehome/
+.xdg_cache/
+.tmp/
+.test_tmp/
+.triton_cache/
+.vllm_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Server-only artefacts (architecture §3.1): checkpoints, Kaggle bundles, job logs
+runs/
+export/
+logs/
+
+# Large or derived data. Small configs, manifests, calibration/stats json and the fold table stay tracked.
+data/labels/*.jsonl
+data/labels/*.parquet
+data/labels/*.csv
+data/targets/**/*.parquet
+analysis/out/
+
+# Binary payloads that never belong in git
+*.npy
+*.safetensors
+*.pt
+*.whl
+*.dcm
+*.so
+*.so.*
+
+# QA scratch holding DICOMs, third-party binaries or third-party code
+qa/audit_2026-09-25/tester/edge_data/
+qa/audit_2026-09-25/tester/declibs/
+qa/competitor/kernels/
+qa/stage1/png/
+qa/stage1/centroid.csv
+qa/stage1/resume/
+qa/competitor/llm_labels/
+
+# Other teams' material shared with us during merge talks; never ours to publish
+merge_share_2026-10-15_gold58.zip
+invisible_ensemble_merge_proposal.md
+
+# Empty placeholder, derived tables
+train_files.zip
+*.parquet
+
+# Written by scripts/remote.ps1 sync
+.sync-manifest.tsv
+
+# competition data (MIRA licence, rule 4.b.1: no redistribution) and teammates' files
+data/fewshot/*.json
+qa/claude_labels/batches/
+qa/claude_labels/out/
+qa/claude_labels/prompt_*.txt
+Qile's labels and predictions.zip
+hx48_ensemble.zip
+files/
+latest_gold.csv
+data/gold58_hx48_v6.csv
+report_examples.csv

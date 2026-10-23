@@ -1,0 +1,41 @@
+# Smoke test of the MVP arm (§4 stage 3): run with `scripts/train.py --limit 200`; 4 epochs so the
+# EMA weights move off the ImageNet init; everything else identical to mvp_effv2s_256.yaml.
+run_id: smoke_effv2s_256
+cache:
+  version: v1
+model:
+  backbone: tf_efficientnetv2_s.in21k_ft_in1k
+  img_px: 256
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs]
+  k_train: 16
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.1
+  grad_checkpoint: true
+targets_version: v0
+folds_csv: data/folds/folds_v1.csv
+epochs: 4
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 8
+# Stage-3 behaviour kept: the bundle/OOF are the best validation epoch (main arms use "last").
+select_epoch: best

@@ -1,0 +1,26 @@
+# LLM extractor, full precision (qa/llm_ab ceiling test): Qwen3-32B in bf16, ~65 GB of weights.
+# Needs both A6000s (tensor_parallel_size 2, ~33 GB of weights per GPU), so it may only start once
+# no training job holds GPU 0 or GPU 1. Other users keep ~6 GB on GPU 0 and ~11 GB on GPU 1, which
+# is why gpu_memory_utilization is 0.74 (36 GB of 49) rather than the usual 0.9: the KV cache is
+# then ~3.5 GB per GPU = ~28k tokens, enough for max_num_seqs 24 once the few-shot prefix is cached.
+# Single-GPU fallback when only one card is free: tensor_parallel_size 1, cpu_offload_gb 28,
+# gpu_memory_utilization 0.84 - correct but PCIe-bound and several times slower.
+model: Qwen/Qwen3-32B
+quantization: null
+dtype: bfloat16
+max_model_len: 12288
+tensor_parallel_size: 2
+gpu_memory_utilization: 0.74
+cpu_offload_gb: 0
+enable_prefix_caching: true
+max_tokens: 1400
+temperature: 0.0
+batch_size: 128
+max_num_seqs: 24
+seed: 0
+enable_thinking: false
+enforce_eager: false
+fewshot_dir: data/fewshot
+out_dir: data/labels
+extractor: qwen3_32b_bf16
+prompt_rules: base

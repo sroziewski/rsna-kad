@@ -1,0 +1,60 @@
+........................................................................ [ 26%]
+........................................................................ [ 52%]
+........................................................................ [ 78%]
+...........................................................              [100%]
+=============================== warnings summary ===============================
+tests/test_infer.py::test_predict_studies_cpu_and_submission
+tests/test_infer.py::test_predict_studies_cpu_and_submission
+tests/test_infer.py::test_predict_studies_cpu_and_submission
+tests/test_infer.py::test_predict_studies_fp32_matches_and_no_tta
+tests/test_infer.py::test_predict_studies_fp32_matches_and_no_tta
+tests/test_infer.py::test_wall_clock_guard_returns_every_study
+  /usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2249744) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+tests/test_train.py: 15 warnings
+  /raid/sroziewski/sandbox/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+    warnings.warn(warn_msg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 15 durations =============================
+4.34s call     tests/test_export.py::test_notebook_runs_locally_on_cpu
+3.43s setup    tests/test_cache.py::test_index_contract
+3.08s call     tests/test_cache.py::test_resume_skips_valid_series
+2.43s call     tests/test_cv.py::test_make_folds_groups_and_stratifies
+2.41s call     tests/test_train.py::test_select_epoch_policy
+2.19s call     tests/test_infer.py::test_study_slots_match_cache_index
+1.90s call     tests/test_train.py::test_train_fold_resumes
+1.55s call     tests/test_infer.py::test_view_crop_member_inputs_equal_training_inputs
+1.47s call     tests/test_train.py::test_train_fold_end_to_end
+1.24s call     tests/test_cache.py::test_verify_cache
+1.20s call     tests/test_infer.py::test_series_volume_equals_cache_process_series
+0.91s call     tests/test_infer.py::test_predict_studies_fp32_matches_and_no_tta
+0.91s call     tests/test_infer.py::test_predict_studies_cpu_and_submission
+0.81s call     tests/test_cv.py::test_write_and_load_roundtrip
+0.79s call     tests/test_cv.py::test_check_folds_reports_violations
+275 passed, 21 warnings in 58.26s
+	Command being timed: "/raid/sroziewski/sandbox/bin/python -m pytest tests -q -p no:cacheprovider -o addopts= -rs --durations=15"
+	User time (seconds): 50.59
+	System time (seconds): 5.74
+	Percent of CPU this job got: 93%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1489348
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 1448657
+	Voluntary context switches: 21901
+	Involuntary context switches: 774
+	Swaps: 0
+	File system inputs: 3776
+	File system outputs: 7915016
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+EXIT 0

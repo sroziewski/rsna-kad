@@ -1,0 +1,45 @@
+# MRI intensity augmentation variant of the full-data C_p recipe (qa/mriaug, coordinator 2026-09-30):
+# configs/main_armc_pseudo_full.yaml verbatim except run_id and mri_aug: true (rsna_kad.mri_aug,
+# pre-declared probabilities). Seeds pair with the existing Cfull runs of the same seeds.
+run_id: main_armc_convnextv2_t_384_p_full_mri
+cache:
+  version: v1
+model:
+  backbone: convnextv2_tiny.fcmae_ft_in22k_in1k_384
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1, sag_fs]
+  view_crop_mm: [130.0, 130.0, 130.0, 130.0, 90.0]
+  k_train: 12
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.1
+  grad_checkpoint: true
+targets_version: v3_pseudo_full
+folds_csv: data/folds/folds_v1.csv
+epochs: 8
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 2
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: true
+mri_aug: true

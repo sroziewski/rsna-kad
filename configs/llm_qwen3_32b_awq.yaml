@@ -1,0 +1,17 @@
+# LLM extractor (architecture §2.1). Runs in .venv-llm on GPU 0 only.
+model: Qwen/Qwen3-32B-AWQ
+quantization: awq_marlin      # Ampere kernel for AWQ int4; null lets vLLM pick
+dtype: float16
+max_model_len: 12288          # system + 3 few-shots (~3-5k tokens; Greek is token-heavy) + report (<= 3k) + 900 output
+gpu_memory_utilization: 0.6   # hard cap on the shared GPU
+enable_prefix_caching: true
+max_tokens: 1400              # 12 labels x (state, severity, <=120-char quote); 900 truncated 1.7 % of Greek reports
+temperature: 0.0
+batch_size: 128
+max_num_seqs: 64
+seed: 0
+enable_thinking: false
+enforce_eager: false
+fewshot_dir: data/fewshot
+out_dir: data/labels
+extractor: qwen3_32b_awq

@@ -1,0 +1,84 @@
+{
+ "mode": "main",
+ "members": [
+  {
+   "path": "models/main_convnext_s_384_f0",
+   "weight": 1.0,
+   "tta": true,
+   "backbone": "convnext_small.fb_in22k_ft_in1k_384",
+   "img_px": 384,
+   "metrics": {
+    "oof_weak_auc": 0.920673940253582,
+    "gold_auc": 0.8996212121212122,
+    "epoch": 11
+   }
+  },
+  {
+   "path": "models/eff_effv2s_256_f0",
+   "weight": 1.0,
+   "tta": true,
+   "backbone": "tf_efficientnetv2_s.in21k_ft_in1k",
+   "img_px": 256,
+   "metrics": {
+    "oof_weak_auc": 0.9033366821709897,
+    "gold_auc": 0.871969696969697,
+    "epoch": 7
+   }
+  },
+  {
+   "path": "models/main_armc_convnextv2_t_384_f0",
+   "weight": 1.0,
+   "tta": true,
+   "backbone": "convnextv2_tiny.fcmae_ft_in22k_in1k_384",
+   "img_px": 384,
+   "metrics": {
+    "oof_weak_auc": 0.928194503308103,
+    "gold_auc": 0.8984848484848484,
+    "epoch": 9
+   }
+  }
+ ],
+ "K_infer": 24,
+ "workers": 3,
+ "wall_guard_hours": 8.25,
+ "prior": [
+  0.13289313465356828,
+  0.05181007037560145,
+  0.3632715145746867,
+  0.18689198891321818,
+  0.278877267241478,
+  0.1732933461666107,
+  0.40333012739817303,
+  0.3544280131657918,
+  0.39158778786659243,
+  0.18100946446259816,
+  0.22495100498199463,
+  0.1450359602769216
+ ],
+ "labels": [
+  "ACL",
+  "MCL",
+  "Medial Meniscus",
+  "Lateral Meniscus",
+  "Medial OA",
+  "Lateral OA",
+  "PF OA",
+  "Effusion",
+  "Synovitis",
+  "Baker's",
+  "Contusion",
+  "Fracture"
+ ],
+ "wheels": [
+  "pylibjpeg-2.1.0-py3-none-any.whl",
+  "pylibjpeg_libjpeg-2.4.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+  "pylibjpeg_libjpeg-2.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+  "pylibjpeg_openjpeg-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+  "pylibjpeg_openjpeg-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+  "pylibjpeg_rle-2.2.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+  "pylibjpeg_rle-2.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+  "python_gdcm-3.2.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+  "python_gdcm-3.2.6-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+ ],
+ "version": "tester mini export (f0 of each arm of main_v3)"
+}

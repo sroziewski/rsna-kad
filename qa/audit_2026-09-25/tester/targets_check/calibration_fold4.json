@@ -1,0 +1,357 @@
+{
+ "version": "v1",
+ "fold": 4,
+ "n_gold_train": 46,
+ "values": {
+  "acl": {
+   "affirmed": 0.8825806451612903,
+   "affirmed_mild": 0.31666666666666665,
+   "hedged": 0.4444444444444444,
+   "absent": 0.04363636363636363,
+   "negated": 0.01391304347826087
+  },
+  "mcl": {
+   "affirmed": 0.7573333333333333,
+   "affirmed_mild": 0.15294117647058825,
+   "hedged": 0.5,
+   "absent": 0.03692307692307692,
+   "negated": 0.009696969696969697
+  },
+  "med_men": {
+   "affirmed": 0.9089655172413793,
+   "affirmed_mild": 0.3,
+   "hedged": 0.4444444444444444,
+   "absent": 0.13454545454545455,
+   "negated": 0.011851851851851851
+  },
+  "lat_men": {
+   "affirmed": 0.8417391304347825,
+   "affirmed_mild": 0.4,
+   "hedged": 0.4,
+   "absent": 0.07368421052631578,
+   "negated": 0.07368421052631578
+  },
+  "med_oa": {
+   "affirmed": 0.779047619047619,
+   "affirmed_mild": 0.31666666666666665,
+   "hedged": 0.5,
+   "absent": 0.049999999999999996,
+   "negated": 0.015238095238095238
+  },
+  "lat_oa": {
+   "affirmed": 0.7422222222222222,
+   "affirmed_mild": 0.29230769230769227,
+   "hedged": 0.5,
+   "absent": 0.11034482758620691,
+   "negated": 0.017777777777777778
+  },
+  "pf_oa": {
+   "affirmed": 0.96,
+   "affirmed_mild": 0.37777777777777777,
+   "hedged": 0.5,
+   "absent": 0.21000000000000002,
+   "negated": 0.055
+  },
+  "effusion": {
+   "affirmed": 0.9022222222222221,
+   "affirmed_mild": 0.4482758620689655,
+   "hedged": 0.5,
+   "absent": 0.048,
+   "negated": 0.02666666666666667
+  },
+  "synovitis": {
+   "affirmed": 0.824,
+   "affirmed_mild": 0.5571428571428572,
+   "hedged": 0.5,
+   "absent": 0.32195121951219513,
+   "negated": 0.04
+  },
+  "baker": {
+   "affirmed": 0.8738461538461538,
+   "affirmed_mild": 0.42857142857142855,
+   "hedged": 0.5,
+   "absent": 0.06470588235294118,
+   "negated": 0.018823529411764708
+  },
+  "contusion": {
+   "affirmed": 0.6816666666666666,
+   "affirmed_mild": 0.5578947368421052,
+   "hedged": 0.5,
+   "absent": 0.11000000000000001,
+   "negated": 0.08800000000000001
+  },
+  "fracture": {
+   "affirmed": 0.9179999999999999,
+   "affirmed_mild": 0.5499999999999999,
+   "hedged": 0.6,
+   "absent": 0.08800000000000001,
+   "negated": 0.06947368421052631
+  }
+ },
+ "counts": {
+  "acl": {
+   "affirmed": [
+    23,
+    20
+   ],
+   "affirmed_mild": [
+    4,
+    1
+   ],
+   "hedged": [
+    1,
+    0
+   ],
+   "absent": [
+    3,
+    0
+   ],
+   "negated": [
+    15,
+    0
+   ]
+  },
+  "mcl": {
+   "affirmed": [
+    7,
+    4
+   ],
+   "affirmed_mild": [
+    9,
+    1
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    5,
+    0
+   ],
+   "negated": [
+    25,
+    0
+   ]
+  },
+  "med_men": {
+   "affirmed": [
+    21,
+    19
+   ],
+   "affirmed_mild": [
+    2,
+    1
+   ],
+   "hedged": [
+    1,
+    0
+   ],
+   "absent": [
+    3,
+    1
+   ],
+   "negated": [
+    19,
+    0
+   ]
+  },
+  "lat_men": {
+   "affirmed": [
+    15,
+    12
+   ],
+   "affirmed_mild": [
+    7,
+    4
+   ],
+   "hedged": [
+    2,
+    0
+   ],
+   "absent": [
+    5,
+    0
+   ],
+   "negated": [
+    17,
+    2
+   ]
+  },
+  "med_oa": {
+   "affirmed": [
+    13,
+    9
+   ],
+   "affirmed_mild": [
+    4,
+    1
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    16,
+    0
+   ],
+   "negated": [
+    13,
+    0
+   ]
+  },
+  "lat_oa": {
+   "affirmed": [
+    10,
+    6
+   ],
+   "affirmed_mild": [
+    5,
+    1
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    21,
+    2
+   ],
+   "negated": [
+    10,
+    0
+   ]
+  },
+  "pf_oa": {
+   "affirmed": [
+    8,
+    8
+   ],
+   "affirmed_mild": [
+    10,
+    4
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    12,
+    3
+   ],
+   "negated": [
+    16,
+    1
+   ]
+  },
+  "effusion": {
+   "affirmed": [
+    19,
+    17
+   ],
+   "affirmed_mild": [
+    21,
+    11
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    2,
+    0
+   ],
+   "negated": [
+    4,
+    0
+   ]
+  },
+  "synovitis": {
+   "affirmed": [
+    7,
+    5
+   ],
+   "affirmed_mild": [
+    6,
+    5
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    33,
+    12
+   ],
+   "negated": [
+    0,
+    0
+   ]
+  },
+  "baker": {
+   "affirmed": [
+    5,
+    4
+   ],
+   "affirmed_mild": [
+    6,
+    4
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    26,
+    1
+   ],
+   "negated": [
+    9,
+    0
+   ]
+  },
+  "contusion": {
+   "affirmed": [
+    16,
+    9
+   ],
+   "affirmed_mild": [
+    11,
+    5
+   ],
+   "hedged": [
+    0,
+    0
+   ],
+   "absent": [
+    12,
+    1
+   ],
+   "negated": [
+    7,
+    1
+   ]
+  },
+  "fracture": {
+   "affirmed": [
+    12,
+    11
+   ],
+   "affirmed_mild": [
+    4,
+    1
+   ],
+   "hedged": [
+    2,
+    2
+   ],
+   "absent": [
+    17,
+    1
+   ],
+   "negated": [
+    11,
+    1
+   ]
+  }
+ }
+}

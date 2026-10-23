@@ -1,0 +1,8 @@
+Looking in links: export/main_v3/wheels
+Processing ./export/main_v3/wheels/pylibjpeg-2.1.0-py3-none-any.whl
+Processing ./export/main_v3/wheels/pylibjpeg_libjpeg-2.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+Processing ./export/main_v3/wheels/pylibjpeg_openjpeg-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+Processing ./export/main_v3/wheels/pylibjpeg_rle-2.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+Processing ./export/main_v3/wheels/python_gdcm-3.2.6-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+Installing collected packages: python-gdcm, pylibjpeg-rle, pylibjpeg-openjpeg, pylibjpeg-libjpeg, pylibjpeg
+Successfully installed pylibjpeg-2.1.0 pylibjpeg-libjpeg-2.4.0 pylibjpeg-openjpeg-2.5.0 pylibjpeg-rle-2.2.0 python-gdcm-3.2.6

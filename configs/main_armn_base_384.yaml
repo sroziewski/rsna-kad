@@ -1,0 +1,60 @@
+# Arm N baseline - the control for the per-label attention head (competitor analysis §7 A2).
+#
+# It is arm C's recipe verbatim (convnextv2_tiny.fcmae_ft_in22k_in1k_384 over 5 views / 4 series,
+# MAIN_SLOTS + the 90 mm sagittal meniscus view) with the two things §4.3 settled applied:
+#   * 8 epochs instead of 10 - "a TIE on score, ADOPTED for cost", 32 % cheaper;
+#   * targets v1_1_gemma3 instead of v1 - the clean-provenance 4-voter table, adopted with the
+#     explicit instruction "train *new* arms on v1_1_gemma3 so the label improvement rides free".
+#
+# This control exists because arm C's published numbers (weak 0.9254 / strict 0.8576 / gold
+# 0.8878) were produced at 10 epochs on v1: comparing a new head against those would confound
+# the head with the schedule and the target table. Every arm-N variant differs from THIS file in
+# `model.head` (+ `model.slot_prior_strength`) and in nothing else, so the paired delta is the
+# head and only the head. head: shared_attn is the default and is bit-identical to §2.4 (pinned
+# by tests/test_model.py::test_shared_attn_is_bit_identical_to_the_pre_a2_head).
+#
+#   bash scripts/run_screen.sh armn0 bash -c 'for k in 0 1 2 3 4; do python scripts/train.py \
+#     --config configs/main_armn_base_384.yaml --fold $k; done; \
+#     python scripts/predict_oof.py --config configs/main_armn_base_384.yaml'
+run_id: main_armn_base_384
+cache:
+  version: v1
+model:
+  backbone: convnextv2_tiny.fcmae_ft_in22k_in1k_384
+  img_px: 384
+  crop_mm: 130.0
+  slots: [sag_fs, cor_fs, ax_fs, sag_t1, sag_fs]
+  view_crop_mm: [130.0, 130.0, 130.0, 130.0, 90.0]
+  k_train: 12
+  k_infer: 24
+  attn_hidden: 256
+  fusion_hidden: 512
+  head: shared_attn
+  aux_weight: 0.3
+  drop_rate: 0.1
+  drop_path: 0.1
+  grad_checkpoint: true
+targets_version: v1_1_gemma3
+folds_csv: data/folds/folds_v1.csv
+epochs: 8
+batch_studies: 4
+lr_backbone: 1.0e-4
+lr_heads: 1.0e-3
+weight_decay: 0.05
+warmup_epochs: 1.0
+ema_decay: 0.999
+grad_clip: 2.0
+num_workers: 12
+seed: 2026
+sibling_p: 0.3
+slot_dropout_p: 0.1
+mixup_p: 0.3
+mixup_alpha: 0.4
+crop_scale_mm: [115.0, 130.0]
+rot_deg: 8.0
+bc_jitter: 0.03
+amp_dtype: bfloat16
+eval_batch_studies: 2
+select_epoch: last
+cudnn_benchmark: false
+compile_backbone: true

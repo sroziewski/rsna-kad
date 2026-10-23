@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsna_kad"
+version = "0.1.0"
+description = "RSNA Knee Abnormality Detection - training and inference code"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "pydicom>=3",
+    "opencv-python-headless",
+    "scikit-learn",
+    "pyyaml",
+    "timm",
+    "safetensors",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider -q"
